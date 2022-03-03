@@ -10,140 +10,108 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - 'Partie 1':
-    - 'C1 : Python les base':
+    - 'C1 : Introduction':
       - 'Cours': 'c1c.md'
-      - 'Activité' : 'c1a.md'
+      - 'Activités' : 'c1a.md'
       - 'Révision' : 'c1r.md'
-    - 'C2 : Python les séquences':
+    - 'C2 : les bases de données relationnelles':
       - 'Cours': 'c2c.md'
-      - 'Activité' : 'c2a.md'
+      - 'Activités' : 'c2a.md'
+      - 'Exercices' : 'c2e.md'
       - 'Révision' : 'c2r.md'
-    - 'C3 : Python les dictionnaires':
+    - 'C3 : le langage SQL':
       - 'Cours': 'c3c.md'
-      - 'Activité' : 'c3a.md'
+      - 'Activités' : 'c3a.md'
+      - 'Exercices' : 'c3e.md'
       - 'Révision' : 'c3r.md'
-  - "Projet 1" : 'pr1.md'
   - 'Partie 2':
-    - "C4 : écriture d'un entier positif":
+    - 'C4 : récursivité':
       - 'Cours': 'c4c.md'
-      - 'Activité' : 'c4a.md'
+      - 'Activités' : 'c4a.md'
+      - 'Exercices' : 'c4e.md'
       - 'Révision' : 'c4r.md'
-    - "C5 : représentation d'un texte en machine":
+    - 'C5 : les listes, les piles et les files':
       - 'Cours': 'c5c.md'
-      - 'Activité' : 'c5a.md'
+      - 'Activités' : 'c5a.md'
+      - 'Exercices' : 'c5e.md'
       - 'Révision' : 'c5r.md'
-    - "C6 : représentation binaire d'un entier relatif":
+    - 'C6 : les dictionnaires':
       - 'Cours': 'c6c.md'
-      - 'Activité' : 'c6a.md'
+      - 'Activités' : 'c6a.md'
+      - 'Exercices' : 'c6e.md'
       - 'Révision' : 'c6r.md'
-    - "C7 : notion de nombre flottant":
+    - 'C7 : les arbres':
       - 'Cours': 'c7c.md'
-      - 'Activité' : 'c7a.md'
+      - 'Activités' : 'c7a.md'
+      - 'Exercices' : 'c7e.md'
       - 'Révision' : 'c7r.md'
-  - 'Partie 3':
-    - "C8 : modèle d'architecture de von Neumann":
+    - 'C8 : algorithmes sur les arbres binaires':
       - 'Cours': 'c8c.md'
-      - 'Activité' : 'c8a.md'
+      - 'Activités' : 'c8a.md'
+      - 'Exercices' : 'c8e.md'
       - 'Révision' : 'c8r.md'
-    - 'C9 : simulation CPU':
-      - 'Activité' : 'c9a.md'
-  - "Projet 2" : 'pr2.md'
-  - 'Partie 4':
-    - "C10 : introduction à l'algorithmique":
+    - '*C9 : les graphes':
+      - 'Cours': 'c9c.md'
+      - 'Activités' : 'c9a.md'
+      - 'Exercices' : 'c9e.md'
+      - 'Révision' : 'c9r.md'
+    - '*C10 : algorithmes sur les graphes':
       - 'Cours': 'c10c.md'
-      - 'Activité' : 'c10a.md'
+      - 'Activités' : 'c10a.md'
+      - 'Exercices' : 'c10e.md'
       - 'Révision' : 'c10r.md'
-    - 'C11 : tri par insertion, tri par sélection':
+  - 'Partie 3':
+    - 'C11 : protocoles de routage':
       - 'Cours': 'c11c.md'
-      - 'Activité' : 'c11a.md'
+      - 'Activités' : 'c11a.md'
+      - 'Exercices' : 'c11e.md'
       - 'Révision' : 'c11r.md'
-    - 'C12 : les invariants de boucle':
+    - '*C12 : sécurisation des communications':
       - 'Cours': 'c12c.md'
-      - 'Activité' : 'c12a.md'
+      - 'Activités' : 'c12a.md'
+      - 'Exercices' : 'c12e.md'
       - 'Révision' : 'c12r.md'
-  - 'Partie 5':
-    - "C13 : introduction aux systèmes d'exploitation" :
+  - 'Partie 4':
+    - '*C13 : calculabilité et décidabilité':
       - 'Cours': 'c13c.md'
-      - 'Activité' : 'c13a.md'
+      - 'Activités' : 'c13a.md'
+      - 'Exercices' : 'c13e.md'
       - 'Révision' : 'c13r.md'
-    - 'C14 : lignes de commandes Linux':
+    - 'C14 : paradigmes de programmation':
       - 'Cours': 'c14c.md'
-      - 'Activité' : 'c14a.md'
+      - 'Activités' : 'c14a.md'
+      - 'Exercices' : 'c14e.md'
       - 'Révision' : 'c14r.md'
-    - 'C15 : langages de programmation':
+  - 'Partie 5':
+    - 'C15 : méthode diviser pour régner':
       - 'Cours': 'c15c.md'
-      - 'Activité' : 'c15a.md'
+      - 'Activités' : 'c15a.md'
+      - 'Exercices' : 'c15e.md'
       - 'Révision' : 'c15r.md'
-  - "Projet 3" : 'pr3.md'
-  - 'Partie 6':
-    - "C16 : introduction réseau" :
+    - '*C16 : programmation dynamique':
       - 'Cours': 'c16c.md'
-      - 'Activité' : 'c16a.md'
+      - 'Activités' : 'c16a.md'
+      - 'Exercices' : 'c16e.md'
       - 'Révision' : 'c16r.md'
-    - "C17 : les protocoles TCP et IP" :
+    - '*C17 : recherche textuelle':
       - 'Cours': 'c17c.md'
-      - 'Activité' : 'c17a.md'
+      - 'Activités' : 'c17a.md'
+      - 'Exercices' : 'c17e.md'
       - 'Révision' : 'c17r.md'
-    - "C18 : le modèle TCP/IP" :
+  - 'Partie 6':
+    - 'C18 : système sur puce':
       - 'Cours': 'c18c.md'
-      - 'Activité' : 'c18a.md'
+      - 'Activités' : 'c18a.md'
+      - 'Exercices' : 'c18e.md'
       - 'Révision' : 'c18r.md'
-    - 'C19 : simulation réseau (I)':
-      - 'Activité' : 'c19a.md'
-    - 'C20 : le protocole du bit alterné':
-      - 'Cours': 'c20c.md'
-      - 'Activité' : 'c20a.md'
-      - 'Révision' : 'c20r.md'
-  - 'Partie 7':
-    - "C21 : introduction au web" :
-      - 'Cours': 'c21c.md'
-      - 'Activité' : 'c21a.md'
-      - 'Révision' : 'c21r.md'
-    - "C22 : les URL" :
-      - 'Cours': 'c22c.md'
-      - 'Activité' : 'c22a.md'
-      - 'Révision' : 'c22r.md'
-    - "C23 : HTML et CSS : les bases" :
-      - 'Cours': 'c23c.md'
-      - 'Activité' : 'c23a.md'
-      - 'Révision' : 'c23r.md'
-    - "C24 : interaction avec l'utilisateur dans une page web" :
-      - 'Cours': 'c24c.md'
-      - 'Activité' : 'c24a.md'
-      - 'Révision' : 'c24r.md'
-    - 'C25 : modèle client/serveur':
-      - 'Cours': 'c25c.md'
-      - 'Activité' : 'c25a.md'
-      - 'Révision' : 'c25r.md'
-    - "C26 : protocole HTTP" :
-      - 'Cours': 'c26c.md'
-      - 'Activité' : 'c26a.md'
-      - 'Révision' : 'c26r.md'
-    - "C27 : simulation réseau (II)" :
-      - 'Activité' : 'c27a.md'
-    - "C28 : formulaire d'une page web":
-      - 'Activité' : 'c28a.md'
-  - "Projet 4" : 'pr4.md'
-  - 'Partie 8':
-    - "C29 : traitement de données en tables" :
-      - 'Cours': 'c29c.md'
-      - 'Activité' : 'c29a.md'
-      - 'Révision' : 'c29r.md'
-  - 'Partie 9':
-    - "C30 : recherche dichotomique" :
-      - 'Cours': 'c30c.md'
-      - 'Activité' : 'c30a.md'
-      - 'Révision' : 'c30r.md'
-    - "C31 : algorithmes gloutons" :
-      - 'Cours': 'c31c.md'
-      - 'Activité' : 'c31a.md'
-      - 'Révision' : 'c31r.md'
-    - "C32 : algorithme des k plus proches voisins" :
-      - 'Cours': 'c32c.md'
-      - 'Activité' : 'c32a.md'
-      - 'Révision' : 'c32r.md'
-  - "Projet 5" : 'pr5.md'
-  - 'Partie 10':
-    - "C33: interface Homme - Machine" :
-      - 'Cours': 'c33c.md'
+    - 'C19 : les processus':
+      - 'Cours': 'c19c.md'
+      - 'Activités' : 'c19a.md'
+      - 'Exercices' : 'c19e.md'
+      - 'Révision' : 'c19r.md'
+  - 'Projets' :
+    - 'Projet 1 : répertoire téléphonique' : 'pr1.md'
+    - 'Projet 2 : jeu du morpion' : 'pr2.md'
+  
+  
   
