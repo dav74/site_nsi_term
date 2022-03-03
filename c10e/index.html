@@ -2258,42 +2258,42 @@ FIN
 <p>1) Faites un schéma du graphe G</p>
 <p>2) Implémentez le graphe G en Python à l’aide d’un dictionnaire et des listes (tableaux).</p>
 <p>3) Soit le programme Python suivant :</p>
-<div class="highlight"><pre><span></span><code>g1 = {&#39;A&#39;:[&#39;B&#39;,&#39;C&#39;], &#39;B&#39;:[&#39;A&#39;], &#39;C&#39;:[&#39;A&#39;,&#39;D&#39;], &#39;D&#39;:[&#39;C&#39;]}
+<div class="highlight"><pre><span></span><code><span class="n">g1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">]}</span>
 
-def myst(G,s):
-    noir=[]
-    p = []
-    l = []
-    noir.append(s)
-    p.append(s)
-    while len(p)&gt;0:
-        u = p.pop()
-        l.append(u)
-        for v in G[u]:
-            if v not in noir:
-                noir.append(v)
-                p.append(v)
-    return l
+<span class="k">def</span> <span class="nf">myst</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">noir</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">noir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">noir</span><span class="p">:</span>
+                <span class="n">noir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l</span>
 
-L = myst(g1,&#39;A&#39;)
+<span class="n">L</span> <span class="o">=</span> <span class="n">myst</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Que vaut L après l'exécution de ce programme</p>
 <p>4) Complétez le programme Python suivant (la fonction cycle prend en paramètre un graphe G et retourne True si le graphe G possède un cycle et False dans le cas contraire), si possible sans vous aider du cours.</p>
-<div class="highlight"><pre><span></span><code>def cycle(G):
-    s = random.choice(list(G.keys()))
-    p = []
-    p.append(s)
-    noir=[]
-    while len(p)&gt;0:
-        u = p.pop()
-        for v in ………:
-            if v not in noir:
-                p.append(....)   
-        if u in ……….:
-            return True
-        else :
-            noir.append(u)
-    return …………
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">noir</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="err">………</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">noir</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">....</span><span class="p">)</span>   
+        <span class="k">if</span> <span class="n">u</span> <span class="ow">in</span> <span class="err">………</span><span class="o">.</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">noir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+    <span class="k">return</span> <span class="err">…………</span>
 </code></pre></div>
 
               

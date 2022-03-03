@@ -2511,13 +2511,13 @@
 
 <h3 id="activite-141">activité 14.1</h3>
 <p>Soit la classe <em>Personnage</em> suivante :</p>
-<p><div class="highlight"><pre><span></span><code>class Personnage:
-  def __init__(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self,nbPoint):
-    self.vie=self.vie-nbPoint
+<p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nbPoint</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="n">nbPoint</span>
 </code></pre></div>
 Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vie</em> d'une  valeur <em>nbr</em> (<em>nbr</em> sera un paramètre de la méthode <em>soigne</em>).</p>
 <p>Testez cette méthode en saisissant dans la console Python les instructions suivantes (les unes après les autres) :</p>
@@ -2551,36 +2551,36 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 <p>Le but de cette longue activité est d'implémenter en Python les algorithmes sur les arbres binaires précédemment étudiés. Il sera donc sans doute nécessaire de reprendre ce qui a été vu sur la structure de données "arbre" et sur "les algorithmes sur les arbres binaires".</p>
 <p>Comme nous l'avons déjà dit, Python ne propose pas de structure de données permettant d'implémenter directement les arbres binaires. Il va donc être nécessaire de créer cette structure. Pour programmer ce type de structure, nous allons utiliser le paradigme objet.</p>
 <p>Vous trouverez ci-dessous la classe <em>ArbreBinaire</em> qui va nous permettre d'implémenter des arbres binaires.</p>
-<div class="highlight"><pre><span></span><code>class ArbreBinaire:
-    def __init__(self, valeur):
-        self.valeur = valeur
-        self.enfant_gauche = None
-        self.enfant_droit = None
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-    def insert_gauche(self, valeur):
-        if self.enfant_gauche == None:
-            self.enfant_gauche = ArbreBinaire(valeur)
-        else:
-            new_node = ArbreBinaire(valeur)
-            new_node.enfant_gauche = self.enfant_gauche
-            self.enfant_gauche = new_node
+    <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
 
-    def insert_droit(self, valeur):
-        if self.enfant_droit == None:
-            self.enfant_droit = ArbreBinaire(valeur)
-        else:
-            new_node = ArbreBinaire(valeur)
-            new_node.enfant_droit = self.enfant_droit
-            self.enfant_droit = new_node
+    <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   def get_valeur(self):
-        return self.valeur
+   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
-   def get_gauche(self):
-        return self.enfant_gauche
+   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
 
-   def get_droit(self):
-        return self.enfant_droit
+   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 </code></pre></div>
 <h5 id="1-">1-</h5>
 <p>Étudiez attentivement la classe <em>ArbreBinaire</em> (méthodes et attributs). Vous pouvez, par exemple, vous interroger sur l'utilité de toutes les méthodes de cette classe.</p>
@@ -2588,63 +2588,63 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 <p>Soit l'arbre binaire suivant (arbre 1) :</p>
 <p><img alt="" src="../img/pr3_1.png" /></p>
 <p>Voici le programme qui va permettre de construire cet arbre à l'aide de la classe <em>ArbreBinaire</em> :</p>
-<div class="highlight"><pre><span></span><code>class ArbreBinaire:
-   def __init__(self, valeur):
-      self.valeur = valeur
-      self.enfant_gauche = None
-      self.enfant_droit = None
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-   def insert_gauche(self, valeur):
-      if self.enfant_gauche == None:
-         self.enfant_gauche = ArbreBinaire(valeur)
-      else:
-         new_node = ArbreBinaire(valeur)
-         new_node.enfant_gauche = self.enfant_gauche
-         self.enfant_gauche = new_node
+   <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   def insert_droit(self, valeur):
-      if self.enfant_droit == None:
-         self.enfant_droit = ArbreBinaire(valeur)
-      else:
-         new_node = ArbreBinaire(valeur)
-         new_node.enfant_droit = self.enfant_droit
-         self.enfant_droit = new_node
+   <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   def get_valeur(self):
-      return self.valeur
+   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
-   def get_gauche(self):
-      return self.enfant_gauche
+   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
 
-   def get_droit(self):
-      return self.enfant_droit
+   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 
-#######fin de la classe########
+<span class="c1">#######fin de la classe########</span>
 
-######début de la construction de l&#39;arbre binaire###########
+<span class="c1">######début de la construction de l&#39;arbre binaire###########</span>
 
-racine = ArbreBinaire(&#39;A&#39;)
-racine.insert_gauche(&#39;B&#39;)
-racine.insert_droit(&#39;F&#39;)
+<span class="n">racine</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
 
-b_node = racine.get_gauche()
-b_node.insert_gauche(&#39;C&#39;)
-b_node.insert_droit(&#39;D&#39;)
+<span class="n">b_node</span> <span class="o">=</span> <span class="n">racine</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">b_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">b_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
 
-f_node = racine.get_droit()
-f_node.insert_gauche(&#39;G&#39;)
-f_node.insert_droit(&#39;H&#39;)
+<span class="n">f_node</span> <span class="o">=</span> <span class="n">racine</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()</span>
+<span class="n">f_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">f_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
 
-c_node = b_node.get_gauche()
-c_node.insert_droit(&#39;E&#39;)
+<span class="n">c_node</span> <span class="o">=</span> <span class="n">b_node</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">c_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
 
-g_node = f_node.get_gauche()
-g_node.insert_gauche(&#39;I&#39;)
+<span class="n">g_node</span> <span class="o">=</span> <span class="n">f_node</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">g_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">)</span>
 
-h_node = f_node.get_droit()
-h_node.insert_droit(&#39;J&#39;)
+<span class="n">h_node</span> <span class="o">=</span> <span class="n">f_node</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()</span>
+<span class="n">h_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">)</span>
 
-######fin de la construction de l&#39;arbre binaire###########
+<span class="c1">######fin de la construction de l&#39;arbre binaire###########</span>
 </code></pre></div>
 <h5 id="2-">2-</h5>
 <p>Étudiez attentivement le programme ci-dessus afin de comprendre le principe de "construction d'un arbre binaire"</p>
@@ -2653,67 +2653,67 @@ h_node.insert_droit(&#39;J&#39;)
 <div class="highlight"><pre><span></span><code>(&#39;A&#39;, (&#39;B&#39;, (&#39;C&#39;, None, (&#39;E&#39;, None, None)), (&#39;D&#39;, None, None)), (&#39;F&#39;, (&#39;G&#39;, (&#39;I&#39;, None, None), None), (&#39;H&#39;, None, (&#39;J&#39;, None, None))))
 </code></pre></div>
 <p>Voici le programme augmenté de la fonction <em>affiche</em> :</p>
-<div class="highlight"><pre><span></span><code>class ArbreBinaire:
-   def __init__(self, valeur):
-      self.valeur = valeur
-      self.enfant_gauche = None
-      self.enfant_droit = None
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-   def insert_gauche(self, valeur):
-      if self.enfant_gauche == None:
-         self.enfant_gauche = ArbreBinaire(valeur)
-      else:
-         new_node = ArbreBinaire(valeur)
-         new_node.enfant_gauche = self.enfant_gauche
-         self.enfant_gauche = new_node
+   <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   def insert_droit(self, valeur):
-      if self.enfant_droit == None:
-         self.enfant_droit = ArbreBinaire(valeur)
-      else:
-         new_node = ArbreBinaire(valeur)
-         new_node.enfant_droit = self.enfant_droit
-         self.enfant_droit = new_node
+   <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   def get_valeur(self):
-      return self.valeur
+   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
-   def get_gauche(self):
-      return self.enfant_gauche
+   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
 
-   def get_droit(self):
-      return self.enfant_droit
+   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 
-#######fin de la classe########
+<span class="c1">#######fin de la classe########</span>
 
-######début de la construction de l&#39;arbre binaire###########
+<span class="c1">######début de la construction de l&#39;arbre binaire###########</span>
 
-racine = ArbreBinaire(&#39;A&#39;)
-racine.insert_gauche(&#39;B&#39;)
-racine.insert_droit(&#39;F&#39;)
+<span class="n">racine</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
 
-b_node = racine.get_gauche()
-b_node.insert_gauche(&#39;C&#39;)
-b_node.insert_droit(&#39;D&#39;)
+<span class="n">b_node</span> <span class="o">=</span> <span class="n">racine</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">b_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">b_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
 
-f_node = racine.get_droit()
-f_node.insert_gauche(&#39;G&#39;)
-f_node.insert_droit(&#39;H&#39;)
+<span class="n">f_node</span> <span class="o">=</span> <span class="n">racine</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()</span>
+<span class="n">f_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">f_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
 
-c_node = b_node.get_gauche()
-c_node.insert_droit(&#39;E&#39;)
+<span class="n">c_node</span> <span class="o">=</span> <span class="n">b_node</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">c_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
 
-g_node = f_node.get_gauche()
-g_node.insert_gauche(&#39;I&#39;)
+<span class="n">g_node</span> <span class="o">=</span> <span class="n">f_node</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()</span>
+<span class="n">g_node</span><span class="o">.</span><span class="n">insert_gauche</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">)</span>
 
-h_node = f_node.get_droit()
-h_node.insert_droit(&#39;J&#39;)
+<span class="n">h_node</span> <span class="o">=</span> <span class="n">f_node</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()</span>
+<span class="n">h_node</span><span class="o">.</span><span class="n">insert_droit</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">)</span>
 
-######fin de la construction de l&#39;arbre binaire###########
+<span class="c1">######fin de la construction de l&#39;arbre binaire###########</span>
 
-def affiche(T):
-   if T != None:
-      return (T.get_valeur(),affiche(T.get_gauche()),affiche(T.get_droit()))
+<span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+   <span class="k">if</span> <span class="n">T</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">(),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()))</span>
 </code></pre></div>
 <h5 id="3-">3-</h5>
 <p>Vérifiez que "affiche(racine)" renvoie bien :</p>
@@ -2769,12 +2769,12 @@ Testez votre fonction en utilisant l'arbre vu plus haut (schéma "arbre 3") avec
 <li>la classe Node</li>
 <li>la classe LinkedList</li>
 </ul>
-<div class="highlight"><pre><span></span><code>class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
-    def __str__(self):
-        return str(self.value)
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </code></pre></div>
 <p>La classe Node permet d'implémenter un élément de la liste chaînée (les 2 cases : celle qui contient la valeur et celle qui pointe vers l'élément suivant). Cette classe Node possède deux attributs : </p>
 <ul>
@@ -2782,28 +2782,28 @@ Testez votre fonction en utilisant l'arbre vu plus haut (schéma "arbre 3") avec
 <li>l'attribut self.next  qui correspond à la case qui "pointe" vers la valeur suivante (deuxième case)</li>
 </ul>
 <p>Ne vous souciez pas de la méthode __str__ qui permet juste d'afficher la valeur d'un élément. </p>
-<div class="highlight"><pre><span></span><code>class LinkedList:
-    def __init__(self):
-        self.head=None
-        self.tail=None
-    def __iter__(self):
-        cur_node = self.head
-        while cur_node:
-            yield cur_node
-            cur_node = cur_node.next
-    def copy(self):
-        l = LinkedList()
-        node = self.head
-        while node is not None:
-            new_node = Node(node.value)
-            if l.head is None:
-                l.head = new_node
-                l.tail = new_node
-            else:
-                l.tail.next = new_node
-                l.tail = l.tail.next
-            node = node.next
-        return l
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cur_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">cur_node</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">cur_node</span>
+            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span>
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">l</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">new_node</span>
+                <span class="n">l</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">new_node</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">l</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">new_node</span>
+                <span class="n">l</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
+        <span class="k">return</span> <span class="n">l</span>
 </code></pre></div>
 <p>La classe LinkedList permet d'implémenter une liste chaînée. Cette  classe LinkedList possède deux attributs :</p>
 <ul>
@@ -2822,34 +2822,34 @@ Testez votre fonction en utilisant l'arbre vu plus haut (schéma "arbre 3") avec
 </ul>
 <p>On donne ci-dessous les fonctions à compléter. Les fonctions "newList", "isEmpty" et "showList" sont fournies.</p>
 <p>À noter les lignes "l1 = l.copy()" dans la fonction cons et la fonction cdr. Ces 2 lignes permettent de créer une copie de la liste qui a été passée en paramètre afin d'éviter de modifier cette même liste. Un simple "l1 = l" pour créer la copie ne suffirait pas (une modification de l1 entraînerait une modification de l), il est donc nécessaire d'utiliser la méthode "copy" de la classe LinkedList.</p>
-<div class="highlight"><pre><span></span><code> def newList():
-    return LinkedList()
+<div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="nf">newList</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">LinkedList</span><span class="p">()</span>
 
-def showList(l):
-    li = [str(x) for x in l]
-    return &quot; - &quot;.join(li)
+<span class="k">def</span> <span class="nf">showList</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot; - &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
 
-def isEmpty(l):
-    return l.head is None
+<span class="k">def</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">l</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span>
 
-def cons(v,l):
-    l1 = l.copy()
-    ....
+<span class="k">def</span> <span class="nf">cons</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="o">....</span>
 
 
-def car(l):
-    ....
+<span class="k">def</span> <span class="nf">car</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="o">....</span>
 
-def cdr(l):
-    l1 = l.copy()
-    ....
+<span class="k">def</span> <span class="nf">cdr</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="o">....</span>
 </code></pre></div>
 <p>Après avoir complété les fonctions ci-dessus, exécutez le programme ci-dessous :</p>
-<div class="highlight"><pre><span></span><code>l = newList()
-l1 = cons(15,cons(12,cons(2,l)))
-v = car(l1)
-l2 = cdr(l1)
-l3 = cons(4,cons(5, l2))
+<div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="n">newList</span><span class="p">()</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">cons</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="n">cons</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">cons</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">car</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">cdr</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">cons</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">cons</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">l2</span><span class="p">))</span>
 </code></pre></div>
 <p>Ensuite, tapez successivement dans la console :</p>
 <ul>
@@ -2878,12 +2878,12 @@ l3 = cons(4,cons(5, l2))
 <li>la classe Node</li>
 <li>la classe LinkedList</li>
 </ul>
-<div class="highlight"><pre><span></span><code>class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
-    def __str__(self):
-        return str(self.value)
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </code></pre></div>
 <p>La classe Node permet d'implémenter un élément de la liste chaînée (les 2 cases : celle qui contient la valeur et celle qui pointe vers l'élément suivant). Cette classe Node possède deux attributs : </p>
 <ul>
@@ -2891,15 +2891,15 @@ l3 = cons(4,cons(5, l2))
 <li>l'attribut self.next  qui correspond à la case qui "pointe" vers la valeur suivante (deuxième case)</li>
 </ul>
 <p>Ne vous souciez pas de la méthode __str__ qui permet juste d'afficher la valeur d'un élément. </p>
-<div class="highlight"><pre><span></span><code>class LinkedList:
-    def __init__(self):
-        self.head=None
-        self.tail=None
-    def __iter__(self):
-        cur_node = self.head
-        while cur_node:
-            yield cur_node
-            cur_node = cur_node.next
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cur_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">cur_node</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">cur_node</span>
+            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span>
 </code></pre></div>
 <p>La classe LinkedList permet d'implémenter une liste chaînée. Cette  classe LinkedList possède deux attributs :</p>
 <ul>
@@ -2909,41 +2909,41 @@ l3 = cons(4,cons(5, l2))
 <p>Ne vous souciez pas de la méthode __iter__ qui permet de parcourir une liste à l'aide d'une boucle "for"  (vous n'aurez pas à l'utiliser directement)</p>
 <p>Le but de cette activité est d'écrire une classe "Stack" ("Pile" en français). Cette classe vous permettra d'implémenter la structure de données pile.</p>
 <p>La classe "Stack" utilisera les classes "LinkedList" et "Node".</p>
-<div class="highlight"><pre><span></span><code>class Stack:
-    def __init__(self):
-        self.ll = LinkedList()
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Stack</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ll</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 
-    def isEmpty(self):
-        return self.ll.head is None
+    <span class="k">def</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ll</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span>
 
-    def show(self):
-        print(&quot;&quot;)
-        if self.isEmpty():
-            print(&quot;La pile est vide&quot;)
-        else :
-            for n in self.ll:
-                print (&quot;|&quot;,n.value,&quot;|&quot;)
-            print(&quot;-----&quot;)
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La pile est vide&quot;</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ll</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
 
-    def push(self,v):
-        ......
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+        <span class="o">......</span>
 
 
-    def pop(self):
-        ......
+    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">......</span>
 </code></pre></div>
 <p>Comme vous pouvez le constater ci-dessus, les méthodes "__init__", "isEmpty" (renvoie True si la pile est vide et False dans le cas contraire), "show" (permet d'afficher la pile) sont données. Il vous reste donc à implémenter la  méthode "push" (permet de placer un élément v au sommet de la pile) et la méthode "pop" (permet de "dépiler" la pile, cette méthode renvoie la valeur qui vient d'être "dépilée").</p>
 <p>Pour vérifier la correction des méthodes "push" et "pop"  que vous aurez écrites, vous pourrez exécuter le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>p = Stack()
-p.push(5)
-p.push(8)
-p.show()
-v=p.pop()
-print(&quot;valeur renvoyée par pop : &quot;,v)
-p.show()
-v = p.pop()
-print(&quot;valeur renvoyée par pop : &quot;,v)
-p.show()
+<div class="highlight"><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="n">Stack</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">v</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;valeur renvoyée par pop : &quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;valeur renvoyée par pop : &quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>Vous devriez alors obtenir le résultat suivant :</p>
 <div class="highlight"><pre><span></span><code>| 8 |
@@ -2967,12 +2967,12 @@ La pile est vide
 <li>la classe Node</li>
 <li>la classe LinkedList</li>
 </ul>
-<div class="highlight"><pre><span></span><code>class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
-    def __str__(self):
-        return str(self.value)
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </code></pre></div>
 <p>La classe Node permet d'implémenter un élément de la liste chaînée (les 2 cases : celle qui contient la valeur et celle qui pointe vers l'élément suivant). Cette classe Node possède deux attributs : </p>
 <ul>
@@ -2980,15 +2980,15 @@ La pile est vide
 <li>l'attribut self.next  qui correspond à la case qui "pointe" vers la valeur suivante (deuxième case)</li>
 </ul>
 <p>Ne vous souciez pas de la méthode __str__ qui permet juste d'afficher la valeur d'un élément. </p>
-<div class="highlight"><pre><span></span><code>class LinkedList:
-    def __init__(self):
-        self.head=None
-        self.tail=None
-    def __iter__(self):
-        cur_node = self.head
-        while cur_node:
-            yield cur_node
-            cur_node = cur_node.next
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">cur_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">cur_node</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">cur_node</span>
+            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span>
 </code></pre></div>
 <p>La classe LinkedList permet d'implémenter une liste chaînée. Cette  classe LinkedList possède deux attributs :</p>
 <ul>
@@ -2998,38 +2998,38 @@ La pile est vide
 <p>Ne vous souciez pas de la méthode __iter__ qui permet de parcourir une liste à l'aide d'une boucle "for"  (vous n'aurez pas à l'utiliser directement)</p>
 <p>Le but de cette activité est d'écrire une classe "Queue" ("File" en français). Cette classe vous permettra d'implémenter la structure de données file.</p>
 <p>La classe "Queue" utilisera les classes "LinkedList" et "Node".</p>
-<p><div class="highlight"><pre><span></span><code>class Queue:
-    def __init__(self):
-        self.ll = LinkedList()
+<p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Queue</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ll</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 
-    def isEmpty(self):
-        return self.ll.head is None
+    <span class="k">def</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ll</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span>
 
-    def show(self):
-        if self.isEmpty() :
-            print(&quot;la file est vide&quot;)
-        else :
-            l = [str(x) for x in self.ll]
-            print(&quot; - &quot;.join(l))
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">()</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la file est vide&quot;</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ll</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
 
-    def enQueue(self,v):
-        ......
+    <span class="k">def</span> <span class="nf">enQueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+        <span class="o">......</span>
 
-    def deQueue(self):
-        ......
+    <span class="k">def</span> <span class="nf">deQueue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">......</span>
 </code></pre></div>
 Comme vous pouvez le constater ci-dessus, les méthodes "__init__", "isEmpty" (renvoie True si la file est vide et False dans le cas contraire), "show" (permet d'afficher la file) sont données. Il vous reste donc à implémenter la  méthode "enQueue" (permet de placer un élément v dans la file) et la méthode "deQueue" (permet de "défiler" la file, cette méthode renvoie la valeur qui vient d'être "défilée").</p>
 <p>Pour vérifier la correction des méthodes "enQueue" et "deQueue"  que vous aurez écrites, vous pourrez exécuter le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>q = Queue()
-q.enQueue(5)
-q.enQueue(8)
-q.show()
-v = q.deQueue()
-print(&quot;valeur renvoyée par deQueue : &quot;,v)
-q.show()
-v = q.deQueue()
-print(&quot;valeur renvoyée par deQueue : &quot;,v)
-q.show()
+<div class="highlight"><pre><span></span><code><span class="n">q</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+<span class="n">q</span><span class="o">.</span><span class="n">enQueue</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">enQueue</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">deQueue</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;valeur renvoyée par deQueue : &quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">deQueue</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;valeur renvoyée par deQueue : &quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>Vous devriez alors obtenir le résultat suivant :</p>
 <div class="highlight"><pre><span></span><code>5 - 8

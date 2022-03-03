@@ -2587,61 +2587,61 @@
 <h2 id="2-requetes-dinterrogation">2) requêtes d'interrogation</h2>
 <h3 id="a-requetes-dinterrogation-simples">a) requêtes d'interrogation "simples"</h3>
 <p>Quand on désire extraire des informations d'une table, on effectue une requête d'interrogation à l'aide du mot clé SELECT. Voici un exemple de requête d'interrogation :
-<div class="highlight"><pre><span></span><code>SELECT id, titre, id_auteur, ann_publi, note
-FROM LIVRES
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
 </code></pre></div>
 Cette requête va nous permettre d'obtenir l'id, le titre, l'id de l'auteur, l'année de publication et la note de tous les livres présents dans la table LIVRES.</p>
 <p>D'une façon générale, le mot clé SELECT est suivi par les attributs que l'on désire obtenir. Le mot clé FROM est suivi par la table concernée.</p>
 <p>Il est possible d'obtenir uniquement certains attributs. Par exemple :
-<div class="highlight"><pre><span></span><code>SELECT nom, prenom
-FROM AUTEURS
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
 </code></pre></div>
 nous permettra d'obtenir le nom et le prénom de tous les auteurs présents dans la table AUTEURS.</p>
 <p>À noter qu'il est possible d'obtenir tous les attributs sans être obligé de tous les noter grâce au caractère étoile * :
-<div class="highlight"><pre><span></span><code>SELECT *
-FROM AUTEURS
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
 </code></pre></div>
 sera équivalent à 
-<div class="highlight"><pre><span></span><code>SELECT id, nom, prenom, ann_naissance, langue_ecriture
-FROM AUTEURS
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
 </code></pre></div></p>
 <h3 id="b-selectionner-certaines-lignes-la-clause-where">b) sélectionner certaines lignes : la clause WHERE</h3>
 <p>Il est possible d'utiliser la clause WHERE afin d'imposer une (ou des) condition(s) permettant de sélectionner uniquement certaines lignes.</p>
 <p>La condition doit suivre le mot-clé WHERE :
-<div class="highlight"><pre><span></span><code>SELECT titre
-FROM LIVRES
-WHERE note &gt; 9
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">9</span><span class="w"></span>
 </code></pre></div>
 La requête ci-dessus permettra d'afficher uniquement les titres qui ont une note strictement supérieure à 9 (soit "1984" et "De la Terre à la Lune")</p>
 <p>Il est possible de combiner les conditions à l'aide d'un OR ou d'un AND :
-<div class="highlight"><pre><span></span><code>SELECT nom
-FROM AUTEURS
-WHERE langue_ecriture = &#39;français&#39; AND ann_naissance &gt; 1900
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;français&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1900</span><span class="w"></span>
 </code></pre></div>
 Cette requête permet d'obtenir le nom des auteurs nés après 1900 qui écrivent en français (soit ici "Barjavel" et "Boulle") </p>
 <p>Il est aussi possible d'utiliser le OR à la place du AND :
-<div class="highlight"><pre><span></span><code>SELECT nom
-FROM AUTEURS
-WHERE langue_ecriture = &#39;français&#39; OR ann_naissance &gt; 1920
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;français&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1920</span><span class="w"></span>
 </code></pre></div>
 Cette requête permet d'obtenir le nom des auteurs qui écrivent en français (quelle que soit leur date de naissance) et des auteurs qui n'écrivent pas en français, mais qui sont nés après 1920 (soit ici "Barjavel", "Boulle", "Verne" et "K.Dick")</p>
 <h3 id="c-mettre-dans-lordre-les-reponses-la-clause-order-by">c) mettre dans l'ordre les réponses : la clause ORDER BY</h3>
 <p>Il est possible de classer les résultats d'une requête par ordre croissant grâce à la clause ORDER BY :
-<div class="highlight"><pre><span></span><code>SELECT nom
-FROM AUTEURS
-WHERE langue_ecriture = &#39;français&#39; ORDER BY ann_naissance
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;français&#39;</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"></span>
 </code></pre></div>
 La requête ci-dessus permettra d'obtenir le nom des auteurs écrivant en français classé en fonction de leur année de naissance (ici on obtiendra donc : "Verne", "Barjavel", "Boulle")</p>
 <p>En rajoutant DESC, on obtient l'ordre décroissant :
-<div class="highlight"><pre><span></span><code>SELECT nom
-FROM AUTEURS
-WHERE langue_ecriture = &#39;français&#39; ORDER BY ann_naissance DESC
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;français&#39;</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
 </code></pre></div>
 On obtiendra ici : "Boulle", "Barjavel", "Verne"</p>
 <p>À noter que si la clause ORDER BY porte sur une chaine de caractères, on obtient alors l'ordre alphabétique  :
-<div class="highlight"><pre><span></span><code>SELECT nom
-FROM AUTEURS
-WHERE langue_ecriture = &#39;français&#39; ORDER BY nom
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;français&#39;</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom</span><span class="w"></span>
 </code></pre></div>
 On obtiendra : "Barjavel", "Boulle", "Verne"</p>
 <h3 id="d-la-clause-distinct">d) la clause DISTINCT</h3>
@@ -2679,23 +2679,23 @@ On obtiendra : "Barjavel", "Boulle", "Verne"</p>
 </tbody>
 </table>
 <p>La requête suivante :</p>
-<p><div class="highlight"><pre><span></span><code>SELECT proprietaire
-FROM MACHINES
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">proprietaire</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">MACHINES</span><span class="w"></span>
 </code></pre></div>
 donnerait le résultat suivant : Marc, Pierre, Kevin, Marc</p>
 <p>Nous avons donc un doublon : Marc apparait 2 fois</p>
 <p>Pour éviter ce doublon, nous pouvons écrire : </p>
-<p><div class="highlight"><pre><span></span><code>SELECT DISTINCT proprietaire
-FROM MACHINES
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">proprietaire</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">MACHINES</span><span class="w"></span>
 </code></pre></div>
 qui nous donnera comme résultat : Marc, Pierre, Kevin</p>
 <h3 id="e-les-jointures">e) les jointures</h3>
 <p>Nous avons 2 tables, grâce aux jointures nous allons pouvoir associer ces 2 tables dans une même requête.</p>
 <p>En général, les jointures consistent à associer des lignes de 2 tables. Elles permettent d'établir un lien entre 2 tables. Qui dit lien entre 2 tables dit souvent clé étrangère et clé primaire.</p>
 <p>Analysons la requête suivante :
-<div class="highlight"><pre><span></span><code>SELECT *
-FROM LIVRES
-INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="w"></span>
 </code></pre></div>
 Le "FROM LIVRES INNER JOIN AUTEURS" permet de créer une jointure entre les tables LIVRES et AUTEURS ("rassembler" les tables LIVRES et AUTEURS en une seule grande table). Le "ON LIVRES.id_auteur = AUTEURS.id" signifie qu'une ligne quelconque A de la table LIVRES devra être fusionnée avec la ligne B de la table AUTEURS à condition que l'attribut id_auteur de la ligne A soit égal à l'attribut id de la ligne B.</p>
 <p>Par exemple, la ligne 1 (id=1) de la table LIVRES (que l'on nommera dans la suite ligne A) sera fusionnée avec la ligne 1 (id=1) de la table AUTEURS (que l'on nommera dans la suite B) car l'attribut id_auteur de la ligne A est égal à 1 et l'attribut id de la ligne B est aussi égal à 1.</p>
@@ -2914,9 +2914,9 @@ Le "FROM LIVRES INNER JOIN AUTEURS" permet de créer une jointure entre les tabl
 </table>
 <p>À noter que pour éviter toute confusion il est souvent judicieux d'ajouter le nom de la table juste devant le nom de l'attribut : on écrira AUTEURS.id au lieu de simplement id, en effet, si on écrivait seulement id, il n'y aurait aucun moyen de distinguer l'id de la table LIVRES et l'id de la table AUTEURS. Je vous conseille d'adopter cette écriture systématiquement en cas de jointure, même quand cela n'est pas obligatoire (par exemple on aurait pu écrire id_auteur à la place de LIVRES.id_auteur puisqu'il y a uniquement un id_auteur dans la table LIVRES), cela vous permettra d'éviter certains déboires.</p>
 <p>Dans le cas d'une jointure, il est tout à fait possible de sélectionner certains attributs et pas d'autres (aucune obligation de sélectionner tous les attributs des 2 tables :
-<div class="highlight"><pre><span></span><code>SELECT LIVRES.titre, AUTEURS.nom, AUTEURS.prenom
-FROM AUTEURS
-INNER JOIN LIVRES ON LIVRES.id_auteur = AUTEURS.id
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">prenom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="w"></span>
 </code></pre></div>
 On obtiendra alors une jointure uniquement avec l'attribut titre de la table LIVRES et les attributs nom, prenom de la table AUTEURS.</p>
 <table>
@@ -3012,10 +3012,10 @@ On obtiendra alors une jointure uniquement avec l'attribut titre de la table LIV
 </table>
 <h3 id="f-utilisation-du-where-dans-les-jointures">f) utilisation du WHERE dans les jointures</h3>
 <p>Suite à une jointure il est possible de sélectionner certaines lignes grâce à la clause WHERE :
-<div class="highlight"><pre><span></span><code>SELECT LIVRES.titre,AUTEURS.nom, AUTEURS.prenom
-FROM LIVRES
-INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
-WHERE LIVRES.ann_publi&gt;1965
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">titre</span><span class="p">,</span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">prenom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">ann_publi</span><span class="o">&gt;</span><span class="mi">1965</span><span class="w"></span>
 </code></pre></div>
 On obtient avec cette requête le résultat suivant :</p>
 <table>
@@ -3048,27 +3048,27 @@ On obtient avec cette requête le résultat suivant :</p>
 <p>Pour terminer avec les jointures, vous devez savoir que nous avons abordé la jointure la plus simple (INNER JOIN). Il existe des jointures plus complexes (CROSS JOIN, LEFT JOIN, RIGHT JOIN), ces autres jointures ne seront pas abordées dans ce cours.</p>
 <h2 id="3-requetes-dinsertion">3) requêtes d'insertion</h2>
 <p>Il est possible d'ajouter une entrée à une table grâce à une requête d'insertion :
-<div class="highlight"><pre><span></span><code>INSERT INTO LIVRES
-(id,titre,id_auteur,ann_publi,note)
-VALUES
-(17,&#39;Hypérion&#39;,11,1989,8);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">id_auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"></span>
+<span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s1">&#39;Hypérion&#39;</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1989</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 On emploie les mots clés INSERT INTO suivi de la table concernée (ici LIVRES). Ensuite on indique les noms des attributs que l'on désire ajouter (ici (id,titre,auteur,ann_publi,note)), et enfin pour terminer les valeurs de chaque attribut (ici (17,'Hypérion','Simmons',1989,8), attention à bien respecter l'ordre : 17 correspond à id, Hypérion correspond au titre, 11 correspond à id_auteur, 1989 correspond à ann_publi et 8 correspond à note).</p>
 <h2 id="4-requetes-de-mise-a-jour">4) requêtes de mise à jour</h2>
 <p>"UPDATE" va permettre de modifier une ou des entrées. Nous utiliserons "WHERE", comme dans le cas d'un "SELECT", pour spécifier les entrées à modifier. Voici un exemple de modification :
-<div class="highlight"><pre><span></span><code>UPDATE LIVRES
-SET note=7
-WHERE titre = &#39;Hypérion&#39;
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">SET</span><span class="w"> </span><span class="n">note</span><span class="o">=</span><span class="mi">7</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hypérion&#39;</span><span class="w"></span>
 </code></pre></div>
 Cette requête permet de modifier la note du(des) livre(s) ayant pour titre Hypérion</p>
 <h2 id="5-requetes-de-suppression">5) requêtes de suppression</h2>
 <p>"DELETE" est utilisée pour effectuer la suppression d'une (ou de plusieurs) entrée(s). Ici aussi c'est le "WHERE" qui permettra de sélectionner les entrées à supprimer :
-<div class="highlight"><pre><span></span><code>DELETE FROM LIVRES
-WHERE titre=&#39;Hypérion&#39;
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="o">=</span><span class="s1">&#39;Hypérion&#39;</span><span class="w"></span>
 </code></pre></div>
 Cette requête permet de supprimer le(les) livre(s) ayant pour titre Hypérion</p>
 <p>Attention à l'utilisation de cette requête DELETE notamment si on oublie le WHERE. Un :</p>
-<p><div class="highlight"><pre><span></span><code>DELETE FROM LIVRES
+<p><div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
 </code></pre></div>
 supprimerait toutes les entrées de la table LIVRES</p>
 

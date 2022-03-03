@@ -2229,28 +2229,28 @@ Monotone.</p>
 <p>2) Recherchez  le motif  ail dans cette strophe en utilisant l'algorithme de Boyer-Moore</p>
 <h3 id="activite-172">activité 17.2</h3>
 <p>La fonction <em>recherche</em> ci-dessous :</p>
-<p><div class="highlight"><pre><span></span><code>def recherche(txt, motif):
-    NO_CAR = 256
-    m = len(motif)
-    n = len(...)
-    tab_car = [-1]*NO_CAR
-    for i in range(...):
-        tab_car[ord(motif[i])] = i
-    decalage = 0
-    res = ...
-    while(decalage &lt;= n-m):
-        j = m-1
-        while j&gt;=0 and motif[j] == txt[decalage+j]:
-            j = j - 1
-        if j&lt;0:
-            res.append(decalage)
-            if decalage+m&lt;n :
-                decalage = decalage + m-tab_car[ord(txt[decalage+m])]
-            else :
-                decalage = decalage + 1
-        else:
-            decalage = decalage + max(1, j-tab_car[ord(txt[decalage+j])])
-    return res
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">NO_CAR</span> <span class="o">=</span> <span class="mi">256</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">tab_car</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">NO_CAR</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="n">tab_car</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">motif</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">decalage</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">decalage</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">):</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">motif</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">txt</span><span class="p">[</span><span class="n">decalage</span><span class="o">+</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decalage</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">decalage</span><span class="o">+</span><span class="n">m</span><span class="o">&lt;</span><span class="n">n</span> <span class="p">:</span>
+                <span class="n">decalage</span> <span class="o">=</span> <span class="n">decalage</span> <span class="o">+</span> <span class="n">m</span><span class="o">-</span><span class="n">tab_car</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">txt</span><span class="p">[</span><span class="n">decalage</span><span class="o">+</span><span class="n">m</span><span class="p">])]</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="n">decalage</span> <span class="o">=</span> <span class="n">decalage</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decalage</span> <span class="o">=</span> <span class="n">decalage</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">tab_car</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">txt</span><span class="p">[</span><span class="n">decalage</span><span class="o">+</span><span class="n">j</span><span class="p">])])</span>
+    <span class="k">return</span> <span class="n">res</span>
 </code></pre></div>
 permet de trouver la position du motif <em>motif</em> dans le texte <em>txt</em>. Si le motif <em>motif</em> est présent dans texte <em>txt</em>, la fonction <em>recherche</em> renvoie un tableau contenant les  indices de positions du motif dans le texte. Dans le cas où le motif n'est pas présent, la fonction <em>recherche</em> renvoie un tableau vide.</p>
 <p>Par exemple <em>recherche("AZERTYAZER", "ER")</em> renverra le  tableau [2,8], <em>recherche("AZERTYAZER", "AB")</em> renverra le tableau [ ].</p>

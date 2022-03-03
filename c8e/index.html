@@ -2371,38 +2371,38 @@ On considère l’arbre binaire de recherche représenté ci-dessous (figure 1),
 <p>a) Donner les valeurs d’affichage des nœuds dans le cas du parcours infixe de l’arbre.</p>
 <p>b) Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe de l’arbre.</p>
 <p>3) On considère la classe Noeud définie de la façon suivante en Python :</p>
-<div class="highlight"><pre><span></span><code>class Noeud():
-    def __init__(self, v):
-        self.ag = None
-        self.ad = None
-        self.v = v
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span>
 
-    def insere(self, v):
-        n = self
-        est_insere = False
-        while not est_insere :
-            if v == n.v:
-                est_insere = True
-            elif v &lt; n.v:
-                if n.ag != None:
-                    n = n.ag
-                else:
-                    n.ag = Noeud(v)
-                    est_insere = True
-            else:
-                if n.ad != None:
-                    n = n.ad
-                else:
-                    n.ad = Noeud(v)
-                    est_insere = True
+    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">est_insere</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+                <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
 
-    def insere_tout(self, vals):
-        for v in vals:
-            self.insere(v)
+    <span class="k">def</span> <span class="nf">insere_tout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </code></pre></div>
 <p>a) Représenter l’arbre construit suite à l’exécution de l’instruction suivante :</p>
-<div class="highlight"><pre><span></span><code>racine = Noeud(18)
-racine.insere_tout([12, 13, 15, 16, 19, 21, 32, 23])
+<div class="highlight"><pre><span></span><code><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insere_tout</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
 </code></pre></div>
 <p>b) Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que le nombre val est égal à 16.</p>
 <p>4) Écrire une méthode recherche(self, v) qui prend en argument un entier v et renvoie la valeur True si cet entier est une étiquette de l’arbre, False sinon.</p>

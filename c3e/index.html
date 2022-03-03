@@ -2325,15 +2325,15 @@
 <li>Écrire une requête SQL permettant d’obtenir le numéro de licence des adhérents nés après 1980 et ayant pour prénom John.</li>
 <li>Donnez le résultat de la requête SQL suivante :</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code>SELECT nom 
-FROM ADHERENTS 
-WHERE num_licence &gt; 2000 OR  ref_station = 3
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ADHERENTS</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_licence</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="k">OR</span><span class="w">  </span><span class="n">ref_station</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
 </code></pre></div>
 5. Donnez le résultat de la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>SELECT STATIONS.nom
-FROM STATIONS
-INNER JOIN ADHERENTS ON ADHERENTS.ref_station = STATIONS.ref
-WHERE annee_naissance &gt; 1975
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">STATIONS</span><span class="p">.</span><span class="n">nom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">STATIONS</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ADHERENTS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ADHERENTS</span><span class="p">.</span><span class="n">ref_station</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATIONS</span><span class="p">.</span><span class="k">ref</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee_naissance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1975</span><span class="w"></span>
 </code></pre></div>
 <h3 id="exercice-32">exercice 3.2</h3>
 <p>Exercice tiré du bac 2021</p>
@@ -2348,8 +2348,8 @@ La clé étrangère Reservation.numT fait référence à la clé primaire Train.
 <p>1) Quel nom générique donne-t-on aux logiciels qui assurent, entre autres, la persistance des données, l’efficacité de traitement des requêtes et la sécurisation des accès pour les bases de données ?</p>
 <p>2)</p>
 <p>a) On considère les requêtes SQL suivantes :</p>
-<div class="highlight"><pre><span></span><code>DELETE FROM Train WHERE numT = 1241 ;
-DELETE FROM Reservation WHERE numT = 1241 ;
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Train</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1241</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Reservation</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1241</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>Sachant que le train n°1241 a été enregistré dans la table Train et que des réservations pour ce train ont été enregistrées dans la table Reservation, expliquer pourquoi cette suite d’instructions renvoie une erreur.</p>
 <p>b) Citer un cas pour lequel l’insertion d’un enregistrement dans la table Reservation n’est pas possible.</p>
@@ -2359,8 +2359,8 @@ DELETE FROM Reservation WHERE numT = 1241 ;
 <p>c. Suite à un changement, l’horaire d’arrivée du train n°7869 est programmé à 08 h 11.
 Mettre à jour la base de données en conséquence.</p>
 <p>4) Que permet de déterminer la requête suivante ?</p>
-<div class="highlight"><pre><span></span><code>SELECT COUNT(*) FROM Reservation 
-WHERE nomClient = &quot;Hopper&quot; AND prenomClient = &quot;Grace&quot;;
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Reservation</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hopper&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">prenomClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Grace&quot;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>5) Écrire la requête qui renvoie les destinations et les prix des réservations effectuées par Grace Hopper.</p>
 <h3 id="exercice-33">exercice 3.3</h3>
@@ -2391,8 +2391,8 @@ WHERE 1;
 <p>a) Afficher les noms et les avis des clients ayant effectué une réservation pour la date du '2021-06-05' à l’heure '19:30:00'.</p>
 <p>b) Afficher le nom des plats des catégories 'plat principal' et 'dessert', correspondant aux commandes de la date '2021-04-12'.</p>
 <p>3) Que réalise la requête SQL suivante ?</p>
-<div class="highlight"><pre><span></span><code>INSERT INTO Plat
-VALUES(58,&#39;Pêche Melba&#39;, &#39;dessert&#39;, &#39;Pêches et glace vanille&#39;, 6.5);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Plat</span><span class="w"></span>
+<span class="k">VALUES</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="s1">&#39;Pêche Melba&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;dessert&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Pêches et glace vanille&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>4) Écrire des requêtes SQL permettant de réaliser les tâches suivantes :</p>
 <p>a) Supprimer les commandes ayant comme idReservation la valeur 2047.</p>

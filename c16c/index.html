@@ -2259,11 +2259,11 @@
 
 <h2 id="1-suite-de-fibonacci">1) Suite de Fibonacci</h2>
 <p>Dans le chapitre sur la récursivité, nous avons étudié la programmation de la suite de Fibonacci :  </p>
-<div class="highlight"><pre><span></span><code>def fib(n) :
-  if n &lt; 2 :
-    return n
-  else :
-    return fib(n-1)+fib(n-2)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">n</span>
+  <span class="k">else</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <p>Pour n=6, il est possible d'illustrer le fonctionnement de ce programme avec le schéma ci-dessous :</p>
 <p><img alt="" src="../img/c16c_1.png" /></p>
@@ -2271,19 +2271,19 @@
 <p>En observant attentivement le schéma ci-dessus, vous avez remarqué que de nombreux calculs sont inutiles, car effectué 2 fois : par exemple on retrouve le calcul de fib(4) à 2 endroits (en haut à droite et un peu plus bas à gauche) :</p>
 <p><img alt="" src="../img/c16c_2.png" /></p>
 <p>On pourrait donc grandement simplifier le calcul en calculant une fois pour toutes fib(4), en "mémorisant" le résultat et en le réutilisant quand nécessaire :</p>
-<div class="highlight"><pre><span></span><code>def fib_mem(n):
-  mem = [0]*(n+1)  #permet de créer un tableau contenant n+1 zéro
-  return fib_mem_c(n,mem)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fib_mem</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="n">mem</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">#permet de créer un tableau contenant n+1 zéro</span>
+  <span class="k">return</span> <span class="n">fib_mem_c</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">mem</span><span class="p">)</span>
 
-def fib_mem_c(n,m):
-  if n==0 or n==1:
-    m[n]=n
-    return n
-  elif m[n]&gt;0:
-    return m[n]
-  else:
-    m[n]=fib_mem_c(n-1,m) + fib_mem_c(n-2,m)
-    return m[n]
+<span class="k">def</span> <span class="nf">fib_mem_c</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">=</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">n</span>
+  <span class="k">elif</span> <span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">=</span><span class="n">fib_mem_c</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_mem_c</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 </code></pre></div>
 <p>Nous pouvons résumer ce programme comme suit :</p>
 <ul>
@@ -2361,17 +2361,17 @@ def fib_mem_c(n,m):
 </ul>
 <p>Le "min" présent dans la formule de récurrence exprime le fait que le nombre de pièces à rendre pour une somme X−p<sub>i</sub> doit être le plus petit possible.</p>
 <p>Étudions le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>def rendu_monnaie_rec(P,X):
-  if X==0:
-    return 0
-  else:
-    mini = 1000
-  for i in range(len(P)):
-    if P[i]&lt;=X:
-      nb = 1 + rendu_monnaie_rec(P,X-P[i])
-      if nb&lt;mini:
-        mini = nb
-  return mini
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_monnaie_rec</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">X</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="mi">1000</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">X</span><span class="p">:</span>
+      <span class="n">nb</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu_monnaie_rec</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="o">-</span><span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+      <span class="k">if</span> <span class="n">nb</span><span class="o">&lt;</span><span class="n">mini</span><span class="p">:</span>
+        <span class="n">mini</span> <span class="o">=</span> <span class="n">nb</span>
+  <span class="k">return</span> <span class="n">mini</span>
 </code></pre></div>
 <p>La fonction <em>rendu_monnaie_rec</em> prend en paramètre un tableau de pièces (P) et la somme à rendre (X). Elle renvoie le plus petit nombre de pièces possible. On retrouve la relation de récurrence définie juste au-dessus.</p>
 <p>Pour être sûr de renvoyer le plus petit nombre de pièces, on attribue dans un premier temps la valeur 1000 à la variable mini (cette valeur 1000 est arbitraire, il faut juste une valeur suffisamment grande : on peut partir du principe que nous ne rencontrerons jamais de cas où il faudra rendre plus de 1000 pièces), ensuite, à chaque appel récursif, on "sauvegarde" le plus petit nombre de pièces dans cette variable mini.</p>
@@ -2399,7 +2399,7 @@ def fib_mem_c(n,m):
 <p>Il va donc être possible d'appliquer la même méthode que pour Fibonacci.</p>
 <p>À noter que dans des cas plus "difficiles à traiter" comme 171 cts, on va retrouver de nombreuses fois exactement les mêmes calculs, il est donc potentiellement intéressant d'utiliser la programmation dynamique.</p>
 <p>Voici donc notre programme de calcul de rendu de monnaie modifiée :</p>
-<p>```
+<p>```python
 def rendu_monnaie_mem(P,X):
   mem = [0]*(X+1)
   return rendu_monnaie_mem_c(P,X,mem)</p>

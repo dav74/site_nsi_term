@@ -2139,26 +2139,26 @@
   <h1>Cours</h1>
 
 <p>Considérons le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>def fctA():
-    print (&quot;Début fonction fctA&quot;)
-    i=0
-    while i&lt;5:
-        print(f&quot;fctA {i}&quot;)
-        i = i + 1
-    print (&quot;Fin fonction fctA&quot;)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fctA</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Début fonction fctA&quot;</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fctA </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Fin fonction fctA&quot;</span><span class="p">)</span>
 
-def fctB():
-    print (&quot;Début fonction fctB&quot;)
-    i=0
-    while i&lt;5:
-        if i==3:
-            fctA()
-            print(&quot;Retour à la fonction fctB&quot;)
-        print(f&quot;fctB {i}&quot;)
-        i = i + 1
-    print (&quot;Fin fonction fctB&quot;)
+<span class="k">def</span> <span class="nf">fctB</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Début fonction fctB&quot;</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+            <span class="n">fctA</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retour à la fonction fctB&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fctB </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Fin fonction fctB&quot;</span><span class="p">)</span>
 
-fctB()
+<span class="n">fctB</span><span class="p">()</span>
 </code></pre></div>
 <p>l'exécution de ce programme donne le résultat suivant :</p>
 <div class="highlight"><pre><span></span><code>Début fonction fctB
@@ -2194,10 +2194,10 @@ Fin fonction fctB
 <p>La pile d'exécution conserve une "trace" des valeurs des variables lorsqu'une autre fonction est exécutée. Par exemple la valeur de i (fctB) est conservée au moment de l'exécution de fctA. Quand l'exécution de fctA se termine est que l'exécution de fctB "reprend", la valeur référencée par i (fctB) a été "conservée" (voilà pourquoi on reprend l'exécution de fctB avec un "fctB 3").</p>
 <p>Une fonction peut s'appeler elle-même, on parle alors de fonction récursive.</p>
 <p>Considérons de  programme suivant :</p>
-<div class="highlight"><pre><span></span><code>def fctA():
-    print (&quot;Hello&quot;)
-    fctA()
-fctA()
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fctA</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+    <span class="n">fctA</span><span class="p">()</span>
+<span class="n">fctA</span><span class="p">()</span>
 </code></pre></div>
 <p>Si nous exécutons ce programme, nous allons obtenir une erreur :</p>
 <div class="highlight"><pre><span></span><code>RecursionError: maximum recursion depth exceeded while calling a Python object
@@ -2206,12 +2206,12 @@ fctA()
 <p>Quand on écrit une fonction récursive, il est donc nécessaire de bien penser à mettre en place une structure qui à un moment ou à un autre mettra fin à ces appels récursifs.</p>
 <p>Dans le cas de fonctions récursives, il est, comme pour n'importe quelle fonction, possible d'utiliser des paramètres :</p>
 <p>Soit le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>def fonct(n):
-    if n&gt;0:
-        fonct(n-1)
-    print(n)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonct</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">fonct</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-fonct(3)
+<span class="n">fonct</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <p>Analysons en détail le fonctionnement de ce programme :</p>
 <ul>
@@ -2252,11 +2252,11 @@ fonct(3)
 </ul>
 <p>Nous allons utiliser cette définition de la factorielle pour définir notre fonction récursive (nous allons utiliser le fait que la factorielle de n dépend de la factorielle de n-1 et que 0! = 1)</p>
 <p>Analysons le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>def fact(n) :
-    if n &gt; 0 :
-        return n*fact(n-1)
-    else :
-        return 1
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
 </code></pre></div>
 <p>Comme vous pouvez le constater, la fonction fact est structurée de la même manière que la définition mathématique vu ci-dessus :</p>
 <ul>

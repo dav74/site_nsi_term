@@ -2222,48 +2222,48 @@
 <p>On veut écrire une classe pour gérer une file à l’aide d’une liste chaînée. On dispose d’une
 classe Maillon permettant la création d’un maillon de la chaîne, celui-ci étant constitué
 d’une valeur et d’une référence au maillon suivant de la chaîne :</p>
-<div class="highlight"><pre><span></span><code>class Maillon :
-    def __init__(self,v) :
-        self.valeur = v
-        self.suivant = None
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Compléter la classe File suivante où l’attribut dernier_file contient le maillon correspondant à l’élément arrivé en dernier dans la file :</p>
-<div class="highlight"><pre><span></span><code>class Maillon :
-    def __init__(self,v) :
-        self.valeur = v
-        self.suivant = None
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
 
-class File :
-    def __init__(self) :
-        self.dernier_file = None
+<span class="k">class</span> <span class="nc">File</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
 
-    def enfile(self,element) :
-        nouveau_maillon = Maillon(...)
-        nouveau_maillon.suivant = self.dernier_file
-        self.dernier_file = ...
+    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">nouveau_maillon</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="n">nouveau_maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="o">...</span>
 
-    def est_vide(self) :
-        return self.dernier_file == None
+    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">==</span> <span class="kc">None</span>
 
-    def affiche(self) :
-        maillon = self.dernier_file
-        while maillon != ... :
-            print(maillon.valeur)
-            maillon = ...
+    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
+        <span class="k">while</span> <span class="n">maillon</span> <span class="o">!=</span> <span class="o">...</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">maillon</span> <span class="o">=</span> <span class="o">...</span>
 
-    def defile(self) :
-        if not self.est_vide() :
-            if self.dernier_file.suivant == None :
-                resultat = self.dernier_file.valeur
-                self.dernier_file = None
-                return resultat
-            maillon = ...
-            while maillon.suivant.suivant != None :
-                maillon = maillon.suivant
-            resultat = ...
-            maillon.suivant = None
-            return resultat
-        return None 
+    <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">suivant</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span>
+                <span class="n">resultat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">valeur</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">return</span> <span class="n">resultat</span>
+            <span class="n">maillon</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="k">while</span> <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+                <span class="n">maillon</span> <span class="o">=</span> <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span>
+            <span class="n">resultat</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="n">resultat</span>
+        <span class="k">return</span> <span class="kc">None</span> 
 </code></pre></div>
 <h3 id="exercice-142">exercice 14.2</h3>
 <p>Cet exercice est tiré du sujet de bac 2021</p>
@@ -2281,11 +2281,11 @@ Dans ce programme, pour modéliser les données de biens immobiliers, on défini
 </li>
 </ul>
 <p>La classe Bim possède une méthode estim_prix qui renvoie une estimation du prix du bien. Le code (incomplet) de la classe Bim est donné ci-dessous :</p>
-<div class="highlight"><pre><span></span><code>class Bim:
-    def __init__(self, nature, surface, prix_moy):
-        …
-    def estim_prix(self):
-        return self.sf * self.pm
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bim</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nature</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">prix_moy</span><span class="p">):</span>
+        <span class="err">…</span>
+    <span class="k">def</span> <span class="nf">estim_prix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sf</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pm</span>
 </code></pre></div>
 <p>1) Recopier et compléter le code du constructeur de la classe Bim.</p>
 <p>2) On exécute l'instruction suivante :</p>
@@ -2324,13 +2324,13 @@ Dans ce programme, pour modéliser les données de biens immobiliers, on défini
 <p><img alt="" src="../img/c14e_1.png" /></p>
 <p>Donner la liste les biens b1, b2, b3, b4, b5, b6 triée dans l'ordre croissant de leur surface.</p>
 <p>b) Recopier et compléter le code de la fonction récursive contient donnée ci-dessous, qui prend en arguments un nombre surface de type float et un arbre binaire de recherche abr contenant des éléments de type Bim ordonnés selon leur attribut de surface sf. La fonction contient(surface, abr) renvoie True s'il existe un bien dans abr d'une surface supérieure ou égale à surface et False sinon.</p>
-<div class="highlight"><pre><span></span><code>def contient(surface, abr):
-    if abr.est_vide():
-        return False
-    elif abr.get_v().sf &gt;= ……… :
-        return True
-    else:
-        return contient( surface , ……… )
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">abr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="n">abr</span><span class="o">.</span><span class="n">get_v</span><span class="p">()</span><span class="o">.</span><span class="n">sf</span> <span class="o">&gt;=</span> <span class="err">………</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">contient</span><span class="p">(</span> <span class="n">surface</span> <span class="p">,</span> <span class="err">………</span> <span class="p">)</span>
 </code></pre></div>
 
               

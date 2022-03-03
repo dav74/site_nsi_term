@@ -2365,14 +2365,14 @@
 <p>mais il est aussi nécessaire de calculer r<sub>3</sub>, r<sub>2</sub> et r<sub>1</sub> à la fois pour calculer r<sub>5</sub> mais aussi pour calculer r<sub>4</sub> ... On retrouve bien notre structure récursive.</p>
 <p>N.B : Si vous avez du mal à comprendre le pourquoi du comment de la relation vue ci-dessus (r<sub>n</sub> = max(p<sub>i</sub>+r<sub>n-i</sub>) avec i compris entre 1 et n (n inclus)), cela n'a pas une grande importance, contentez-vous de l'utiliser (le but de cette activité est ailleurs).</p>
 <p>3) La fonction <em>revenu_barre</em> ci-dessous prend en paramètre la taille n de la barre (avant découpe) et renvoie le revenu maximum possible pour cette barre de longueur n :</p>
-<div class="highlight"><pre><span></span><code>def revenu_barre(n):
-    prix = [0,1,5,8,9,10,17,17,20,24,30]
-    if n==0:
-        return .........
-    r = float(&#39;-inf&#39;)
-    for i in range(1,n+1):
-        r = max(r,prix[i]+........)
-    return r
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">revenu_barre</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">prix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">.........</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">prix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+........</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">r</span>
 </code></pre></div>
 <p>Compétez la fonction <em>revenu_barre</em></p>
 <p>4) Utilisez la fonction <em>revenu_barre</em> pour calculer r<sub>5</sub>, r<sub>6</sub>, r<sub>7</sub>, r<sub>8</sub>, r<sub>9</sub> et r<sub>10</sub></p>
