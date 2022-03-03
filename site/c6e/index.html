@@ -2233,30 +2233,30 @@
 
 <h3 id="exercice-61">exercice 6.1</h3>
 <p>Soit le programme Python suivant :
-<div class="highlight"><pre><span></span><code>inventaire = {&#39;pommes&#39;: 430, &#39;bananes&#39;: 312,&#39;oranges&#39; : 274, &#39;poires&#39; : 137}
+<div class="highlight"><pre><span></span><code><span class="n">inventaire</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pommes&#39;</span><span class="p">:</span> <span class="mi">430</span><span class="p">,</span> <span class="s1">&#39;bananes&#39;</span><span class="p">:</span> <span class="mi">312</span><span class="p">,</span><span class="s1">&#39;oranges&#39;</span> <span class="p">:</span> <span class="mi">274</span><span class="p">,</span> <span class="s1">&#39;poires&#39;</span> <span class="p">:</span> <span class="mi">137</span><span class="p">}</span>
 
-stock = 0
-for fruit in inventaire.keys():
-  if fruit != &#39;bananes&#39;:
-    stock = stock + inventaire[fruit]
+<span class="n">stock</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">inventaire</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+  <span class="k">if</span> <span class="n">fruit</span> <span class="o">!=</span> <span class="s1">&#39;bananes&#39;</span><span class="p">:</span>
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">stock</span> <span class="o">+</span> <span class="n">inventaire</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span>
 </code></pre></div>
 Quelle est la valeur de la variable stock après l'exécution de ce programme ?</p>
 <h3 id="exercice-62">exercice 6.2</h3>
 <p>Soit le programme Python suivant :</p>
-<p><div class="highlight"><pre><span></span><code>P = [{&quot;nom&quot;:&quot;Turing&quot;,&quot;prenom&quot;:&quot;Alan&quot;,&quot;age&quot;:28},{&quot;nom&quot;:&quot;Lovelace&quot;,&quot;prenom&quot;:&quot;Ada&quot;,&quot;age&quot;:27}]
+<p><div class="highlight"><pre><span></span><code><span class="n">P</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;nom&quot;</span><span class="p">:</span><span class="s2">&quot;Turing&quot;</span><span class="p">,</span><span class="s2">&quot;prenom&quot;</span><span class="p">:</span><span class="s2">&quot;Alan&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">28</span><span class="p">},{</span><span class="s2">&quot;nom&quot;</span><span class="p">:</span><span class="s2">&quot;Lovelace&quot;</span><span class="p">,</span><span class="s2">&quot;prenom&quot;</span><span class="p">:</span><span class="s2">&quot;Ada&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">27</span><span class="p">}]</span>
 </code></pre></div>
 Qu'obtient-on si  on  tape P[1]['age'] dans une console Python  ?</p>
 <h3 id="exercice-63">exercice 6.3</h3>
 <p>Soit le programme Python suivant :</p>
-<p><div class="highlight"><pre><span></span><code>def ajoute(stock,element,quantite):
-  if element in stock:
-    stock[element] = stock[element] + quantite
-  else:
-    stock[element] = quantite
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ajoute</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="n">element</span><span class="p">,</span><span class="n">quantite</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">stock</span><span class="p">:</span>
+    <span class="n">stock</span><span class="p">[</span><span class="n">element</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock</span><span class="p">[</span><span class="n">element</span><span class="p">]</span> <span class="o">+</span> <span class="n">quantite</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">stock</span><span class="p">[</span><span class="n">element</span><span class="p">]</span> <span class="o">=</span> <span class="n">quantite</span>
 
-stock = { &#39;clous&#39;: 14, &#39;vis&#39;: 27, &#39;boulons&#39;: 8, &#39;écrous&#39;: 24 }
-ajoute(stock,&#39;vis&#39;,5)
-ajoute(stock,&#39;chevilles&#39;,3)
+<span class="n">stock</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;clous&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;vis&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="s1">&#39;boulons&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;écrous&#39;</span><span class="p">:</span> <span class="mi">24</span> <span class="p">}</span>
+<span class="n">ajoute</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="s1">&#39;vis&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ajoute</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="s1">&#39;chevilles&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 Quelle est la valeur de la variable stock à la fin de cette exécution ?</p>
 

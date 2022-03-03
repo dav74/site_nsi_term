@@ -2425,8 +2425,8 @@
 <p>mais pour l'instant elle ne contient aucune table (aucune relation), pour créer une table, cliquez sur l'onglet "Exécuter le SQL". On obtient alors :</p>
 <p><img alt="" src="../img/nsi_term_bd_sql_4.png" /></p>
 <p>Copiez-collez le texte ci-dessous dans la fenêtre "SQL 1"</p>
-<div class="highlight"><pre><span></span><code>CREATE TABLE LIVRES
-    (id INT, titre TEXT, auteur TEXT, ann_publi INT, note INT, PRIMARY KEY (id));
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">auteur</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
 <p>Cliquez ensuite sur le petit triangle situé au-dessus de la fenêtre SQL 1 (ou appuyez sur F5), vous devriez avoir ceci :</p>
 <p><img alt="" src="../img/nsi_term_bd_sql_5.png" /></p>
@@ -2448,25 +2448,25 @@
 <h3 id="activite-32">activité 3.2</h3>
 <p>Nous allons maintenant ajouter des données à notre table.</p>
 <p>Toujours dans l'onglet "Exécuter le SQL", après avoir effacé la fenêtre SQL 1, copiez-collez dans cette même fenêtre la requête ci-dessous :</p>
-<div class="highlight"><pre><span></span><code>INSERT INTO LIVRES
-    (id,titre,auteur,ann_publi,note)
-    VALUES
-    (1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
-    (2,&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
-    (3,&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
-    (4,&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
-    (5,&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
-    (6,&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
-    (7,&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
-    (8,&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
-    (9,&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
-    (10,&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
-    (11,&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
-    (12,&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
-    (13,&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
-    (14,&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
-    (15,&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
-    (16,&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">VALUES</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="s1">&#39;Orwell&#39;</span><span class="p">,</span><span class="mi">1949</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Dune&#39;</span><span class="p">,</span><span class="s1">&#39;Herbert&#39;</span><span class="p">,</span><span class="mi">1965</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1951</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Le meilleur des mondes&#39;</span><span class="p">,</span><span class="s1">&#39;Huxley&#39;</span><span class="p">,</span><span class="mi">1931</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Fahrenheit 451&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1953</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1969</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Chroniques martiennes&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Blade Runner&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;La Planète des singes&#39;</span><span class="p">,</span><span class="s1">&#39;Boulle&#39;</span><span class="p">,</span><span class="mi">1963</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;Ravage&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1943</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;Le Maître du Haut Château&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1962</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;Le monde des Ā&#39;</span><span class="p">,</span><span class="s1">&#39;Van Vogt&#39;</span><span class="p">,</span><span class="mi">1945</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1955</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span><span class="s1">&#39;Verne&#39;</span><span class="p">,</span><span class="mi">1865</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Un message devrait vous préciser que votre requête a été exécutée avec succès :</p>
 <p><img alt="" src="../img/nsi_term_bd_sql_6.png" /></p>
@@ -2474,8 +2474,8 @@
 <p><img alt="" src="../img/nsi_term_bd_sql_7.png" /></p>
 <h3 id="activite-33">activité 3.3</h3>
 <p>Saisissez la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>SELECT id, titre, auteur, ann_publi, note
-FROM LIVRES
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">auteur</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
 </code></pre></div>
 <p>puis appuyez sur le triangle (ou la touche F5)</p>
 <p>Après un temps plus ou moins long, vous devriez voir s'afficher ceci :</p>
@@ -2484,18 +2484,18 @@ FROM LIVRES
 <p>Effectuez une requête qui permettra d'obtenir le titre et l'auteur de tous les livres présents dans la table LIVRES.</p>
 <h3 id="activite-35">activité 3.5</h3>
 <p>Saisissez et testez la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>SELECT titre, ann_publi
-FROM LIVRES
-WHERE auteur=&#39;Asimov&#39;
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">auteur</span><span class="o">=</span><span class="s1">&#39;Asimov&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>Vérifiez que vous obtenez bien uniquement les livres écrits par Isaac Asimov.</p>
 <h3 id="activite-36">activité 3.6</h3>
 <p>Écrivez et testez une requête permettant d'obtenir uniquement les titres des livres écrits par Philip K.Dick.</p>
 <h3 id="activite-37">activité 3.7</h3>
 <p>Saisissez et testez la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>SELECT titre, ann_publi
-FROM LIVRES
-WHERE auteur=&#39;Asimov&#39; AND ann_publi&gt;1953
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">auteur</span><span class="o">=</span><span class="s1">&#39;Asimov&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ann_publi</span><span class="o">&gt;</span><span class="mi">1953</span><span class="w"></span>
 </code></pre></div>
 <p>Vérifiez que nous obtenons bien le livre écrit par Asimov publié après 1953.</p>
 <h3 id="activite-38">activité 3.8</h3>
@@ -2504,55 +2504,55 @@ WHERE auteur=&#39;Asimov&#39; AND ann_publi&gt;1953
 <p>Écrivez une requête SQL permettant d'obtenir les livres de K.Dick classés du plus ancien ou plus récent.</p>
 <h3 id="activite-310">activité 3.10</h3>
 <p>Créez une nouvelle base de données que vous nommerez par exemple db_livres_auteurs.db, puis créez une table AUTEURS à l'aide de la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>CREATE TABLE AUTEURS
-(id INT, nom TEXT, prenom TEXT, ann_naissance INT, langue_ecriture TEXT, PRIMARY KEY (id));
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
 <p>Créez ensuite une deuxième table (LIVRES) :</p>
-<div class="highlight"><pre><span></span><code>CREATE TABLE LIVRES
-(id INT, titre TEXT, id_auteur INT, ann_publi INT, note INT, PRIMARY KEY (id), FOREIGN KEY (id_auteur) REFERENCES AUTEURS(id));
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_auteur</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">(</span><span class="n">id</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
 <p>Comme vous l'avez sans doute remarqué nous avons précisé dans notre requête que l'attribut "id_auteur" jouera le rôle de clé étrangère : liaison entre "id_auteur" de la table  LIVRES et "id" de la table AUTEURS (FOREIGN KEY (id_auteur) REFERENCES AUTEURS(id)).</p>
 <p>Ajoutez des données à la table AUTEURS à l'aide de la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>INSERT INTO AUTEURS
-(id,nom,prenom,ann_naissance,langue_ecriture)
-VALUES
-(1,&#39;Orwell&#39;,&#39;George&#39;,1903,&#39;anglais&#39;),
-(2,&#39;Herbert&#39;,&#39;Frank&#39;,1920,&#39;anglais&#39;),
-(3,&#39;Asimov&#39;,&#39;Isaac&#39;,1920,&#39;anglais&#39;),
-(4,&#39;Huxley&#39;,&#39;Aldous&#39;,1894,&#39;anglais&#39;),
-(5,&#39;Bradbury&#39;,&#39;Ray&#39;,1920,&#39;anglais&#39;),
-(6,&#39;K.Dick&#39;,&#39;Philip&#39;,1928,&#39;anglais&#39;),
-(7,&#39;Barjavel&#39;,&#39;René&#39;,1911,&#39;français&#39;),
-(8,&#39;Boulle&#39;,&#39;Pierre&#39;,1912,&#39;français&#39;),
-(9,&#39;Van Vogt&#39;,&#39;Alfred Elton&#39;,1912,&#39;anglais&#39;),
-(10,&#39;Verne&#39;,&#39;Jules&#39;,1828,&#39;français&#39;);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="n">prenom</span><span class="p">,</span><span class="n">ann_naissance</span><span class="p">,</span><span class="n">langue_ecriture</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"></span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;Orwell&#39;</span><span class="p">,</span><span class="s1">&#39;George&#39;</span><span class="p">,</span><span class="mi">1903</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Herbert&#39;</span><span class="p">,</span><span class="s1">&#39;Frank&#39;</span><span class="p">,</span><span class="mi">1920</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="s1">&#39;Isaac&#39;</span><span class="p">,</span><span class="mi">1920</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Huxley&#39;</span><span class="p">,</span><span class="s1">&#39;Aldous&#39;</span><span class="p">,</span><span class="mi">1894</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="s1">&#39;Ray&#39;</span><span class="p">,</span><span class="mi">1920</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="s1">&#39;Philip&#39;</span><span class="p">,</span><span class="mi">1928</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="s1">&#39;René&#39;</span><span class="p">,</span><span class="mi">1911</span><span class="p">,</span><span class="s1">&#39;français&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;Boulle&#39;</span><span class="p">,</span><span class="s1">&#39;Pierre&#39;</span><span class="p">,</span><span class="mi">1912</span><span class="p">,</span><span class="s1">&#39;français&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Van Vogt&#39;</span><span class="p">,</span><span class="s1">&#39;Alfred Elton&#39;</span><span class="p">,</span><span class="mi">1912</span><span class="p">,</span><span class="s1">&#39;anglais&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Verne&#39;</span><span class="p">,</span><span class="s1">&#39;Jules&#39;</span><span class="p">,</span><span class="mi">1828</span><span class="p">,</span><span class="s1">&#39;français&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Ajoutez des données à la table LIVRES à l'aide de la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>INSERT INTO LIVRES
-(id,titre,id_auteur,ann_publi,note)
-VALUES
-(1,&#39;1984&#39;,1,1949,10),
-(2,&#39;Dune&#39;,2,1965,8),
-(3,&#39;Fondation&#39;,3,1951,9),
-(4,&#39;Le meilleur des mondes&#39;,4,1931,7),
-(5,&#39;Fahrenheit 451&#39;,5,1953,7),
-(6,&#39;Ubik&#39;,6,1969,9),
-(7,&#39;Chroniques martiennes&#39;,5,1950,8),
-(8,&#39;La nuit des temps&#39;,7,1968,7),
-(9,&#39;Blade Runner&#39;,6,1968,8),
-(10,&#39;Les Robots&#39;,3,1950,9),
-(11,&#39;La Planète des singes&#39;,8,1963,8),
-(12,&#39;Ravage&#39;,7,1943,8),
-(13,&#39;Le Maître du Haut Château&#39;,6,1962,8),
-(14,&#39;Le monde des Ā&#39;,9,1945,7),
-(15,&#39;La Fin de l’éternité&#39;,3,1955,8),
-(16,&#39;De la Terre à la Lune&#39;,10,1865,10);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">id_auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"></span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1949</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Dune&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1965</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1951</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Le meilleur des mondes&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1931</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Fahrenheit 451&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1953</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1969</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Chroniques martiennes&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Blade Runner&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;La Planète des singes&#39;</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1963</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;Ravage&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1943</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;Le Maître du Haut Château&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1962</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;Le monde des Ā&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1945</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1955</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1865</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <h3 id="activite-311">activité 3.11</h3>
 <p>Saisissez et testez la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>SELECT titre,nom, prenom
-FROM LIVRES
-INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="w"></span>
 </code></pre></div>
 <p>Rappel : attention, si un même nom d'attribut est présent dans les 2 tables (par exemple ici l'attribut id), il est nécessaire d'ajouter le nom de la table devant afin de pouvoir les distinguer (AUTEURS.id et LIVRES.id).</p>
 <h3 id="activite-312">activité 3.12</h3>
@@ -2560,29 +2560,29 @@ INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
 <h3 id="activite-313">activité 3.13</h3>
 <p>Nous allons repartir avec une nouvelle base de données. Créez une nouvelle base de données nommée "db_livres.db".</p>
 <p>Créez ensuite une table LIVRES à l'aide de la requête suivante :</p>
-<div class="highlight"><pre><span></span><code>CREATE TABLE LIVRES
-(id INT, titre TEXT, auteur TEXT, ann_publi INT, note INT, PRIMARY KEY (id));
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">auteur</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
 <p>Ajoutez des données à la table LIVRES à l'aide de la requête SQL suivante :</p>
-<div class="highlight"><pre><span></span><code>INSERT INTO LIVRES
-(id,titre,auteur,ann_publi,note)
-VALUES
-(1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
-(2,&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
-(3,&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
-(4,&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
-(5,&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
-(6,&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
-(7,&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
-(8,&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
-(9,&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
-(10,&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
-(11,&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
-(12,&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
-(13,&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
-(14,&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
-(15,&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
-(16,&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10);
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"></span>
+<span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span><span class="w"></span>
+<span class="k">VALUES</span><span class="w"></span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="s1">&#39;Orwell&#39;</span><span class="p">,</span><span class="mi">1949</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Dune&#39;</span><span class="p">,</span><span class="s1">&#39;Herbert&#39;</span><span class="p">,</span><span class="mi">1965</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1951</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Le meilleur des mondes&#39;</span><span class="p">,</span><span class="s1">&#39;Huxley&#39;</span><span class="p">,</span><span class="mi">1931</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Fahrenheit 451&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1953</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1969</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Chroniques martiennes&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Blade Runner&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;La Planète des singes&#39;</span><span class="p">,</span><span class="s1">&#39;Boulle&#39;</span><span class="p">,</span><span class="mi">1963</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;Ravage&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1943</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;Le Maître du Haut Château&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1962</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;Le monde des Ā&#39;</span><span class="p">,</span><span class="s1">&#39;Van Vogt&#39;</span><span class="p">,</span><span class="mi">1945</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1955</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span><span class="s1">&#39;Verne&#39;</span><span class="p">,</span><span class="mi">1865</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <h3 id="activite-314">activité 3.14</h3>
 <p>À l'aide d'une requête SQL, ajoutez à la table LIVRES le livre suivant :</p>

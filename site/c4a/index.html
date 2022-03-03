@@ -2232,38 +2232,38 @@
 <p>Dans cette activté, nous allons utiliser le module Python Turtle. Ce module permet de dessiner très simplement.</p>
 <p>Étudiez le Wikibook consacré au module Turtle (<a href="https://fr.wikibooks.org/wiki/Programmation_Python/Turtle">wikibook Turtle</a>) afin d'acquérir les bases de ce module.</p>
 <p>Essayez de prévoir le résultat de l'exécution du programme ci-dessus. Vérifiez votre hypothèse en exécutant le programme.</p>
-<div class="highlight"><pre><span></span><code>import turtle as t
-t.forward(100)
-t.left(120)
-t.forward(100)
-t.left(120)
-t.forward(100)
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span> <span class="k">as</span> <span class="nn">t</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 <p>Nous allons maintenant étudier le flocon de Koch.</p>
 <p>Visionnez la vidéo consacrée au flocon de Koch : <a href="https://www.youtube.com/watch?v=PW_Pka9iBko&amp;t=1s">vidéo consacrée au flocon de Koch</a></p>
 <p>Après avoir testé le programme ci-dessous, vous l'étudierez attentivement. Vous vous concentrerez notamment sur le rôle des paramètres taille et etape de la fonction flocon.</p>
-<div class="highlight"><pre><span></span><code>import turtle as t
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span> <span class="k">as</span> <span class="nn">t</span>
 
-def koch(longueur, n):
-    if n == 0:
-        t.forward(longueur)
-    else:
-        koch(longueur/3, n-1)
-        t.left(60)
-        koch(longueur/3, n-1)
-        t.right(120)
-        koch(longueur/3, n-1)
-        t.left(60)
-        koch(longueur/3, n-1)
+<span class="k">def</span> <span class="nf">koch</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">longueur</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">longueur</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">longueur</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">longueur</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">longueur</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-def flocon(taille, etape):
-    koch(taille, etape)
-    t.right(120)
-    koch(taille, etape)
-    t.right(120)
-    koch(taille, etape)
+<span class="k">def</span> <span class="nf">flocon</span><span class="p">(</span><span class="n">taille</span><span class="p">,</span> <span class="n">etape</span><span class="p">):</span>
+    <span class="n">koch</span><span class="p">(</span><span class="n">taille</span><span class="p">,</span> <span class="n">etape</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">koch</span><span class="p">(</span><span class="n">taille</span><span class="p">,</span> <span class="n">etape</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">koch</span><span class="p">(</span><span class="n">taille</span><span class="p">,</span> <span class="n">etape</span><span class="p">)</span>
 
-flocon(100, 3)
+<span class="n">flocon</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 
               
