@@ -46,7 +46,7 @@ Table LIVRES
 ## 2) requêtes d'interrogation
 ### a) requêtes d'interrogation "simples"
 Quand on désire extraire des informations d'une table, on effectue une requête d'interrogation à l'aide du mot clé SELECT. Voici un exemple de requête d'interrogation :
-```
+```sql
 SELECT id, titre, id_auteur, ann_publi, note
 FROM LIVRES
 ```
@@ -55,19 +55,19 @@ Cette requête va nous permettre d'obtenir l'id, le titre, l'id de l'auteur, l'a
 D'une façon générale, le mot clé SELECT est suivi par les attributs que l'on désire obtenir. Le mot clé FROM est suivi par la table concernée.
 
 Il est possible d'obtenir uniquement certains attributs. Par exemple :
-```
+```sql
 SELECT nom, prenom
 FROM AUTEURS
 ```
 nous permettra d'obtenir le nom et le prénom de tous les auteurs présents dans la table AUTEURS.
 
 À noter qu'il est possible d'obtenir tous les attributs sans être obligé de tous les noter grâce au caractère étoile * :
-```
+```sql
 SELECT *
 FROM AUTEURS
 ```
 sera équivalent à 
-```
+```sql
 SELECT id, nom, prenom, ann_naissance, langue_ecriture
 FROM AUTEURS
 ```
@@ -76,7 +76,7 @@ FROM AUTEURS
 Il est possible d'utiliser la clause WHERE afin d'imposer une (ou des) condition(s) permettant de sélectionner uniquement certaines lignes.
 
 La condition doit suivre le mot-clé WHERE :
-```
+```sql
 SELECT titre
 FROM LIVRES
 WHERE note > 9
@@ -84,7 +84,7 @@ WHERE note > 9
 La requête ci-dessus permettra d'afficher uniquement les titres qui ont une note strictement supérieure à 9 (soit "1984" et "De la Terre à la Lune")
 
 Il est possible de combiner les conditions à l'aide d'un OR ou d'un AND :
-```
+```sql
 SELECT nom
 FROM AUTEURS
 WHERE langue_ecriture = 'français' AND ann_naissance > 1900
@@ -92,7 +92,7 @@ WHERE langue_ecriture = 'français' AND ann_naissance > 1900
 Cette requête permet d'obtenir le nom des auteurs nés après 1900 qui écrivent en français (soit ici "Barjavel" et "Boulle") 
 
 Il est aussi possible d'utiliser le OR à la place du AND :
-```
+```sql
 SELECT nom
 FROM AUTEURS
 WHERE langue_ecriture = 'français' OR ann_naissance > 1920
@@ -101,7 +101,7 @@ Cette requête permet d'obtenir le nom des auteurs qui écrivent en français (q
 
 ### c) mettre dans l'ordre les réponses : la clause ORDER BY
 Il est possible de classer les résultats d'une requête par ordre croissant grâce à la clause ORDER BY :
-```
+```sql
 SELECT nom
 FROM AUTEURS
 WHERE langue_ecriture = 'français' ORDER BY ann_naissance
@@ -109,7 +109,7 @@ WHERE langue_ecriture = 'français' ORDER BY ann_naissance
 La requête ci-dessus permettra d'obtenir le nom des auteurs écrivant en français classé en fonction de leur année de naissance (ici on obtiendra donc : "Verne", "Barjavel", "Boulle")
 
 En rajoutant DESC, on obtient l'ordre décroissant :
-```
+```sql
 SELECT nom
 FROM AUTEURS
 WHERE langue_ecriture = 'français' ORDER BY ann_naissance DESC
@@ -117,7 +117,7 @@ WHERE langue_ecriture = 'français' ORDER BY ann_naissance DESC
 On obtiendra ici : "Boulle", "Barjavel", "Verne"
 
 À noter que si la clause ORDER BY porte sur une chaine de caractères, on obtient alors l'ordre alphabétique  :
-```
+```sql
 SELECT nom
 FROM AUTEURS
 WHERE langue_ecriture = 'français' ORDER BY nom
@@ -138,7 +138,7 @@ Table MACHINES
 
 La requête suivante :
 
-```
+```sql
 SELECT proprietaire
 FROM MACHINES
 ```
@@ -148,7 +148,7 @@ Nous avons donc un doublon : Marc apparait 2 fois
 
 Pour éviter ce doublon, nous pouvons écrire : 
 
-```
+```sql
 SELECT DISTINCT proprietaire
 FROM MACHINES
 ```
@@ -160,7 +160,7 @@ Nous avons 2 tables, grâce aux jointures nous allons pouvoir associer ces 2 tab
 En général, les jointures consistent à associer des lignes de 2 tables. Elles permettent d'établir un lien entre 2 tables. Qui dit lien entre 2 tables dit souvent clé étrangère et clé primaire.
 
 Analysons la requête suivante :
-```
+```sql
 SELECT *
 FROM LIVRES
 INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
@@ -197,7 +197,7 @@ La requête ci-dessus permettra d'obtenir le résultat suivant :
 À noter que pour éviter toute confusion il est souvent judicieux d'ajouter le nom de la table juste devant le nom de l'attribut : on écrira AUTEURS.id au lieu de simplement id, en effet, si on écrivait seulement id, il n'y aurait aucun moyen de distinguer l'id de la table LIVRES et l'id de la table AUTEURS. Je vous conseille d'adopter cette écriture systématiquement en cas de jointure, même quand cela n'est pas obligatoire (par exemple on aurait pu écrire id_auteur à la place de LIVRES.id_auteur puisqu'il y a uniquement un id_auteur dans la table LIVRES), cela vous permettra d'éviter certains déboires.
 
 Dans le cas d'une jointure, il est tout à fait possible de sélectionner certains attributs et pas d'autres (aucune obligation de sélectionner tous les attributs des 2 tables :
-```
+```sql
 SELECT LIVRES.titre, AUTEURS.nom, AUTEURS.prenom
 FROM AUTEURS
 INNER JOIN LIVRES ON LIVRES.id_auteur = AUTEURS.id
@@ -226,7 +226,7 @@ On obtiendra alors une jointure uniquement avec l'attribut titre de la table LIV
 ### f) utilisation du WHERE dans les jointures
 
 Suite à une jointure il est possible de sélectionner certaines lignes grâce à la clause WHERE :
-```
+```sql
 SELECT LIVRES.titre,AUTEURS.nom, AUTEURS.prenom
 FROM LIVRES
 INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
@@ -246,7 +246,7 @@ Pour terminer avec les jointures, vous devez savoir que nous avons abordé la jo
 
 ## 3) requêtes d'insertion
 Il est possible d'ajouter une entrée à une table grâce à une requête d'insertion :
-```
+```sql
 INSERT INTO LIVRES
 (id,titre,id_auteur,ann_publi,note)
 VALUES
@@ -255,7 +255,7 @@ VALUES
 On emploie les mots clés INSERT INTO suivi de la table concernée (ici LIVRES). Ensuite on indique les noms des attributs que l'on désire ajouter (ici (id,titre,auteur,ann_publi,note)), et enfin pour terminer les valeurs de chaque attribut (ici (17,'Hypérion','Simmons',1989,8), attention à bien respecter l'ordre : 17 correspond à id, Hypérion correspond au titre, 11 correspond à id_auteur, 1989 correspond à ann_publi et 8 correspond à note).
 ## 4) requêtes de mise à jour
 "UPDATE" va permettre de modifier une ou des entrées. Nous utiliserons "WHERE", comme dans le cas d'un "SELECT", pour spécifier les entrées à modifier. Voici un exemple de modification :
-```
+```sql
 UPDATE LIVRES
 SET note=7
 WHERE titre = 'Hypérion'
@@ -263,7 +263,7 @@ WHERE titre = 'Hypérion'
 Cette requête permet de modifier la note du(des) livre(s) ayant pour titre Hypérion
 ## 5) requêtes de suppression
 "DELETE" est utilisée pour effectuer la suppression d'une (ou de plusieurs) entrée(s). Ici aussi c'est le "WHERE" qui permettra de sélectionner les entrées à supprimer :
-```
+```sql
 DELETE FROM LIVRES
 WHERE titre='Hypérion'
 ```
@@ -271,7 +271,7 @@ Cette requête permet de supprimer le(les) livre(s) ayant pour titre Hypérion
 
 Attention à l'utilisation de cette requête DELETE notamment si on oublie le WHERE. Un :
 
-```
+```sql
 DELETE FROM LIVRES
 ```
 supprimerait toutes les entrées de la table LIVRES

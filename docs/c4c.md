@@ -1,6 +1,6 @@
 Considérons le programme suivant :
 
-```
+```python
 def fctA():
     print ("Début fonction fctA")
     i=0
@@ -71,7 +71,7 @@ Une fonction peut s'appeler elle-même, on parle alors de fonction récursive.
 
 Considérons de  programme suivant :
 
-```
+```python
 def fctA():
     print ("Hello")
     fctA()
@@ -92,7 +92,7 @@ Dans le cas de fonctions récursives, il est, comme pour n'importe quelle foncti
 
 Soit le programme suivant :
 
-```
+```python
 def fonct(n):
     if n>0:
         fonct(n-1)
@@ -135,7 +135,7 @@ Nous allons utiliser cette définition de la factorielle pour définir notre fon
 
 Analysons le programme suivant :
 
-```
+```python
 def fact(n) :
     if n > 0 :
         return n*fact(n-1)

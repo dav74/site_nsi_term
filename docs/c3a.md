@@ -22,7 +22,7 @@ mais pour l'instant elle ne contient aucune table (aucune relation), pour créer
 
 Copiez-collez le texte ci-dessous dans la fenêtre "SQL 1"
 
-```
+```sql
 CREATE TABLE LIVRES
 	(id INT, titre TEXT, auteur TEXT, ann_publi INT, note INT, PRIMARY KEY (id));
 ```
@@ -59,7 +59,7 @@ Nous allons maintenant ajouter des données à notre table.
 
 Toujours dans l'onglet "Exécuter le SQL", après avoir effacé la fenêtre SQL 1, copiez-collez dans cette même fenêtre la requête ci-dessous :
 
-```
+```sql
 INSERT INTO LIVRES
 	(id,titre,auteur,ann_publi,note)
 	VALUES
@@ -93,7 +93,7 @@ La table LIVRES contient bien les données souhaitées (onglet "Parcourir les do
 
 Saisissez la requête SQL suivante :
 
-```
+```sql
 SELECT id, titre, auteur, ann_publi, note
 FROM LIVRES
 ```
@@ -112,7 +112,7 @@ Effectuez une requête qui permettra d'obtenir le titre et l'auteur de tous les 
 
 Saisissez et testez la requête SQL suivante :
 
-```
+```sql
 SELECT titre, ann_publi
 FROM LIVRES
 WHERE auteur='Asimov'
@@ -128,7 +128,7 @@ Vérifiez que vous obtenez bien uniquement les livres écrits par Isaac Asimov.
 
 Saisissez et testez la requête SQL suivante :
 
-```
+```sql
 SELECT titre, ann_publi
 FROM LIVRES
 WHERE auteur='Asimov' AND ann_publi>1953
@@ -148,14 +148,14 @@ Vérifiez que nous obtenons bien le livre écrit par Asimov publié après 1953.
 
 Créez une nouvelle base de données que vous nommerez par exemple db_livres_auteurs.db, puis créez une table AUTEURS à l'aide de la requête SQL suivante :
 
-```
+```sql
 CREATE TABLE AUTEURS
 (id INT, nom TEXT, prenom TEXT, ann_naissance INT, langue_ecriture TEXT, PRIMARY KEY (id));
 ```
 
 Créez ensuite une deuxième table (LIVRES) :
 
-```
+```sql
 CREATE TABLE LIVRES
 (id INT, titre TEXT, id_auteur INT, ann_publi INT, note INT, PRIMARY KEY (id), FOREIGN KEY (id_auteur) REFERENCES AUTEURS(id));
 ```
@@ -164,7 +164,7 @@ Comme vous l'avez sans doute remarqué nous avons précisé dans notre requête 
 
 Ajoutez des données à la table AUTEURS à l'aide de la requête SQL suivante :
 
-```
+```sql
 INSERT INTO AUTEURS
 (id,nom,prenom,ann_naissance,langue_ecriture)
 VALUES
@@ -182,7 +182,7 @@ VALUES
 
 Ajoutez des données à la table LIVRES à l'aide de la requête SQL suivante :
 
-```
+```sql
 INSERT INTO LIVRES
 (id,titre,id_auteur,ann_publi,note)
 VALUES
@@ -208,7 +208,7 @@ VALUES
 
 Saisissez et testez la requête SQL suivante :
 
-```
+```sql
 SELECT titre,nom, prenom
 FROM LIVRES
 INNER JOIN AUTEURS ON LIVRES.id_auteur = AUTEURS.id
@@ -226,14 +226,14 @@ Nous allons repartir avec une nouvelle base de données. Créez une nouvelle bas
 
 Créez ensuite une table LIVRES à l'aide de la requête suivante :
 
-```
+```sql
 CREATE TABLE LIVRES
 (id INT, titre TEXT, auteur TEXT, ann_publi INT, note INT, PRIMARY KEY (id));
 ```
 
 Ajoutez des données à la table LIVRES à l'aide de la requête SQL suivante :
 
-```
+```sql
 INSERT INTO LIVRES
 (id,titre,auteur,ann_publi,note)
 VALUES

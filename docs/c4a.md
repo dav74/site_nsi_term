@@ -16,7 +16,7 @@ Dans cette activté, nous allons utiliser le module Python Turtle. Ce module per
 
 Essayez de prévoir le résultat de l'exécution du programme ci-dessus. Vérifiez votre hypothèse en exécutant le programme.
 
-```
+```python
 import turtle as t
 t.forward(100)
 t.left(120)
@@ -31,7 +31,7 @@ Visionnez la vidéo consacrée au flocon de Koch : [vidéo consacrée au flocon 
 
 Après avoir testé le programme ci-dessous, vous l'étudierez attentivement. Vous vous concentrerez notamment sur le rôle des paramètres taille et etape de la fonction flocon.
 
-```
+```python
 import turtle as t
 
 def koch(longueur, n):

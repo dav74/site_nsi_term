@@ -111,7 +111,7 @@ b) Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe d
 
 3) On considère la classe Noeud définie de la façon suivante en Python :
 
-```
+```python
 class Noeud():
     def __init__(self, v):
         self.ag = None
@@ -144,7 +144,7 @@ class Noeud():
 			
 a) Représenter l’arbre construit suite à l’exécution de l’instruction suivante :
 
-```
+```python
 racine = Noeud(18)
 racine.insere_tout([12, 13, 15, 16, 19, 21, 32, 23])
 ```

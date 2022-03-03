@@ -119,7 +119,7 @@ Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un gr
 
 Il est assez simple d'utiliser les matrices d'adjacence en Python grâce aux tableaux de tableaux vus l'année dernière :
 
-```
+```python
 #matrice d'ajacence
 m = [[0, 1, 1, 1, 0, 0, 0],
      [1, 0, 0, 0, 1, 1, 1],
@@ -156,7 +156,7 @@ liste d'adjacence prédécesseurs du graphe orienté cartographie :
 
 Il est possible de travailler avec des listes d'adjacences en Python en utilisant les dictionnaires :
 
-```
+```python
 #liste d'ajacence
 l = {'A':('B','C','D'), 'B':('A', 'E', 'F', 'G'), 'C':('A'), 'D':('A', 'G'), 'E':('B', 'F'), 'F':('B', 'E'), 'G':('B', 'D')}
 ```

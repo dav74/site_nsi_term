@@ -31,14 +31,14 @@ table STATIONS
 3. Écrire une requête SQL permettant d’obtenir le numéro de licence des adhérents nés après 1980 et ayant pour prénom John.
 4. Donnez le résultat de la requête SQL suivante :
 
-```
+```sql
 SELECT nom 
 FROM ADHERENTS 
 WHERE num_licence > 2000 OR  ref_station = 3
 ```
 5. Donnez le résultat de la requête SQL suivante :
 
-```
+```sql
 SELECT STATIONS.nom
 FROM STATIONS
 INNER JOIN ADHERENTS ON ADHERENTS.ref_station = STATIONS.ref
@@ -72,7 +72,7 @@ Les attributs horaireDepart et horaireArrivee sont de type TIME et s’écrivent
 
 a) On considère les requêtes SQL suivantes :
 
-```
+```sql
 DELETE FROM Train WHERE numT = 1241 ;
 DELETE FROM Reservation WHERE numT = 1241 ;
 ```
@@ -92,7 +92,7 @@ Mettre à jour la base de données en conséquence.
 
 4) Que permet de déterminer la requête suivante ?
 
-```
+```sql
 SELECT COUNT(*) FROM Reservation 
 WHERE nomClient = "Hopper" AND prenomClient = "Grace";
 ```
@@ -139,7 +139,7 @@ b) Afficher le nom des plats des catégories 'plat principal' et 'dessert', corr
 
 3) Que réalise la requête SQL suivante ?
 
-```
+```sql
 INSERT INTO Plat
 VALUES(58,'Pêche Melba', 'dessert', 'Pêches et glace vanille', 6.5);
 ```

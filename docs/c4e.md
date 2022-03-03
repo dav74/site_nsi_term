@@ -2,7 +2,7 @@
 
 Soit le programme Python suivant :
 
-```
+```python
 def fct(n):
    if n > 5:
        return 1

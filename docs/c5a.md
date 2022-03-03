@@ -50,7 +50,7 @@ Donnez le contenu de la file F, la valeur de a et la valeur de b.
 
 Soit le programme Python suivant :
 
-```
+```python
 def vide():
     return None
 def estVide(L):

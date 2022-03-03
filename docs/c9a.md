@@ -37,7 +37,7 @@ Soit la matrice d'adjacence d'un graphe G composé des sommets A, B, C, D  :
 
 Soit G un graphe non-orienté implémenté en Python comme suit :
 
-```
+```python
 G = {'A':['B', 'C', 'E'], 'B':['A', 'E'], 'C':['A','D'], 'D':['C'], 'E':['A','B']}
 ```
 Représentez le graphe G.

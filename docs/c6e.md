@@ -1,6 +1,6 @@
 ### exercice 6.1
 Soit le programme Python suivant :
-```
+```python
 inventaire = {'pommes': 430, 'bananes': 312,'oranges' : 274, 'poires' : 137}
 
 stock = 0
@@ -14,7 +14,7 @@ Quelle est la valeur de la variable stock après l'exécution de ce programme ?
 
 Soit le programme Python suivant :
 
-```
+```python
 
 P = [{"nom":"Turing","prenom":"Alan","age":28},{"nom":"Lovelace","prenom":"Ada","age":27}]
 ```
@@ -24,7 +24,7 @@ Qu'obtient-on si  on  tape P[1]['age'] dans une console Python  ?
 
 Soit le programme Python suivant :
 
-```
+```python
 def ajoute(stock,element,quantite):
   if element in stock:
     stock[element] = stock[element] + quantite

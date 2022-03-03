@@ -67,7 +67,7 @@ Donnez l’état de la pile pile après l’exécution de ce programme.
 
 Soit le programme Python suivant :
 
-```
+```python
 from collections import deque
 file = deque([])
 tab = [2,78,6,89,3,17]
@@ -112,7 +112,7 @@ Exemple : si P est la pile de la question 1 : hauteur_pile(P) = 4.
 Recopier et compléter sur votre feuille le programme Python suivant implémentant la fonction
 *hauteur_pile* en remplaçant les ??? par les bonnes instructions.
 
-```
+```python
 def hauteur_pile ( P ):
 Q = pileVide ()
 n = 0
