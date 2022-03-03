@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
     
     
       
@@ -17,17 +17,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
-      
-    
-    
-    
-      
+          
+          
+          <meta name="theme-color" content="#000000">
         
+      
+    
+    
+    
+      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -51,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
   
     
     
@@ -2371,11 +2374,11 @@ ATTENTION : comme on trouve 2 définitions pour la profondeur, on peut trouver 2
 <p>Il est possible d'avoir des arbres binaires de même taille, mais de "forme" très différente :</p>
 <p><img alt="" src="../img/nsi_term_structDo_arbre_4.png" /></p>
 <p>Sur le schéma ci-dessus l'arbre 1 est dit " filiforme" alors que l'arbre 2 est dit "complet" (on dira qu'un arbre binaire est complet si tous les noeuds possèdent 2 fils et que toutes les feuilles se situent à la même profondeur). On pourra aussi dire que l'arbre 1 est déséquilibré alors que l'arbre 2 est équilibré.</p>
-<p>Si on prend un arbre filiforme de taille n, on peut dire que la hauteur de cet arbre est égale à $n−1$ (si on prend la définition de la hauteur d'un arbre où la racine a une profondeur 0)</p>
-<p>Si on prend un arbre complet de taille n, on peut démontrer que la hauteur de cet arbre est égale à la partie entière de $log_2(n)$ (on arrondit à l'entier immédiatement inférieur le $log_2(n)$). Dans le cas de l'arbre 2, nous avons $log_2(7)=2,8$ donc en prenant la partie entière on a bien la hauteur de l'arbre 2 égale à 2.</p>
+<p>Si on prend un arbre filiforme de taille n, on peut dire que la hauteur de cet arbre est égale à <span class="arithmatex">\(n−1\)</span> (si on prend la définition de la hauteur d'un arbre où la racine a une profondeur 0)</p>
+<p>Si on prend un arbre complet de taille n, on peut démontrer que la hauteur de cet arbre est égale à la partie entière de <span class="arithmatex">\(log_2(n)\)</span> (on arrondit à l'entier immédiatement inférieur le <span class="arithmatex">\(log_2(n)\)</span>). Dans le cas de l'arbre 2, nous avons <span class="arithmatex">\(log_2(7)=2,8\)</span> donc en prenant la partie entière on a bien la hauteur de l'arbre 2 égale à 2.</p>
 <p>Un arbre filiforme et un arbre complet étant deux cas extrêmes, on peut affirmer que pour un arbre binaire quelconque :</p>
-<p>$\lfloor log_2(n) \rfloor  \leq h \leq n-1$</p>
-<p>avec n la taille de l'arbre et h la hauteur de l'arbre ($\lfloor log_2(n) \rfloor$ permet de prendre la partie entière du logarithme base 2 de n)</p>
+<p><span class="arithmatex">\(\lfloor log_2(n) \rfloor  \leq h \leq n-1\)</span></p>
+<p>avec n la taille de l'arbre et h la hauteur de l'arbre (<span class="arithmatex">\(\lfloor log_2(n) \rfloor\)</span> permet de prendre la partie entière du logarithme base 2 de n)</p>
 <h3 id="e-les-arbres-binaires-en-python">e) les arbres binaires en Python</h3>
 <p>Python ne propose pas de façon native l'implémentation des arbres binaires. Mais nous aurons, plus tard dans l'année, l'occasion d'implémenter des arbres binaires en Python en utilisant la programmation orientée objet.</p>
 <h2 id="3-les-arbres-binaires-de-recherche">3) les arbres binaires de recherche</h2>
@@ -2457,7 +2460,13 @@ ATTENTION : comme on trouve 2 définitions pour la profondeur, on peut trouver 2
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.5413a266.min.js"></script>
+      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
