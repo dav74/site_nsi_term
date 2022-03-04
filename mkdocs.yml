@@ -23,12 +23,12 @@ nav:
       - 'Cours': 'c1c.md'
       - 'Activités' : 'c1a.md'
       - 'Révision' : 'c1r.md'
-    - 'C2 : les bases de données relationnelles':
+    - 'C2 : bd relationnelles':
       - 'Cours': 'c2c.md'
       - 'Activités' : 'c2a.md'
       - 'Exercices' : 'c2e.md'
       - 'Révision' : 'c2r.md'
-    - 'C3 : le langage SQL':
+    - 'C3 : langage SQL':
       - 'Cours': 'c3c.md'
       - 'Activités' : 'c3a.md'
       - 'Exercices' : 'c3e.md'
@@ -39,7 +39,7 @@ nav:
       - 'Activités' : 'c4a.md'
       - 'Exercices' : 'c4e.md'
       - 'Révision' : 'c4r.md'
-    - 'C5 : les listes, les piles et les files':
+    - 'C5 : listes-piles-files':
       - 'Cours': 'c5c.md'
       - 'Activités' : 'c5a.md'
       - 'Exercices' : 'c5e.md'
@@ -54,7 +54,7 @@ nav:
       - 'Activités' : 'c7a.md'
       - 'Exercices' : 'c7e.md'
       - 'Révision' : 'c7r.md'
-    - 'C8 : algorithmes sur les arbres binaires':
+    - 'C8 : algo arbres binaires':
       - 'Cours': 'c8c.md'
       - 'Activités' : 'c8a.md'
       - 'Exercices' : 'c8e.md'
@@ -64,7 +64,7 @@ nav:
       - 'Activités' : 'c9a.md'
       - 'Exercices' : 'c9e.md'
       - 'Révision' : 'c9r.md'
-    - '*C10 : algorithmes sur les graphes':
+    - '*C10 : algo graphes':
       - 'Cours': 'c10c.md'
       - 'Activités' : 'c10a.md'
       - 'Exercices' : 'c10e.md'
@@ -81,7 +81,7 @@ nav:
       - 'Exercices' : 'c12e.md'
       - 'Révision' : 'c12r.md'
   - 'Partie 4':
-    - '*C13 : calculabilité et décidabilité':
+    - '*C13 : calculabilité-décidabilité':
       - 'Cours': 'c13c.md'
       - 'Activités' : 'c13a.md'
       - 'Exercices' : 'c13e.md'
