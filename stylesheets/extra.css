@@ -15,3 +15,7 @@
 .md-grid {
   max-width: 1500px; 
 }
+
+.md-header__button.md-logo{
+  display: none;
+}
