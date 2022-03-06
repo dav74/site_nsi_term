@@ -1,6 +1,7 @@
 site_name: NSI terminale
 theme:
   name: material
+  favicon: img/favicon.png
   language: fr
   palette:
     primary: black
