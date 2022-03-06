@@ -11,3 +11,7 @@
   font-size : 40px;
   color : gray;
 }
+
+.md-grid {
+  max-width: 1500px; 
+}
