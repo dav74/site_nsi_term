@@ -2474,35 +2474,36 @@ Après l'exécution du programme ci-dessus, la variable <em>point</em> aura pour
 <span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
 <span class="n">point</span><span class="o">=</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span>
 </code></pre></div>
-<p>N.B : random.random() renvoie une valeur aléatoire comprise entre 0 et 1</p>
+<p>N.B : <code>random.random()</code> renvoie une valeur aléatoire comprise entre 0 et 1</p>
 <p>Comme vous l'avez remarqué, il est possible d'utiliser une instruction conditionnelle (if / else) dans une méthode. Il est donc possible d'utiliser dans le même programme le paradigme objet et le paradigme impératif.</p>
 <p>Il est maintenant possible d'organiser un combat virtuel entre nos 2 personnages grâce à la classe <em>Personnage</em> que nous venons de créer :</p>
-<p><code>python
-import random
-class Personnage:
-  def __init__(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self):
-    if random.random()&gt;0.5:
-      nbPoint = 1
-    else :
-      nbPoint = 2
-    self.vie=self.vie-nbPoint
-def game():
-  bilbo = Personnage(20)
-  gollum = Personnage(20)
-  while bilbo.donneEtat()&gt;0 and gollum.donneEtat()&gt;0 :
-    bilbo.perdVie()
-    gollum.perdVie()
-  if bilbo.donneEtat()&lt;=0 and gollum.donneEtat()&gt;0:
-    msg = f"Gollum est vainqueur, il lui reste encore {gollum.donneEtat()} points alors que Bilbo est mort"
-  elif gollum.donneEtat()&lt;=0 and bilbo.donneEtat()&gt;0:
-    msg = f"Bilbo est vainqueur, il lui reste encore {bilbo.donneEtat()} points alors que Gollum est mort"
-  else :
-    msg = "Les deux combattants sont morts en même temps"
-  return msg</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span> <span class="p">:</span>
+      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="n">nbPoint</span>
+<span class="k">def</span> <span class="nf">game</span><span class="p">():</span>
+  <span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="n">gollum</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="k">while</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+    <span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+    <span class="n">gollum</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Gollum est vainqueur, il lui reste encore </span><span class="si">{</span><span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="si">}</span><span class="s2"> points alors que Bilbo est mort&quot;</span>
+  <span class="k">elif</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Bilbo est vainqueur, il lui reste encore </span><span class="si">{</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="si">}</span><span class="s2"> points alors que Gollum est mort&quot;</span>
+  <span class="k">else</span> <span class="p">:</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Les deux combattants sont morts en même temps&quot;</span>
+  <span class="k">return</span> <span class="n">msg</span>
+</code></pre></div>
 <p>Nous avons encore ici la démonstration qu'il est possible d'utiliser le paradigme objet et le paradigme impératif dans un même programme.</p>
 <h2 id="4-conclusion">4) conclusion</h2>
 <p>Il est important de bien comprendre qu'un programmeur doit maitriser plusieurs paradigmes de programmation (impératif, objet ou encore fonctionnelle). En effet, il sera plus facile d'utiliser le paradigme objet dans certains cas alors que dans d'autres situations, l'utilisation du paradigme fonctionnel sera préférable. Être capable de choisir le "bon" paradigme en fonction des situations fait partie du bagage de tout bon programmeur.</p>

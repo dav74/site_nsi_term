@@ -347,7 +347,8 @@ while run :
   surf.fill((0,0,0))
   pygame.display.flip()
 pygame.quit()
- ```
+
+```
  
 Vous trouverez la liste complète des touches dans la documentation officielle de pygame.
  
