@@ -2672,9 +2672,9 @@ pygame.quit()
 Il est aussi possible de gérer des événements de type "clavier" :</p>
 <h3 id="projet-212">projet 2.12</h3>
 <p>Saisissez, analysez et testez ce code, observez la console lorsque vous appuyez sur les touches "Entrée", "Espace" et "A" (vous pouvez aussi constater qu'il ne se passe rien quand )</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
+<div class="highlight"><pre><span></span><code>import pygame
+
+surf = pygame.display.set_mode((800,600))
 run = True
 while run :
   for event in pygame.event.get():
@@ -2682,17 +2682,17 @@ while run :
       run = False
     if event.type == pygame.KEYDOWN :
       if event.key == pygame.K_SPACE :
-        print ("vous avez appuyé sur la touche espace")
+        print (&quot;vous avez appuyé sur la touche espace&quot;)
       elif event.key == pygame.K_a :
-        print ("vous avez appuyé sur la touche A")
+        print (&quot;vous avez appuyé sur la touche A&quot;)
       elif event.key == pygame.K_RETURN :
-        print ("vous avez appuyé sur la touche Entrée")
+        print (&quot;vous avez appuyé sur la touche Entrée&quot;)
       else :
-        print ("vous avez appuyé sur une touche")
+        print (&quot;vous avez appuyé sur une touche&quot;)
   surf.fill((0,0,0))
   pygame.display.flip()
 pygame.quit()
- ```</p>
+</code></pre></div>
 <p>Vous trouverez la liste complète des touches dans la documentation officielle de pygame.</p>
 <h2 id="2-jeu-du-morpion">2) jeu du morpion</h2>
 <p>Vous en savez suffisamment sur la bibliothèque pygame pour pouvoir vous lancer dans la conception d'un jeu du morpion.</p>

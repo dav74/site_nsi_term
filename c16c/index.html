@@ -2402,25 +2402,25 @@
 <p>Il va donc être possible d'appliquer la même méthode que pour Fibonacci.</p>
 <p>À noter que dans des cas plus "difficiles à traiter" comme 171 cts, on va retrouver de nombreuses fois exactement les mêmes calculs, il est donc potentiellement intéressant d'utiliser la programmation dynamique.</p>
 <p>Voici donc notre programme de calcul de rendu de monnaie modifiée :</p>
-<p>```python
-def rendu_monnaie_mem(P,X):
-  mem = [0]*(X+1)
-  return rendu_monnaie_mem_c(P,X,mem)</p>
-<p>def rendu_monnaie_mem_c(P,X,m):
-  if X==0:
-    return 0
-  elif m[X]&gt;0:
-    return m[X]
-  else:
-    mini = 1000
-    for i in range(len(P)):
-      if P[i]&lt;=X:
-        nb=1+rendu_monnaie_mem_c(P,X-P[i],m)
-        if nb&lt;mini:
-          mini = nb
-          m[X] = mini
-  return mini</p>
-<p>```
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_monnaie_mem</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+  <span class="n">mem</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">X</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">rendu_monnaie_mem_c</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">mem</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rendu_monnaie_mem_c</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">X</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">elif</span> <span class="n">m</span><span class="p">[</span><span class="n">X</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">[</span><span class="n">X</span><span class="p">]</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="mi">1000</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">)):</span>
+      <span class="k">if</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">X</span><span class="p">:</span>
+        <span class="n">nb</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">rendu_monnaie_mem_c</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="o">-</span><span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">m</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nb</span><span class="o">&lt;</span><span class="n">mini</span><span class="p">:</span>
+          <span class="n">mini</span> <span class="o">=</span> <span class="n">nb</span>
+          <span class="n">m</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">=</span> <span class="n">mini</span>
+  <span class="k">return</span> <span class="n">mini</span>
+</code></pre></div>
  Ce programme ressemble beaucoup à programme utiliser pour la suite de Fibonacci, il ne devrait donc pas vous poser de problème.</p>
 <p>Si maintenant nous testons ce programme en tapant dans  la console Python <em>rendu_monnaie_mem((2,5,10,50,100),171)</em>, tout fonctionne parfaitement, il suffit d'une fraction de seconde pour obtenir le résultat qui est 7.</p>
 
