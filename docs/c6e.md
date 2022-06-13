@@ -36,3 +36,12 @@ ajoute(stock,'vis',5)
 ajoute(stock,'chevilles',3)
 ```
 Quelle est la valeur de la variable stock à la fin de cette exécution ?
+
+### exercices du bac
+
+- [Sujet 6 2021 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_6.pdf)
+- [Sujet 10 2021 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_10.pdf)
+- [Sujet 6 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_06.pdf)
+- [Sujet 6 2022 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_06.pdf)
+- [Sujet 7 2022 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_07.pdf)
+
