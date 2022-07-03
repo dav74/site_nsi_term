@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-141" class="md-skip">
+        <a href="#exercices-du-bac" class="md-skip">
           Aller au contenu
         </a>
       
@@ -1542,15 +1542,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercice-141" class="md-nav__link">
-    exercice 14.1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-142" class="md-nav__link">
-    exercice 14.2
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2191,15 +2184,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercice-141" class="md-nav__link">
-    exercice 14.1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-142" class="md-nav__link">
-    exercice 14.2
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2220,121 +2206,21 @@
 
   <h1>Exercices</h1>
 
-<h3 id="exercice-141">exercice 14.1</h3>
-<p>Cet exercice est tiré de la banque de sujet de l'épreuve pratique de terminale</p>
-<p>On veut écrire une classe pour gérer une file à l’aide d’une liste chaînée. On dispose d’une
-classe Maillon permettant la création d’un maillon de la chaîne, celui-ci étant constitué
-d’une valeur et d’une référence au maillon suivant de la chaîne :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Compléter la classe File suivante où l’attribut dernier_file contient le maillon correspondant à l’élément arrivé en dernier dans la file :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="k">class</span> <span class="nc">File</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
-
-    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">nouveau_maillon</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-        <span class="n">nouveau_maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="o">...</span>
-
-    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">==</span> <span class="kc">None</span>
-
-    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
-        <span class="k">while</span> <span class="n">maillon</span> <span class="o">!=</span> <span class="o">...</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
-            <span class="n">maillon</span> <span class="o">=</span> <span class="o">...</span>
-
-    <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">suivant</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span>
-                <span class="n">resultat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">valeur</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
-                <span class="k">return</span> <span class="n">resultat</span>
-            <span class="n">maillon</span> <span class="o">=</span> <span class="o">...</span>
-            <span class="k">while</span> <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span><span class="o">.</span><span class="n">suivant</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
-                <span class="n">maillon</span> <span class="o">=</span> <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span>
-            <span class="n">resultat</span> <span class="o">=</span> <span class="o">...</span>
-            <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="k">return</span> <span class="n">resultat</span>
-        <span class="k">return</span> <span class="kc">None</span> 
-</code></pre></div>
-<h3 id="exercice-142">exercice 14.2</h3>
-<p>Cet exercice est tiré du sujet de bac 2021</p>
-<p>Une agence immobilière développe un programme pour gérer les biens immobiliers qu’elle propose à la vente.
-Dans ce programme, pour modéliser les données de biens immobiliers, on définit une classe Bim avec les attributs suivants :</p>
+<h3 id="exercices-du-bac">exercices du bac</h3>
 <ul>
-<li>
-<p>nt de type str représente la nature du bien (appartement, maison, bureau, commerces, … ) ;</p>
-</li>
-<li>
-<p>sf de type float est la surface du bien ;</p>
-</li>
-<li>
-<p>pm de type float est le prix moyen par m² du bien qui dépend de son emplacement.</p>
-</li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_3.pdf">Sujet 3 2021 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_4.pdf">Sujet 4 2021 Exercice 2</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_5.pdf">Sujet 5 2021 Exercice 3</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_3.pdf">Sujet 6 2021 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_10.pdf">Sujet 10 2021 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf">Sujet 2 2022 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_03.pdf">Sujet 3 2022 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_05.pdf">Sujet 5 2022 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_06.pdf">Sujet 6 2022 Exercice 2</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_07.pdf">Sujet 7 2022 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_08.pdf">Sujet 8 2022 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf">Sujet 10 2022 Exercice 2</a></li>
 </ul>
-<p>La classe Bim possède une méthode estim_prix qui renvoie une estimation du prix du bien. Le code (incomplet) de la classe Bim est donné ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bim</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nature</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">prix_moy</span><span class="p">):</span>
-        <span class="err">…</span>
-    <span class="k">def</span> <span class="nf">estim_prix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sf</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pm</span>
-</code></pre></div>
-<p>1) Recopier et compléter le code du constructeur de la classe Bim.</p>
-<p>2) On exécute l'instruction suivante :</p>
-<div class="highlight"><pre><span></span><code>b1 = Bim(&#39;maison&#39;, 70.0, 2000.0)
-</code></pre></div>
-<p>Que renvoie l'instruction b1.estim_prix() ? Préciser le type de la valeur renvoyée.</p>
-<p>3) On souhaite affiner l’estimation du prix d’un bien en prenant en compte sa nature :</p>
-<ul>
-<li>
-<p>pour un bien dont l’attribut nt est  'maison' la nouvelle estimation du prix est le produit de sa surface par le prix moyen par m² multiplié par 1,1 ;</p>
-</li>
-<li>
-<p>pour un bien dont l’attribut nt est  'bureau' la nouvelle estimation du prix est le produit de sa surface par le prix moyen par m² multiplié par 0,8 ;</p>
-</li>
-<li>
-<p>pour les biens d’autres natures, l’estimation du prix ne change pas.</p>
-</li>
-</ul>
-<p>Modifier le code de la méthode estim_prix  afin de prendre en compte ce changement de calcul.</p>
-<p>4) Écrire le code Python d'une fonction nb_maison(lst) qui prend en argument une liste Python de biens immobiliers de type Bim et qui renvoie le nombre d’objets de nature 'maison' contenus dans la liste lst.</p>
-<p>5) Pour une recherche efficace des biens immobiliers selon le critère de leur surface, on stocke les objets de type Bim dans un arbre binaire de recherche, nommé abr. Pour tout nœud de cet arbre :</p>
-<ul>
-<li>
-<p>tous les objets de son sous-arbre gauche ont une surface inférieure ou égale à la surface de l’objet contenue dans ce nœud ;</p>
-</li>
-<li>
-<p>tous les objets de son sous-arbre droit ont une surface strictement supérieure à la surface de l’objet contenue dans ce nœud.</p>
-</li>
-</ul>
-<p>L’objet abr dispose des méthodes suivantes :</p>
-<p>abr.est_vide() : renvoie True si abr est vide et False sinon.</p>
-<p>abr.get_v() : renvoie l’élément (de type Bim) situé à la racine de abr si abr n’est pas vide et None sinon.</p>
-<p>abr.get_g() : renvoie le sous-arbre gauche de abr si abr n’est pas vide et None sinon.</p>
-<p>abr.get_d() : renvoie le sous-arbre droit de abr si abr n’est pas vide et None sinon.</p>
-<p>a) Dans cette question, on suppose que l'arbre binaire abr a la forme ci-dessous :</p>
-<p><img alt="" src="../img/c14e_1.png" /></p>
-<p>Donner la liste les biens b1, b2, b3, b4, b5, b6 triée dans l'ordre croissant de leur surface.</p>
-<p>b) Recopier et compléter le code de la fonction récursive contient donnée ci-dessous, qui prend en arguments un nombre surface de type float et un arbre binaire de recherche abr contenant des éléments de type Bim ordonnés selon leur attribut de surface sf. La fonction contient(surface, abr) renvoie True s'il existe un bien dans abr d'une surface supérieure ou égale à surface et False sinon.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">abr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">elif</span> <span class="n">abr</span><span class="o">.</span><span class="n">get_v</span><span class="p">()</span><span class="o">.</span><span class="n">sf</span> <span class="o">&gt;=</span> <span class="err">………</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">contient</span><span class="p">(</span> <span class="n">surface</span> <span class="p">,</span> <span class="err">………</span> <span class="p">)</span>
-</code></pre></div>
 
               
             </article>

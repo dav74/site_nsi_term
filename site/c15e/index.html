@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-151" class="md-skip">
+        <a href="#exercices-du-bac" class="md-skip">
           Aller au contenu
         </a>
       
@@ -1665,8 +1665,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercice-151" class="md-nav__link">
-    exercice 15.1
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2184,8 +2184,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercice-151" class="md-nav__link">
-    exercice 15.1
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2206,80 +2206,13 @@
 
   <h1>Exercices</h1>
 
-<h3 id="exercice-151">exercice 15.1</h3>
-<p>Cet exercice est tiré du sujet du bac NSI 2021</p>
-<p>Question 1</p>
-<p>a. Quel est l’ordre de grandeur du coût, en nombre de comparaisons, de l’algorithme de tri fusion pour une liste de longueur n ?</p>
-<p>b. Citer le nom d’un autre algorithme de tri. Donner l’ordre de grandeur de son coût, en nombre de comparaisons, pour une liste de longueur. Comparer ce coût à celui du tri fusion. Aucune justification n’est attendue.</p>
-<p>L’algorithme de tri fusion utilise deux fonctions moitie_gauche et moitie_droite qui prennent en argument une liste L et renvoient respectivement :</p>
+<h2 id="exercices-du-bac">exercices du bac</h2>
 <ul>
-<li>
-<p>la sous-liste de L formée des éléments d’indice strictement inférieur à len(L)//2 ;</p>
-</li>
-<li>
-<p>la sous-liste de L formée des éléments d’indice supérieur ou égal à len(L)//2.
-On rappelle que la syntaxe a//b désigne la division entière de a par b.</p>
-</li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_2.pdf">Sujet 2 2021 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_4.pdf">Sujet 4 2021 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf">Sujet 2 2022 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_03.pdf">Sujet 3 2022 Exercice 5</a></li>
 </ul>
-<p>Par exemple,</p>
-<p><img alt="" src="../img/c15e_1.png" /></p>
-<p>L’algorithme utilise aussi une fonction fusion qui prend en argument deux listes triées L1 et L2 et renvoie une liste L triée et composée des éléments de L1 et L2.</p>
-<p>On donne ci-dessous le code python d’une fonction récursive tri_fusion qui prend en argument une liste L et renvoie une nouvelle liste triée formée des éléments de L.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span> <span class="p">:</span>
-                <span class="k">return</span> <span class="n">L</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-        <span class="n">mg</span> <span class="o">=</span> <span class="n">moitie_gauche</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-        <span class="n">md</span> <span class="o">=</span> <span class="n">moitie_droite</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-        <span class="n">L1</span> <span class="o">=</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">mg</span><span class="p">)</span>
-        <span class="n">L2</span> <span class="o">=</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">md</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
-</code></pre></div>
-<p>Question 2</p>
-<div class="highlight"><pre><span></span><code>Donner la liste des affichages produits par l’appel suivant : tri_fusion([7, 4, 2, 1, 8, 5, 6, 3])
-</code></pre></div>
-<p>Question 3</p>
-<p>Écrire la fonction moitie_droite.</p>
-<p>Question 4</p>
-<p>On donne ci-dessous une version incomplète de la fonction fusion.</p>
-<p><div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
-<span class="mf">2.</span>     <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="mf">3.</span>     <span class="n">n1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
-<span class="mf">4.</span>     <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
-<span class="mf">5.</span>     <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="mf">6.</span>     <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="mf">7.</span>     <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">or</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="p">:</span>
-<span class="mf">8.</span>          <span class="k">if</span> <span class="n">i1</span> <span class="o">&gt;=</span> <span class="n">n1</span><span class="p">:</span>
-<span class="mf">9.</span>              <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
-<span class="mf">10.</span>             <span class="n">i2</span> <span class="o">=</span> <span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="mf">11.</span>         <span class="k">elif</span> <span class="n">i2</span> <span class="o">&gt;=</span> <span class="n">n2</span><span class="p">:</span>
-<span class="mf">12.</span>             <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
-<span class="mf">13.</span>             <span class="n">i1</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="mf">14.</span>         <span class="k">else</span><span class="p">:</span>
-<span class="mf">15.</span>             <span class="n">e1</span> <span class="o">=</span> <span class="n">L1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span>
-<span class="mf">16.</span>             <span class="n">e2</span> <span class="o">=</span> <span class="n">L2</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
-<span class="mf">17.</span>         
-<span class="mf">18.</span>         
-<span class="mf">19.</span>         
-<span class="mf">20.</span>
-<span class="mf">21.</span>
-<span class="mf">22.</span>         
-<span class="mf">23.</span>     <span class="k">return</span> <span class="n">L</span>
-</code></pre></div>
-- Si aucun des deux indices n’est valide, la boucle while est interrompue ;</p>
-<ul>
-<li>
-<p>Si i1 n’est plus un indice valide, on va ajouter à L les éléments de L2 à partir de l’indice i2 ;</p>
-</li>
-<li>
-<p>Si i2 n’est plus un indice valide, on va ajouter à L les éléments de L1 à partir de l’indice i1 ;</p>
-</li>
-<li>
-<p>Sinon, le plus petit élément non encore traité est ajouté à L et on décale l’indice correspondant.</p>
-</li>
-</ul>
-<p>Écrire sur la copie les instructions manquantes des lignes 17 à 22 permettant d’insérer dans la liste L les éléments des listes L1 et L2 par ordre croissant.</p>
 
               
             </article>

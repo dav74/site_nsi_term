@@ -6,7 +6,7 @@ On rappelle que la suite de Fibonacci est définie comme suit :
 
 - et par la relation de récurrence suivante avec n entier et n > 1 : u<sub>n</sub> = u<sub>n-1</sub> + u<sub>n-2</sub>
 
- Écrivez une fonction récursive fib qui donnera le n ième terme de la suite de Fibonacci. Cette fonction prendra en paramètre l'entier n.
+ Écrivez une fonction récursive fib qui donnera le (n+1)ième terme de la suite de Fibonacci (la suite commence avec n = 0 donc pour le 4e terme, nous avons n = 3). Cette fonction prendra en paramètre l'entier n.
 
 ### activité 4.2
 

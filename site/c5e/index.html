@@ -708,8 +708,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-56" class="md-nav__link">
-    exercice 5.6
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2254,8 +2254,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-56" class="md-nav__link">
-    exercice 5.6
+  <a href="#exercices-du-bac" class="md-nav__link">
+    exercices du bac
   </a>
   
 </li>
@@ -2337,65 +2337,20 @@ for i in tab:
         <span class="n">file</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
 </code></pre></div>
 <p>Donnez l’état de la file <em>file</em> après l’exécution de ce programme</p>
-<h3 id="exercice-56">exercice 5.6</h3>
-<p>Cet exercice est tiré du sujet 0 du bac NSI.</p>
-<p>Dans cet exercice nous avons à notre disposition 4 fonctions :</p>
+<h3 id="exercices-du-bac">exercices du bac</h3>
 <ul>
-<li>pileVide() qui permet de créer une pile vide</li>
-<li>estVide(P) qui renvoie True si la pile P est vide et False dans le cas contraire</li>
-<li>empiler(P,val) qui ajoute la valeur val à la pile P</li>
-<li>depiler(P) qui renvoie l'élément au sommet de la pile P et qui supprime cet élément de la pile. </li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_1.pdf">Sujet 1 2021 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_3.pdf">Sujet 3 2021 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_6.pdf">Sujet 6 2021 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_7.pdf">Sujet 7 2021 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_8.pdf">Sujet 8 2021 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_01.pdf">Sujet 1 2022 Exercice 4</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf">Sujet 2 2022 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_03.pdf">Sujet 3 2022 Exercice 2</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_04.pdf">Sujet 4 2022 Exercice 5</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf">Sujet 10 2022 Exercice 1</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_11.pdf">Sujet 11 2022 Exercice 1</a></li>
 </ul>
-<p>1) On suppose dans cette question que le contenu de la pile P est le suivant (les éléments étant
-empilés par le haut) :</p>
-<p><img alt="" src="../img/c5e_1.png" /></p>
-<p>Quel sera le contenu de la pile Q après exécution de la suite d’instructions suivante ?</p>
-<p><div class="highlight"><pre><span></span><code>Q = pileVide ()
-while not estVide ( P ):
-    empiler (Q , depiler ( P ))
-</code></pre></div>
-2) a) On appelle hauteur d’une pile le nombre d’éléments qu’elle contient. La fonction <em>hauteur_pile</em> prend en paramètre une pile P et renvoie sa hauteur. Après appel de cette fonction, la pile P doit avoir retrouvé son état d’origine.</p>
-<p>Exemple : si P est la pile de la question 1 : hauteur_pile(P) = 4.</p>
-<p>Recopier et compléter sur votre feuille le programme Python suivant implémentant la fonction
-<em>hauteur_pile</em> en remplaçant les ??? par les bonnes instructions.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur_pile</span> <span class="p">(</span> <span class="n">P</span> <span class="p">):</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="n">pileVide</span> <span class="p">()</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">estVide</span> <span class="p">(</span> <span class="n">P</span> <span class="p">)):</span>
-    <span class="err">???</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">depiler</span> <span class="p">(</span> <span class="n">P</span> <span class="p">)</span>
-    <span class="n">empiler</span> <span class="p">(</span><span class="n">Q</span> <span class="p">,</span> <span class="n">x</span> <span class="p">)</span>
-<span class="k">while</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">estVide</span> <span class="p">(</span> <span class="n">Q</span> <span class="p">)):</span>
-    <span class="err">???</span>
-    <span class="n">empiler</span> <span class="p">(</span><span class="n">P</span> <span class="p">,</span> <span class="n">x</span> <span class="p">)</span>
-<span class="k">return</span> <span class="err">???</span>
-</code></pre></div>
-2) b) Créer une fonction <em>max_pile</em> ayant pour paramètres une pile P et un entier i. Cette fonction
-renvoie la position j de l’élément maximum parmi les i derniers éléments empilés de la pile P.
-Après appel de cette fonction, la pile P devra avoir retrouvé son état d’origine. La position du
-sommet de la pile est 1.</p>
-<p>Exemple : si P est la pile de la question 1 : max_pile(P, 2) = 1</p>
-<p>3) Créer une fonction <em>retourner</em> ayant pour paramètres une pile P et un entier j. Cette fonction inverse l’ordre des j derniers éléments empilés et ne renvoie rien. On pourra utiliser deux piles auxiliaires.</p>
-<p>Exemple : si P est la pile de la question 1, après l’appel de <em>retourner(P, 3)</em>, l’état de la pile P sera :</p>
-<p><img alt="" src="../img/c5e_2.png" /></p>
-<p>4) L’objectif de cette question est de trier une pile de crêpes.</p>
-<p>On modélise une pile de crêpes par une pile d’entiers représentant le diamètre de chaque crêpe. On souhaite réordonner les crêpes de la plus grande (placée en bas de la pile) à la plus petite (placée en haut de la pile).</p>
-<p>On dispose uniquement d’une spatule que l’on peut insérer dans la pile de crêpes de façon à retourner l’ensemble des crêpes qui lui sont au-dessus.</p>
-<p>Le principe est le suivant :</p>
-<ul>
-<li>On recherche la plus grande crêpe.</li>
-<li>On retourne la pile à partir de cette crêpe de façon à mettre cette plus grande crêpe tout en haut de la pile.</li>
-<li>On retourne l’ensemble de la pile de façon à ce que cette plus grande crêpe se retrouve tout en
-bas.</li>
-<li>La plus grande crêpe étant à sa place, on recommence le principe avec le reste de la pile.</li>
-</ul>
-<p>Exemple :</p>
-<p><img alt="" src="../img/c5e_3.png" /></p>
-<p>Créer la fonction <em>tri_crepes</em> ayant pour paramètre une pile P. Cette fonction trie la pile P selon la méthode du tri crêpes et ne renvoie rien. On utilisera les fonctions créées dans les questions précédentes.</p>
-<p>Exemple : Si la pile P est :</p>
-<p><img alt="" src="../img/c5e_4.png" /></p>
-<p>après l’appel de <em>tri_crepes(P)</em>, la pile P devient :</p>
-<p><img alt="" src="../img/c5e_5.png" /></p>
 
               
             </article>
