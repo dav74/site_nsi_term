@@ -109,7 +109,7 @@ nav:
       - 'Exercices' : 'c17e.md'
       - 'Révision' : 'c17r.md'
   - 'Partie 6':
-    - 'C18 : système sur puce':
+    - '*C18 : système sur puce':
       - 'Cours': 'c18c.md'
       - 'Activités' : 'c18a.md'
       - 'Exercices' : 'c18e.md'

@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -31,6 +31,7 @@
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -1673,7 +1674,14 @@
       
         <li class="md-nav__item">
   <a href="#activite-154" class="md-nav__link">
-    activité 15.4*
+    activité 15.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-155" class="md-nav__link">
+    activité 15.5*
   </a>
   
 </li>
@@ -2227,7 +2235,14 @@
       
         <li class="md-nav__item">
   <a href="#activite-154" class="md-nav__link">
-    activité 15.4*
+    activité 15.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-155" class="md-nav__link">
+    activité 15.5*
   </a>
   
 </li>
@@ -2254,7 +2269,61 @@
 <p>Appliquez l'algorithme de tri-fusion au tableau T = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]. Vous n'hésiterez pas à faire un schéma et à expliquer la fusion de 2 tableaux triés.</p>
 <h3 id="activite-153">activité 15.3</h3>
 <p>Implémentez en Python l'algorithme de tri-fusion. Vous testerez votre programme à l'aide du tableau suivant A = [23, 12, 4, 56, 35, 32, 42, 57, 3]</p>
-<h3 id="activite-154">activité 15.4<sup>*</sup></h3>
+<h3 id="activite-154">activité 15.4</h3>
+<p>Voici une autre implémentation possible du tri-fusion en Python.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span>
+        <span class="n">mil</span> <span class="o">=</span> <span class="n">n</span><span class="o">//...</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[:</span><span class="n">mil</span><span class="p">]</span>
+        <span class="n">R</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">mil</span><span class="p">:]</span>
+        <span class="n">merge_sort</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+        <span class="n">merge_sort</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">R</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">R</span><span class="p">[</span><span class="o">...</span><span class="p">]:</span>
+                <span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                <span class="o">...</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">R</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+            <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">=</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+            <span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">j</span><span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+Complétez la fonction ci-dessus.</p>
+<p>Quelques informations  pour vous aider :</p>
+<p>Cette implémentation utilise le slicing. Le slicing permet de récupérer une partie d'une liste python en écrivant :
+<div class="highlight"><pre><span></span><code><span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">deb</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+</code></pre></div>
+où L est une liste Python et S une autre liste Python contenant uniquement les éléments d'index "deb" à "fin" de la liste L (l'élément d'indice "deb" est inclus alors que l'élément d'indice "fin" est exclu). Voici un exemple :
+<div class="highlight"><pre><span></span><code><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+Dans l'exemple ci-dessus,  on a S = [5, 7, 9]. On a bien l'élément d'indice 1 (c'est-à-dire 5) jusqu'à l'élément d'indice 3 (c'est-à-dire 9). Attention de ne pas oublier que l'élément d'indice 4 (c'est-à-dire 15) est exclu. </p>
+<p>Il est possible d'utiliser des "raccourcis" :
+<div class="highlight"><pre><span></span><code><span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+a exactement la même signification que :
+<div class="highlight"><pre><span></span><code><span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+De la même manière :
+<div class="highlight"><pre><span></span><code><span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</code></pre></div>
+permet de récupérer tous les éléments de la liste L à partir de l'élément d'indice 3. Par exemple, pour :
+<div class="highlight"><pre><span></span><code><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</code></pre></div>
+On a S = [7, 9, 15, 25].</p>
+<h3 id="activite-155">activité 15.5<sup>*</sup></h3>
 <p>Nous avons vu que le tri fusion repose sur le principe algorithmique du "diviser pour régner", un autre algorithme de tri célèbre utilise aussi ce principe du "diviser pour régner" : le tri rapide (quicksort en anglais).</p>
 <p>En vous aidant de la vidéo (en anglais, mais assez facilement compréhensible) dont le lien est donné ci-dessous (vous pouvez arrêter la vidéo à 18 minutes et 59 secondes), implémentez l'algorithme du tri rapide en Python   </p>
 <p><a href="https://www.youtube.com/watch?v=COk73cpQbFQ?&start=0&end=1139" target="_blank">https://www.youtube.com/watch?v=COk73cpQbFQ</a></p>
@@ -2326,7 +2395,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.5413a266.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

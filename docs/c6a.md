@@ -9,7 +9,7 @@
 
 Soit les données suivantes :
 
-|nom|prenom|age|
+|prenom|nom|age|
 |--- |--- |--- |
 |John|Doe|42|
 |Pierre|Martin|23|
