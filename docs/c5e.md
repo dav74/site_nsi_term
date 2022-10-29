@@ -95,5 +95,6 @@ Donnez l’état de la file *file* après l’exécution de ce programme
 - [Sujet 4 2022 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_04.pdf)
 - [Sujet 10 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf)
 - [Sujet 11 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_11.pdf)
+- [Sujet 14 2022 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_14.pdf)
 
 

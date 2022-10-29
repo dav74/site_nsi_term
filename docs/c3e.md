@@ -66,5 +66,7 @@ WHERE annee_naissance > 1975
 - [Sujet 9 2022 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_09.pdf)
 - [Sujet 10 2022 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf)
 - [Sujet 11 2022 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_11.pdf)
-
+- [Sujet 12 2022 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_12.pdf)
+- [Sujet 13 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_13.pdf)
+- [Sujet 14 2022 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_14.pdf)
 

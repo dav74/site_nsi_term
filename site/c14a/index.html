@@ -2542,7 +2542,7 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 </li>
 </ul>
 <h3 id="activite-142">activité 14.2</h3>
-<p>Écrivez une classe <em>Voiture</em> qui aura un attribut <em>vitesse</em> et 2 méthodes :</p>
+<p>Écrivez une classe <em>Voiture</em> qui aura un attribut <em>vitesse</em> et 3 méthodes :</p>
 <ul>
 <li>une méthode <em>accelere</em> qui permettra d'incrémenter l'attribut vitesse d'une unité</li>
 <li>une méthode <em>freine</em> qui permettra de diminuer la vitesse</li>
@@ -2575,14 +2575,11 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
             <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
             <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
-
-   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
-
-   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
-
-   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 </code></pre></div>
 <h5 id="1-">1-</h5>
@@ -2592,35 +2589,32 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 <p><img alt="" src="../img/pr3_1.png" /></p>
 <p>Voici le programme qui va permettre de construire cet arbre à l'aide de la classe <em>ArbreBinaire</em> :</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
-   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-   <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-      <span class="k">else</span><span class="p">:</span>
-         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
-   <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-      <span class="k">else</span><span class="p">:</span>
-         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
-
-   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
-
-   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
-
-   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+    <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+    <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 
 <span class="c1">#######fin de la classe########</span>
 
@@ -2657,35 +2651,33 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 </code></pre></div>
 <p>Voici le programme augmenté de la fonction <em>affiche</em> :</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
-   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
 
-   <span class="k">def</span> <span class="nf">insert_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-      <span class="k">else</span><span class="p">:</span>
-         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
-   <span class="k">def</span> <span class="nf">insert_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-      <span class="k">else</span><span class="p">:</span>
-         <span class="n">new_node</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-         <span class="n">new_node</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span> <span class="o">=</span> <span class="n">new_node</span>
+    <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
 
-   <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
-
-   <span class="k">def</span> <span class="nf">get_gauche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_gauche</span>
-
-   <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
+    <span class="k">def</span> <span class="nf">get_droit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">enfant_droit</span>
 
 <span class="c1">#######fin de la classe########</span>
 
@@ -2715,8 +2707,8 @@ Ajoutez une méthode <em>soigne</em> qui permettra d'augmenter l'attribut <em>vi
 <span class="c1">######fin de la construction de l&#39;arbre binaire###########</span>
 
 <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-   <span class="k">if</span> <span class="n">T</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-      <span class="k">return</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">(),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()))</span>
+    <span class="k">if</span> <span class="n">T</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">(),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_gauche</span><span class="p">()),</span><span class="n">affiche</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">get_droit</span><span class="p">()))</span>
 </code></pre></div>
 <h5 id="3-">3-</h5>
 <p>Vérifiez que "affiche(racine)" renvoie bien :</p>
