@@ -46,7 +46,7 @@ nous créons ensuite les attributs :
 - id
 - titre
 - auteur
-- ann_pulbi
+- ann_publi
 - note
 
 Nous avons pour chaque attribut précisé son domaine : id : entier (INT), titre : chaîne de caractères (TEXT), auteur : chaîne de caractères, ann_publi : entier et note : entier
@@ -142,7 +142,7 @@ Vérifiez que nous obtenons bien le livre écrit par Asimov publié après 1953.
 
 ### activité 3.9
 
-Écrivez une requête SQL permettant d'obtenir les livres de K.Dick classés du plus ancien ou plus récent.
+Écrivez une requête SQL permettant d'obtenir les livres de K.Dick classés du plus ancien au plus récent.
 
 ### activité 3.10
 
