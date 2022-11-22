@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -17,20 +17,23 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
           <meta name="theme-color" content="#000000">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -40,10 +43,11 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     
@@ -81,11 +85,11 @@
     <a href=".." title="NSI terminale" class="md-header__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,7 +111,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -115,13 +119,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -167,7 +171,7 @@
     <a href=".." title="NSI terminale" class="md-nav__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     NSI terminale
@@ -1535,22 +1539,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-definition-de-la-classe-est-terminee" class="md-nav__link">
-    La définition de la classe est terminée.
-  </a>
-  
-    <nav class="md-nav" aria-label="La définition de la classe est terminée.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#4-conclusion" class="md-nav__link">
     4) conclusion
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2239,22 +2230,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-definition-de-la-classe-est-terminee" class="md-nav__link">
-    La définition de la classe est terminée.
-  </a>
-  
-    <nav class="md-nav" aria-label="La définition de la classe est terminée.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#4-conclusion" class="md-nav__link">
     4) conclusion
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2266,11 +2244,14 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
+
+  <h1>Cours</h1>
 
 <h2 id="1-introduction">1) introduction</h2>
 <p>Jusqu'à présent nous avons vu un seul paradigme de programmation (un paradigme est une manière de voir les choses, une représentation du monde) : la programmation impérative. La programmation impérative repose sur des notions qui vous sont familières :</p>
@@ -2292,37 +2273,37 @@
 <h2 id="2-le-paradigme-fonctionnel">2) le paradigme fonctionnel</h2>
 <p>Comme dit l'année dernière dans la partie du cours consacrée aux effets de bord, le paradigme fonctionnel cherche à éviter au maximum les effets de bord, dit autrement, en programmation fonctionnelle on va éviter de modifier les valeurs associées à des variables. Pour ce faire, on va chercher au maximum à utiliser les fonctions (d'où le nom de programmation fonctionnelle), mais ces fonctions ne devront pas modifier les variables : en programmation fonctionnelle, on s’efforce de coder des fonctions qui ne modifient pas l’état courant des variables. Les fonctions utilisées en programmation fonctionnelle sont parfois appelées "fonction pure" : le résultat renvoyé par une fonction pure doit uniquement dépendre des paramètres passés à la fonction et pas des valeurs externes à la fonction (elle ne doit pas non plus engendrer d'effet de bord):</p>
 <p>Intéressons-nous au programme Python suivant :</p>
-<p><code>python
-i = 5
-def fct():
-  if i &gt; 5:
-    return True
-  else :
-    return False
-fct()</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span> <span class="nf">fct</span><span class="p">():</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">fct</span><span class="p">()</span>
+</code></pre></div>
 La fonction ci-dessus n'est pas une fonction pure, car la valeur renvoyée par la fonction fct (True ou False) dépend d'une valeur extérieure à la fonction.</p>
 <p>Alors que dans ce cas :</p>
-<p><code>python
-def fct(i):
-  if i &gt; 5:
-    return True
-  else :
-    return False
-fct(5)</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">fct</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">fct</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
 La fonction ci-dessus est une fonction pure, car la valeur renvoyée par la fonction fct (True ou False) dépend uniquement du paramètre passé à la fonction.</p>
 <p>Même si certains langages de programmation ont été conçus pour "imposer" au programmeur le paradigme fonctionnel (Lisp, Scheme, Haskell...), il est tout à fait possible d'utiliser le paradigme fonctionnel avec des langages de programmation plus "généralistes" (Python par exemple).</p>
 <p>Nous allons maintenant travailler sur un exemple de programme Python utilisant le paradigme fonctionnel :</p>
 <p>Considérons le programme suivant :</p>
-<p><code>python
-l = [4,7,3]
-def ajout(i):
-  l.append(i)</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
 Le programme ci-dessus ne respecte pas le paradigme fonctionnel, car nous avons un effet de bord (la variable l est modifiée par la fonction ajout).</p>
 <p>Alors que dans le cas ci-dessous :</p>
-<p><code>python
-def ajout(i,l):
-  tab = l + [i]
-  return tab</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="n">tab</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="k">return</span> <span class="n">tab</span>
+</code></pre></div>
 La fonction ajout ne modifie aucune variable, elle crée un nouveau tableau (tab) à partir du tableau l et du paramètre i (le signe + permet de créer un nouveau tableau, ce nouveau tableau est constitué des éléments contenus dans le tableau l auxquels on ajoute la valeur i), la fonction renvoie le tableau ainsi créé.</p>
 <p>D'une façon plus générale, la méthode append de Python ne respecte pas le paradigme fonctionnel puisque append modifie une donnée existante. Le paradigme fonctionnel va amener le programmeur non pas à modifier une valeur existante, mais plutôt à créer une nouvelle grandeur à partir de la grandeur existante : une grandeur existante n'est jamais modifiée, donc aucun risque d'effet de bord.</p>
 <h2 id="3-le-paradigme-objet">3) le paradigme objet</h2>
@@ -2332,43 +2313,42 @@ La fonction ajout ne modifie aucune variable, elle crée un nouveau tableau (tab
 <p>Les idées sous-tendant le paradigme objet datent des années 60. Mais il faudra attendre le début des années 70 et la mise au point du langage Smalltalk pour que le paradigme objet gagne en popularité chez les informaticiens. Aujourd'hui de nombreux langages permettent d'utiliser le paradigme objet : C++, Java,...</p>
 <p>Pour nous initier à la programmation orientée objet nous allons utiliser un langage que vous connaissez bien : Python. Python permet d'utiliser le paradigme impératif (comme nous l'avons fait jusqu'à présent), mais il permet aussi d'utiliser le paradigme objet. Il est même possible, comme nous le verrons plus loin, d'utiliser les 2 paradigmes dans un même programme.</p>
 <p>La création d'une classe en python commence toujours par le mot class. Ensuite toutes les instructions de la classe seront indentées :</p>
-<p>```python
-class LeNomDeMaClasse:
-  #instructions de la classe</p>
-<h1 id="la-definition-de-la-classe-est-terminee">La définition de la classe est terminée.</h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">LeNomDeMaClasse</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="c1">#instructions de la classe</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">#La définition de la classe est terminée.</span>
+</code></pre></div>
 <p>La classe est une espèce de moule (nous reviendrons plus tard sur cette analogie qui a ses limites), à partir de ce moule nous allons créer des objets (plus exactement nous parlerons d'instances). Par exemple, nous pouvons créer une classe voiture, puis créer différentes instances de cette classe (Peugeot407, Renault Espace,...). Pour créer une de ces instances, la procédure est relativement simple :</p>
-<p><code>python
-peugeot407 = Voiture()</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">peugeot407</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">()</span>
+</code></pre></div>
 <p>Cette ligne veut tout simplement dire : "crée un objet (une instance) de la classe Voiture que l'on nommera peugeot407."</p>
 <p>Ensuite, rien ne nous empêche de créer une deuxième instance de la classe Voiture :</p>
-<p><code>python
-renaultEspace = Voiture()</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">renaultEspace</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">()</span>
+</code></pre></div>
 <p>Nous rencontrons ici la limite de notre analogie avec le moule. En effet 2 objets fabriqués avec le même moule seront (définitivement) identiques, alors qu'ici nos 2 instances pourront évoluer différemment.</p>
 <p>Pour développer toutes ces notions (et d'autres), nous allons écrire un premier programme :</p>
 <p>Nous allons commencer par écrire une classe Personnage (qui sera dans un premier temps une coquille vide) et, à partir de cette classe créer 2 instances : bilbo et gollum :</p>
-<p><code>python
-class Personnage:
-  pass
-gollum = Personnage()
-bilbo = Personnage()</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="k">pass</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">gollum</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">()</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">()</span>
+</code></pre></div>
 Pour l'instant, notre classe ne sert à rien et nos instances d'objet ne peuvent rien faire. Comme il n'est pas possible de créer une classe totalement vide, nous avons utilisé l'instruction pass qui ne fait rien. Ensuite nous avons créé 2 instances de la classe Personnage : gollum et bilbo.</p>
 <p>Comme expliqué précédemment, une instance de classe possède des attributs et des méthodes. Commençons par les attributs :</p>
 <p>Un attribut possède une valeur (un peu comme une variable). Nous allons associer un attribut vie à notre classe Personnage (chaque instance aura un attribut vie, quand la valeur de vie deviendra nulle, le personnage sera mort !)</p>
 <p>Ces attributs s'utilisent comme des variables, l'attribut vie pour bilbo sera noté :</p>
-<p><code>python
-bilbo.vie</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">bilbo</span><span class="o">.</span><span class="n">vie</span>
+</code></pre></div>
 de la même façon l'attribut vie de l'instance gollum sera noté :</p>
-<p><code>python
-gollum.vie</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">gollum</span><span class="o">.</span><span class="n">vie</span>
+</code></pre></div>
 <p>Considérons maintenant le programme suivant :</p>
-<p><code>python
-class Personnage:
-  pass
-gollum=Personnage()
-gollum.vie=20
-bilbo=Personnage()
-bilbo.vie=20</code>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  <span class="k">pass</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">gollum</span><span class="o">=</span><span class="n">Personnage</span><span class="p">()</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">gollum</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="mi">20</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">bilbo</span><span class="o">=</span><span class="n">Personnage</span><span class="p">()</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">bilbo</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="mi">20</span>
+</code></pre></div>
 Comme pour une variable il est possible d'utiliser la console Python pour afficher la valeur référencée par un attribut. Il suffit de taper dans la console gollum.vie ou bilbo.vie (sans bien sûr avoir oublié d'exécuter le programme au préalable.). Si nous tapons dans la console <em>gollum.vie</em> nous aurons 20 comme réponse, même chose si nous tapons <em>bilbo.vie</em></p>
 <p>Cette façon de faire n'est pas très "propre" et n'est pas une bonne pratique</p>
 <p>En effet, nous ne respectons pas un principe de base de la POO : l'encapsulation</p>
@@ -2376,27 +2356,27 @@ Comme pour une variable il est possible d'utiliser la console Python pour affich
 <p>En effet, les attributs (gollum.vie et bilbo.vie), font partie de la classe et devraient donc être enfermés dans la "caisse" !</p>
 <p>Pour résoudre ce problème, nous allons définir les attributs, dans la classe, à l'aide d'une méthode (une méthode est une fonction définie dans une classe) d'initialisation des attributs.</p>
 <p>Cette méthode est définie dans le code source par la ligne :</p>
-<p><code>python
-def __init__ (self)</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
 <p>La méthode <em>init</em> est automatiquement exécutée au moment de la création d'une instance. Le mot self est obligatoirement le premier argument d'une méthode (nous reviendrons ci-dessous sur ce mot self)</p>
 <p>Nous retrouvons ce mot self lors de la définition des attributs. La définition des attributs sera de la forme :</p>
-<p><code>python
-self.vie=20</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="mi">20</span>
+</code></pre></div>
 <p>Le mot self représente l'instance. Quand vous définissez une instance de classe (bilbo ou gollum) le nom de votre instance va remplacer le mot self.</p>
 <p>Dans le code source, nous allons avoir :</p>
-<p><code>python
-class Personnage:
-  def __init__ (self):
-    self.vie=20</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="mi">20</span>
+</code></pre></div>
 <p>Ensuite lors de la création de l'instance gollum, python va automatiquement remplacer self par gollum et ainsi créer un attribut gollum.vie qui aura pour valeur de départ la valeur donnée à self.vie dans la méthode <em>init</em></p>
 <p>Il se passera exactement la même chose au moment de la création de l'instance bilbo, on aura automatiquement la création de l'attribut bilbo.vie.</p>
 <p>Si nous saisissons le programme suivant :</p>
-<p><code>python
-class Personnage:
-  def __init__(self):
-    self.vie=20
-gollum=Personnage()
-bilbo=Personnage()</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="mi">20</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">gollum</span><span class="o">=</span><span class="n">Personnage</span><span class="p">()</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">bilbo</span><span class="o">=</span><span class="n">Personnage</span><span class="p">()</span>
+</code></pre></div>
 <p>et que nous tapons dans la console Python <em>gollum.vie</em>, nous obtiendrons bien 20.</p>
 <p>Au moment de la création de l'instance gollum, on passe comme argument le nombre de vies (gollum=Personnage (20)). Ce nombre de vies est attribué au premier argument de la méthode <strong>init</strong> , la variable nbreDeVie (nbreDeVie n'est pas tout à fait le premier argument de la méthode <strong>init</strong> puisque devant il y a self, mais bon, self étant obligatoire, nous pouvons dire que nbreDeVie est le premier argument non obligatoire).</p>
 <p>N.B. Je parle bien de variable pour nbreDeVie (car ce n'est pas un attribut de la classe personnage puisqu'elle ne commence pas par self).</p>
@@ -2411,16 +2391,16 @@ bilbo=Personnage()</code></p>
 </li>
 </ul>
 <p>Intéressons-nous à ce programme :</p>
-<p><code>python
-class Personnage:
-  def __init__(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self):
-    self.vie=self.vie-1
-gollum = Personnage(20)
-bilbo = Personnage(15)</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">gollum</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</code></pre></div>
 <p>si dans la console Python vous tapez successivement :</p>
 <ul>
 <li>
@@ -2444,99 +2424,106 @@ bilbo = Personnage(15)</code></p>
 </ul>
 <p>Vous avez sans doute remarqué que lors de "l'utilisation" des instances biblo et gollum, nous avons uniquement utilisé des méthodes et nous n'avons plus directement utilisé des attributs (plus de "gollum.vie"). Il est important de savoir qu'en dehors de la classe l'utilisation des attributs est une mauvaise pratique en programmation orientée objet : les attributs doivent rester "à l'intérieur" de la classe, l'utilisateur de la classe ne doit pas les utiliser directement. Il peut les manipuler, mais uniquement par l'intermédiaire d'une méthode (la méthode self.perdVie() permet de manipuler l'attribut self.vie)</p>
 <p>Pour l'instant nous avons utilisé les méthodes uniquement en tapant des instructions dans la console, il est évidemment possible d'utiliser ces méthodes directement dans votre programme :</p>
-<p>```python
-class Personnage:
-  def <strong>init</strong>(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self):
-    self.vie=self.vie-1</p>
-<p>bilbo = Personnage(15)
-bilbo.perdVie()
-point=bilbo.donneEtat()
-```
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">point</span><span class="o">=</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span>
+</code></pre></div>
 Après l'exécution du programme ci-dessus, la variable <em>point</em> aura pour valeur 14</p>
 <p>Selon le type d'attaque subit, le personnage peut perdre plus ou moins de points de vie. Pour tenir compte de cet élément, il est possible d'ajouter un paramètre à la méthode perdVie :</p>
-<p><code>python
-class Personnage:
-  def __init__(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self,nbPoint):
-    self.vie=self.vie-nbPoint
-bilbo = Personnage(15)
-bilbo.perdVie(2)
-point=bilbo.donneEtat()</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nbPoint</span><span class="p">):</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="n">nbPoint</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="n">point</span><span class="o">=</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span>
+</code></pre></div>
 <p>Après l'exécution du programme ci-dessus, la variable <em>point</em> aura pour valeur 13</p>
 <p>Il est possible d'ajouter une part d'aléatoire dans la méthode perdVie :</p>
-<p><code>python
-import random
-class Personnage:
-  def __init__(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self):
-    if random.random()&gt;0.5:
-      nbPoint = 1
-    else :
-      nbPoint = 2
-    self.vie=self.vie-nbPoint
-bilbo = Personnage(15)
-bilbo.perdVie()
-point=bilbo.donneEtat()</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    <span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="n">nbPoint</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="n">point</span><span class="o">=</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span>
+</code></pre></div>
 <p>N.B : <code>random.random()</code> renvoie une valeur aléatoire comprise entre 0 et 1</p>
 <p>Comme vous l'avez remarqué, il est possible d'utiliser une instruction conditionnelle (if / else) dans une méthode. Il est donc possible d'utiliser dans le même programme le paradigme objet et le paradigme impératif.</p>
 <p>Il est maintenant possible d'organiser un combat virtuel entre nos 2 personnages grâce à la classe <em>Personnage</em> que nous venons de créer :</p>
-<p>```python
-import random</p>
-<p>class Personnage:
-  def <strong>init</strong>(self, nbreDeVie):
-    self.vie=nbreDeVie
-  def donneEtat (self):
-    return self.vie
-  def perdVie (self):
-    if random.random()&gt;0.5:
-      nbPoint = 1
-    else :
-      nbPoint = 2
-    self.vie=self.vie-nbPoint
-def game():
-  bilbo = Personnage(20)
-  gollum = Personnage(20)
-  while bilbo.donneEtat()&gt;0 and gollum.donneEtat()&gt;0 :
-    bilbo.perdVie()
-    gollum.perdVie()
-  if bilbo.donneEtat()&lt;=0 and gollum.donneEtat()&gt;0:
-    msg = f"Gollum est vainqueur, il lui reste encore {gollum.donneEtat()} points alors que Bilbo est mort"
-  elif gollum.donneEtat()&lt;=0 and bilbo.donneEtat()&gt;0:
-    msg = f"Bilbo est vainqueur, il lui reste encore {bilbo.donneEtat()} points alors que Gollum est mort"
-  else :
-    msg = "Les deux combattants sont morts en même temps"
-  return msg
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nbreDeVie</span><span class="p">):</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="n">nbreDeVie</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>  <span class="k">def</span> <span class="nf">donneEtat</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vie</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>  <span class="k">def</span> <span class="nf">perdVie</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    <span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>      <span class="n">nbPoint</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vie</span><span class="o">-</span><span class="n">nbPoint</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="k">def</span> <span class="nf">game</span><span class="p">():</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>  <span class="n">bilbo</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>  <span class="n">gollum</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>  <span class="k">while</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>    <span class="n">bilbo</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>    <span class="n">gollum</span><span class="o">.</span><span class="n">perdVie</span><span class="p">()</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>  <span class="k">if</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Gollum est vainqueur, il lui reste encore </span><span class="si">{</span><span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="si">}</span><span class="s2"> points alors que Bilbo est mort&quot;</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>  <span class="k">elif</span> <span class="n">gollum</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Bilbo est vainqueur, il lui reste encore </span><span class="si">{</span><span class="n">bilbo</span><span class="o">.</span><span class="n">donneEtat</span><span class="p">()</span><span class="si">}</span><span class="s2"> points alors que Gollum est mort&quot;</span>
+<a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>  <span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Les deux combattants sont morts en même temps&quot;</span>
+<a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>  <span class="k">return</span> <span class="n">msg</span>
+</code></pre></div>
 <p>Nous avons encore ici la démonstration qu'il est possible d'utiliser le paradigme objet et le paradigme impératif dans un même programme.</p>
 <h2 id="4-conclusion">4) conclusion</h2>
 <p>Il est important de bien comprendre qu'un programmeur doit maitriser plusieurs paradigmes de programmation (impératif, objet ou encore fonctionnelle). En effet, il sera plus facile d'utiliser le paradigme objet dans certains cas alors que dans d'autres situations, l'utilisation du paradigme fonctionnel sera préférable. Être capable de choisir le "bon" paradigme en fonction des situations fait partie du bagage de tout bon programmeur.</p>
 <p>Il est aussi important de bien comprendre que la frontière entre ces différents paradigmes est parfois floue, par exemple on utilise très souvent de l'impératif en programmation orientée objet.  </p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
         <a href="../c13r/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Révision" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2560,7 +2547,7 @@ def game():
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2586,10 +2573,11 @@ def game():
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

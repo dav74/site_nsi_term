@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -17,20 +17,23 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
           <meta name="theme-color" content="#000000">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -40,10 +43,11 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     
@@ -81,11 +85,11 @@
     <a href=".." title="NSI terminale" class="md-header__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,7 +111,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -115,13 +119,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -167,7 +171,7 @@
     <a href=".." title="NSI terminale" class="md-nav__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     NSI terminale
@@ -2254,10 +2258,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>Pr3</h1>
@@ -2269,11 +2274,11 @@
 <p>Avant de pouvoir s'attaquer à la création du morpion proprement dit, il est nécessaire de travailler sur les bases de l'utilisation de Pygame :</p>
 <h3 id="projet-21">projet 2.1</h3>
 <p>Saisissez, analysez et testez ce code :</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import pygame
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pygame.quit()
+</code></pre></div>
 <p>Quelques explications sur le code ci-dessus :</p>
 <ul>
 <li>
@@ -2291,16 +2296,16 @@ pygame.quit()
 <p>Il faut donc empêcher la fenêtre de se refermer, il faut donc empêcher le programme de se terminer. Pour cela nous allons employer une boucle. On appelle souvent cette boucle une "boucle de jeu"</p>
 <h3 id="projet-22">projet 2.2</h3>
 <p>Saisissez, analysez et testez ce code :</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import pygame
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>run = True
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>while run :
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    for event in pygame.event.get():
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        if event.type == pygame.QUIT:
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            run = False
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>pygame.quit()
+</code></pre></div>
 <p>Nous avons bien notre boucle ("while run" avec au départ run = True).</p>
 <p>Cette boucle ne peut pas continuer indéfiniment, il faut laisser à l'utilisateur la possibilité de sortir du programme. Pour cela nous utilisons le gestionnaire d'événements de Pygame :</p>
 <p>Pygame "surveille" tous les événements qui pourraient survenir (principalement une action de l'utilisateur sur la souris ou sur le clavier). "pygame.event.get()" renvoie un tableau avec tous les événements en cours, la boucle "for" permet de parcourir tous ces événements. On retrouve ces événements dans l'objet "event". Un des événements possibles est "le clic de souris sur la croix en haut à gauche de la fenêtre" traduit par "pygame.QUIT". Si l'utilisateur clique sur "la croix en haut à gauche de la fenêtre", on "entre" dans le "if" et la variable "run" devient False : la "boucle de jeu" se termine, la ligne "pygame.quit()" est exécutée, et le programme se termine.</p>
@@ -2308,18 +2313,18 @@ pygame.quit()
 <p>Pygame permet de dessiner des formes diverses :</p>
 <h3 id="projet-23">projet 2.3</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  pygame.draw.line(surf,(255,255,255),(10,20),(150,200),2)
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import pygame
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>run = True
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>while run :
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  for event in pygame.event.get():
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>      run = False
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  pygame.draw.line(surf,(255,255,255),(10,20),(150,200),2)
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  pygame.display.flip()
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>pygame.quit()
+</code></pre></div>
 <p>La ligne "pygame.draw.line(...)" permet d'afficher une ligne, la méthode "line" prend en paramètres :</p>
 <ul>
 <li>
@@ -2343,18 +2348,18 @@ pygame.quit()
 <p>Il est aussi possible de dessiner des cercles :</p>
 <h3 id="projet-24">projet 2.4</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  pygame.draw.circle(surf, (255,0,0), (400, 300), 30, 2)
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import pygame
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>run = True
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>while run :
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  for event in pygame.event.get():
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>      run = False
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  pygame.draw.circle(surf, (255,0,0), (400, 300), 30, 2)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  pygame.display.flip()
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>pygame.quit()
+</code></pre></div>
 <p>La ligne "pygame.draw.circle(...)" permet d'afficher un cercle, la méthode "circle" prend en paramètres :</p>
 <ul>
 <li>
@@ -2378,84 +2383,84 @@ pygame.quit()
 <p>Nous allons déplacer notre cercle en modifiant ces coordonnées à chaque tour de boucle :</p>
 <h3 id="projet-25">projet 2.5</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-posX = 50
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
-  posX = posX + 1
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import pygame
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>run = True
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>posX = 50
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>while run :
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  for event in pygame.event.get():
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>      run = False
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  posX = posX + 1
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  pygame.display.flip()
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>pygame.quit()
+</code></pre></div>
 <p>Comme vous pouvez le constater, nous avons un problème : les cercles précédents restent affichés. Il faut donc effacer l'image précédente avant de pouvoir en afficher une nouvelle.</p>
 <h3 id="projet-26">projet 2.6</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-posX = 50
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  surf.fill((0,0,0))
-  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
-  posX = posX + 1
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import pygame
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>run = True
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>posX = 50
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>while run :
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  for event in pygame.event.get():
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>      run = False
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  surf.fill((0,0,0))
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  posX = posX + 1
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  pygame.display.flip()
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>pygame.quit()
+</code></pre></div>
 <p>la ligne "surf.fill((0,0,0))" permet d'effacer l'écran avant de réafficher le cercle à une position différente. "fill" prend en paramètre un tuple qui permet de définir la couleur de fond de la surface (ici avec (0,0,0) nous avons du noir en arrière-plan).</p>
 <p>Il est important de bien comprendre que même si vous n'avez pas d'animation à gérer, il est important d'effacer la surface avant d'afficher une nouvelle image. Nous utiliserons donc systématiquement le 'fill'.</p>
 <p>Il est relativement simple d'avoir une balle qui rebondit sur le bord de l'écran :</p>
 <h3 id="projet-27">projet 2.7</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-posX = 50
-vx = 1
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  surf.fill((0,0,0))
-  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
-  if posX&gt;770 or posX&lt;30 :
-    vx=-vx
-  posX = posX + vx
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import pygame
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>run = True
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>posX = 50
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>vx = 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>while run :
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  for event in pygame.event.get():
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>      run = False
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  surf.fill((0,0,0))
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  if posX&gt;770 or posX&lt;30 :
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    vx=-vx
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>  posX = posX + vx
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  pygame.display.flip()
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>pygame.quit()
+</code></pre></div>
 <p>Le système essaye d'exécuter le plus grand nombre de fois possible la "boucle de jeu". Sachant que plus votre microprocesseur est rapide et plus le nombre d'exécutions de la "boucle de jeu" par seconde sera grand, vous risquez d'avoir un jeu qui ne tournera pas du tout de la même façon sur 2 machines différentes. Pour éviter cet inconvénient, il est possible de limiter le nombre d'exécutions de la "boucle de jeu" par seconde :</p>
 <h3 id="projet-28">projet 2.8</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-posX = 50
-vx = 1
-clock=pygame.time.Clock()
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  clock.tick(60)
-  surf.fill((0,0,0))
-  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
-  if posX&gt;770 or posX&lt;30 :
-    vx=-vx
-  posX = posX + vx
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import pygame
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>run = True
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>posX = 50
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>vx = 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>clock=pygame.time.Clock()
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>while run :
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  for event in pygame.event.get():
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>      run = False
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  clock.tick(60)
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  surf.fill((0,0,0))
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>  pygame.draw.circle(surf, (255,0,0), (posX, 300), 30, 2)
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  if posX&gt;770 or posX&lt;30 :
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    vx=-vx
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>  posX = posX + vx
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  pygame.display.flip()
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>pygame.quit()
+</code></pre></div>
 <p>Nous avons ajouté 2 lignes afin de contrôler le nombre d'exécutions de la "boucle de jeu" par seconde :</p>
 <ul>
 <li>
@@ -2470,20 +2475,20 @@ pygame.quit()
 <p>Commencez par télécharger cette <a href="../img/pyg.png">image</a>. Placez-là dans votre répertoire courant (là où vous avez placé vos programmes Python Pygame)</p>
 <h3 id="projet-29">projet 2.9</h3>
 <p>Saisissez, analysez et testez ce code</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-img = pygame.image.load("pyg.png")
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-  surf.fill((0,0,0))
-  surf.blit(img,(200,200))
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>import pygame
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>run = True
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>img = pygame.image.load(&quot;pyg.png&quot;)
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>while run :
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  for event in pygame.event.get():
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>      run = False
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  surf.fill((0,0,0))
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  surf.blit(img,(200,200))
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  pygame.display.flip()
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>pygame.quit()
+</code></pre></div>
 <p>L'affichage de l'image se fait en 2 étapes :</p>
 <ul>
 <li>
@@ -2497,66 +2502,66 @@ pygame.quit()
 <p>Il existe un événement "pygame.MOUSEBUTTONDOWN" qui correspond à un clic de souris. La méthode "get_pressed" renvoie un tuple constitué de 3 éléments. En l'absence de clic de souris, ce tuple est (0,0,0). En cas de clic sur le bouton gauche de la souris le tuple est (1,0,0). En cas de clic sur le bouton central le tuple est (0,1,0). En cas de clic sur le bouton droit le tuple est (0,0,1)</p>
 <h3 id="projet-210">projet 2.10</h3>
 <p>Saisissez, analysez et testez ce code. Cliquez avec votre souris (clic gauche et clic droit) dans la fenêtre pygame, observez attentivement la console</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-    if event.type == pygame.MOUSEBUTTONDOWN :
-      if pygame.mouse.get_pressed() == (1,0,0) :
-        print ("clic bouton gauche")
-      if pygame.mouse.get_pressed() == (0,0,1) :
-        print ("clic bouton droit")
-  surf.fill((0,0,0))
-  pygame.display.flip()
-pygame.quit()
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>import pygame
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>run = True
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>while run :
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  for event in pygame.event.get():
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>      run = False
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    if event.type == pygame.MOUSEBUTTONDOWN :
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>      if pygame.mouse.get_pressed() == (1,0,0) :
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        print (&quot;clic bouton gauche&quot;)
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>      if pygame.mouse.get_pressed() == (0,0,1) :
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        print (&quot;clic bouton droit&quot;)
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>  surf.fill((0,0,0))
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>  pygame.display.flip()
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>pygame.quit()
+</code></pre></div>
 <p>Il est aussi possible de récupérer les coordonnées du pointeur de la souris au moment du clic à l'aide de la méthode "mouse.get_pos". Cette méthode renvoie un tuple (x,y) =&gt; coordonnées du pointeur de la souris au moment du clic</p>
 <h3 id="projet-211">projet 2.11</h3>
 <p>Saisissez, analysez et testez ce code. Cliquez avec votre souris (clic gauche) dans la fenêtre pygame, observez attentivement la console</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-    if event.type == pygame.MOUSEBUTTONDOWN :
-      if pygame.mouse.get_pressed() == (1,0,0) :
-        pos = pygame.mouse.get_pos()
-        print(pos)
-  surf.fill((0,0,0))
-  pygame.display.flip()
-pygame.quit()
-```
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import pygame
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>run = True
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>while run :
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  for event in pygame.event.get():
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>      run = False
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    if event.type == pygame.MOUSEBUTTONDOWN :
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>      if pygame.mouse.get_pressed() == (1,0,0) :
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        pos = pygame.mouse.get_pos()
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        print(pos)
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>  surf.fill((0,0,0))
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  pygame.display.flip()
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>pygame.quit()
+</code></pre></div>
 Il est aussi possible de gérer des événements de type "clavier" :</p>
 <h3 id="projet-212">projet 2.12</h3>
 <p>Saisissez, analysez et testez ce code, observez la console lorsque vous appuyez sur les touches "Entrée", "Espace" et "A" (vous pouvez aussi constater qu'il ne se passe rien quand )</p>
-<p>```
-import pygame</p>
-<p>surf = pygame.display.set_mode((800,600))
-run = True
-while run :
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      run = False
-    if event.type == pygame.KEYDOWN :
-      if event.key == pygame.K_SPACE :
-        print ("vous avez appuyé sur la touche espace")
-      elif event.key == pygame.K_a :
-        print ("vous avez appuyé sur la touche A")
-      elif event.key == pygame.K_RETURN :
-        print ("vous avez appuyé sur la touche Entrée")
-      else :
-        print ("vous avez appuyé sur une touche")
-  surf.fill((0,0,0))
-  pygame.display.flip()
-pygame.quit()</p>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>import pygame
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>surf = pygame.display.set_mode((800,600))
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>run = True
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>while run :
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  for event in pygame.event.get():
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    if event.type == pygame.QUIT:
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>      run = False
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    if event.type == pygame.KEYDOWN :
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>      if event.key == pygame.K_SPACE :
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        print (&quot;vous avez appuyé sur la touche espace&quot;)
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>      elif event.key == pygame.K_a :
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        print (&quot;vous avez appuyé sur la touche A&quot;)
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>      elif event.key == pygame.K_RETURN :
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>        print (&quot;vous avez appuyé sur la touche Entrée&quot;)
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>      else :
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        print (&quot;vous avez appuyé sur une touche&quot;)
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>  surf.fill((0,0,0))
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>  pygame.display.flip()
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>pygame.quit()
+</code></pre></div>
 <p>Vous trouverez la liste complète des touches dans la documentation officielle de pygame.</p>
 <h2 id="2-jeu-du-morpion">2) jeu du morpion</h2>
 <p>Vous en savez suffisamment sur la bibliothèque pygame pour pouvoir vous lancer dans la conception d'un jeu du morpion.</p>
@@ -2564,9 +2569,15 @@ pygame.quit()</p>
 <p><a href="https://www.youtube.com/watch?v=51AgnDp2xQs">vidéo</a></p>
 <p>Les joueurs cliquent avec le bouton gauche de la souris pour ajouter les symboles (X ou O) dans les cases. Une fois la partie gagnée par un des deux joueurs, les 3 symboles alignés deviennent rouges. Une fois la partie gagnée, il est impossible d'ajouter de nouveaux symboles (X et O). Un appui sur la touche "Entrée" doit permettre de reprendre le jeu à zéro.</p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
@@ -2593,10 +2604,11 @@ pygame.quit()</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
