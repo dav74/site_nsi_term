@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -17,20 +17,23 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
           <meta name="theme-color" content="#000000">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -40,10 +43,11 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     
@@ -81,11 +85,11 @@
     <a href=".." title="NSI terminale" class="md-header__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,7 +111,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -115,13 +119,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -167,7 +171,7 @@
     <a href=".." title="NSI terminale" class="md-nav__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     NSI terminale
@@ -2406,10 +2410,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>Projet 1 : répertoire téléphonique</h1>
@@ -2417,37 +2422,37 @@
 <p>Avant d'évoquer le projet en tant que tel, nous allons commencer par travailler sur les requêtes SQL effectuées depuis un programme Python. Il est donc nécessaire de bien maitriser toute la partie consacrée aux bases de données et particulièrement le cours sur les requêtes SQL</p>
 <h3 id="projet-11">projet 1.1</h3>
 <p>Après avoir créé un répertoire "projet_bd". Créez, à l'aide de spyder, un fichier Python (à vous de choisir le nom) puis saisissez et exécutez le programme suivant :</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-cur.execute(&quot;CREATE TABLE LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import sqlite3
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>cur = conn.cursor()
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cur.execute(&quot;CREATE TABLE LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>conn.commit()
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>cur.close()
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>conn.close()
 </code></pre></div>
 <p>Analysons le programme ci-dessus :</p>
 <p>Ce programme va vous permettre de vous "connecter" à une base de données (si cette dernière n'existe pas, elle sera créée). Ensuite nous créons une table (une relation) nommée LIVRES, cette table contient 4 attributs : id (de type entier), titre (de type texte), auteur (de type texte), ann_publi (de type entier) et note (de type entier).</p>
 <p>Entrons un peu dans les détails en analysant le programme ligne par ligne :</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import sqlite3
 </code></pre></div>
 <p>Nous commençons par importer la bibliothèque sqlite3. Cette bibliothèque va nous permettre d'effectuer des requêtes SQL sur une base de données. Comme dans le cours sur les bases de données, nous utiliserons le SGBD SQLite.</p>
-<div class="highlight"><pre><span></span><code>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cur = conn.cursor()
 </code></pre></div>
 <p>Nous créons un objet de type "connection" (conn) qui va nous permettre d'interagir avec la base de données "baseDonnees.db" (comme dit plus haut, si cette base de données n'existe pas, elle est créée). Vous devriez donc avoir un fichier "baseDonnees.db" dans le même répertoire que votre fichier Python.</p>
 <p>Nous créons ensuite un objet de type "cursor" à partir de l'objet de type "connection". Cet objet de type "cursor" va nous permettre de manipuler la base de données et d'obtenir des résultats lorsque nous effectuerons des requêtes.</p>
-<div class="highlight"><pre><span></span><code>cur.execute(&quot;CREATE TABLE LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cur.execute(&quot;CREATE TABLE LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
 </code></pre></div>
 <p>La méthode "execute" de notre objet de type "cursor" nous permet d'effectuer une requête SQL. Cette requête SQL est en tout point identique à ce que nous avons vu dans le cours sur les bases de données.</p>
-<div class="highlight"><pre><span></span><code>conn.commit()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conn.commit()
 </code></pre></div>
 <p>Pour véritablement exécuter les requêtes, il est nécessaire d'appliquer la méthode "commit" à l'objet de type "connection".</p>
-<div class="highlight"><pre><span></span><code>cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cur.close()
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>conn.close()
 </code></pre></div>
 <p>Avant de terminer le programme, il nécessaire de "fermer" l'objet de type "cursor" et l'objet de type "connection".</p>
 <p>Nous allons systématiquement retrouver cette structure dans nos futurs programmes :</p>
@@ -2461,17 +2466,17 @@ conn.close()
 <p>Si vous exécutez une deuxième fois le programme proposé au "À faire vous-même 1", vous aurez droit à une erreur : "OperationalError: table LIVRES already exists". Afin d'éviter ce genre de problème, il est possible de modifier le programme afin que la requête de création de la table LIVRES ne se fasse pas si la table LIVRES existe déjà :</p>
 <h3 id="projet-12">projet 1.2</h3>
 <p>Après avoir effacé le fichier "baseDonnees.db", saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import sqlite3
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>cur = conn.cursor()
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>conn.commit()
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>cur.close()
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>conn.close()
 </code></pre></div>
 <p>Comme vous pouvez le constater, si vous exécutez le programme plusieurs fois de suite, il n'y a plus d'erreur.</p>
 <h3 id="projet-13">projet 1.3</h3>
@@ -2479,15 +2484,15 @@ conn.close()
 <p>Maintenant que notre table LIVRES a été créée, nous allons pouvoir commencer à la "remplir" avec des données :</p>
 <h3 id="projet-14">projet 1.4</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-cur.execute(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10)&quot;)
-
-conn.commit()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import sqlite3
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>cur = conn.cursor()
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>cur.execute(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10)&quot;)
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>conn.commit()
 </code></pre></div>
 <p>Rien de particulier à signaler, la requête INSERT est identique à ce qui a été vu dans le cours sur les bases de données.</p>
 <h3 id="projet-15">projet 1.5</h3>
@@ -2495,194 +2500,194 @@ conn.commit()
 <p>Nous avons inclus les données à insérer directement dans la requête. Il est possible de procéder autrement en séparant les données à insérer et la requête (cela s'avérera particulièrement pratique dans le futur)</p>
 <h3 id="projet-16">projet 1.6</h3>
 <p>Après avoir effacé le fichier "baseDonnees.db", saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-data = (1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10)
-
-cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-cur.execute(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?, ?)&quot;, data)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>import sqlite3
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>cur = conn.cursor()
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>data = (1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10)
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>cur.execute(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?, ?)&quot;, data)
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>conn.commit()
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>cur.close()
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>conn.close()
 </code></pre></div>
 <p>Première chose à remarquer, nous avons créé un tuple (data) contenant toutes les informations. En effet, la méthode "execute" peut prendre un deuxième paramètre un tuple contenant les données à insérer. Les points d'interrogation présents dans la requête indiquent l'emplacement des données à insérer. Le premier ? sera remplacé par le premier élément du tuple (dans notre cas 1), le deuxième ? sera remplacé par le deuxième élément du tuple (dans notre cas '1984') et ainsi de suite...</p>
 <p>Si l'on désire insérer plusieurs données, il est possible de regrouper toutes les données à insérer dans un tableau et d'utiliser la méthode "executemany" à la place de la méthode "execute".</p>
 <h3 id="projet-17">projet 1.7</h3>
 <p>Après avoir effacé le fichier "baseDonnees.db", saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-datas = [
-    (1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
-    (2,&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
-    (3,&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
-    (4,&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
-    (5,&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
-    (6,&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
-    (7,&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
-    (8,&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
-    (9,&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
-    (10,&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
-    (11,&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
-    (12,&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
-    (13,&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
-    (14,&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
-    (15,&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
-    (16,&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10)
- ]
-
-cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-cur.executemany(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?, ?)&quot;, datas)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>import sqlite3
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>cur = conn.cursor()
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>datas = [
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    (1,&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    (2,&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    (3,&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    (4,&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    (5,&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    (6,&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    (7,&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    (8,&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    (9,&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    (10,&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    (11,&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    (12,&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    (13,&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    (14,&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    (15,&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    (16,&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10)
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a> ]
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INT, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>cur.executemany(&quot;INSERT INTO LIVRES(id,titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?, ?)&quot;, datas)
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>conn.commit()
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>cur.close()
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>conn.close()
 </code></pre></div>
 <h3 id="projet-18">projet 1.8</h3>
 <p>Ouvrez le fichier "baseDonnees.db" à l'aide du logiciel "DB Browser for SQLite" et vérifiez que les données ont bien été ajoutées à la table LIVRES.</p>
 <p>Il n'est pas très pratique d'avoir à gérer l'id (clé primaire). En effet, si je veux ajouter un nouveau livre, il faudra que je connaisse l'id du précédent (incrémentation de l'id). Heureusement, il est possible d'automatiser cette incrémentation.</p>
 <h3 id="projet-19">projet 1.9</h3>
 <p>Après avoir effacé le fichier "baseDonnees.db", saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-datas = [
-    (&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
-    (&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
-    (&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
-    (&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
-    (&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
-    (&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
-    (&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
-    (&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
-    (&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
-    (&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
-    (&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
-    (&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
-    (&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
-    (&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
-    (&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
-    (&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10)
- ]
-
-cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
-cur.executemany(&quot;INSERT INTO LIVRES(titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?)&quot;, datas)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import sqlite3
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>cur = conn.cursor()
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>datas = [
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    (&#39;1984&#39;,&#39;Orwell&#39;,1949,10),
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    (&#39;Dune&#39;,&#39;Herbert&#39;,1965,8),
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    (&#39;Fondation&#39;,&#39;Asimov&#39;,1951,9),
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    (&#39;Le meilleur des mondes&#39;,&#39;Huxley&#39;,1931,7),
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    (&#39;Fahrenheit 451&#39;,&#39;Bradbury&#39;,1953,7),
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    (&#39;Ubik&#39;,&#39;K.Dick&#39;,1969,9),
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    (&#39;Chroniques martiennes&#39;,&#39;Bradbury&#39;,1950,8),
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    (&#39;La nuit des temps&#39;,&#39;Barjavel&#39;,1968,7),
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    (&#39;Blade Runner&#39;,&#39;K.Dick&#39;,1968,8),
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    (&#39;Les Robots&#39;,&#39;Asimov&#39;,1950,9),
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    (&#39;La Planète des singes&#39;,&#39;Boulle&#39;,1963,8),
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    (&#39;Ravage&#39;,&#39;Barjavel&#39;,1943,8),
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    (&#39;Le Maître du Haut Château&#39;,&#39;K.Dick&#39;,1962,8),
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    (&#39;Le monde des Ā&#39;,&#39;Van Vogt&#39;,1945,7),
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    (&#39;La Fin de l’éternité&#39;,&#39;Asimov&#39;,1955,8),
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>    (&#39;De la Terre à la Lune&#39;,&#39;Verne&#39;,1865,10)
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a> ]
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>cur.execute(&quot;CREATE TABLE IF NOT EXISTS LIVRES(id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, titre TEXT, auteur TXT, ann_publi INT, note INT)&quot;)
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>cur.executemany(&quot;INSERT INTO LIVRES(titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?)&quot;, datas)
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>conn.commit()
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>cur.close()
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>conn.close()
 </code></pre></div>
 <p>Ouvrez le fichier "baseDonnees.db" à l'aide du logiciel "DB Browser for SQLite" et vérifiez que les données ont bien été ajoutées à la table LIVRES.</p>
 <p>Vous pouvez constater que nous avons bien l'attribut "id", même si ce dernier n'a pas été renseigné dans les données (absence d'id dans le tableau datas). Désormais l'id sera incrémenté automatiquement grâce au "id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE" (attention il est nécessaire d'utiliser INTEGER à la place du INT habituel) présent dans la requête de création de la table LIVRES. Attention, de bien penser à supprimer un ? dans la requête d'insertion (chaque tuple contient maintenant 4 éléments (nous en avions 5 quand l'id n'était pas géré automatiquement)).</p>
 <p>Il est tout à fait possible de rajouter une nouvelle donnée :</p>
 <h3 id="projet-110">projet 1.10</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-nvx_data = (&#39;Hypérion&#39;,&#39;Simmons&#39;,1989,8)
-
-cur.execute(&quot;INSERT INTO LIVRES(titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?)&quot;, nvx_data)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>import sqlite3
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>cur = conn.cursor()
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>nvx_data = (&#39;Hypérion&#39;,&#39;Simmons&#39;,1989,8)
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>cur.execute(&quot;INSERT INTO LIVRES(titre,auteur,ann_publi,note) VALUES(?, ?, ?, ?)&quot;, nvx_data)
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>conn.commit()
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>cur.close()
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>conn.close()
 </code></pre></div>
 <p>Ouvrez le fichier "baseDonnees.db" à l'aide du logiciel "DB Browser for SQLite" et vérifiez que les données ont bien été ajoutées à la table LIVRES.</p>
 <p>Vous pouvez remarquer que le nouvel enregistrement a bien l'id 17 et que nous n'avons pas eu à nous en occuper.</p>
 <p>Il est possible de modifier des données déjà présentes dans la table.</p>
 <h3 id="projet-111">projet 1.11</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-modif = (7, &#39;Hypérion&#39;)
-cur.execute(&#39;UPDATE LIVRES SET note = ? WHERE titre = ?&#39;, modif)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>import sqlite3
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>cur = conn.cursor()
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>modif = (7, &#39;Hypérion&#39;)
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>cur.execute(&#39;UPDATE LIVRES SET note = ? WHERE titre = ?&#39;, modif)
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>conn.commit()
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>cur.close()
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>conn.close()
 </code></pre></div>
 <p>Ouvrez le fichier "baseDonnees.db" à l'aide du logiciel "DB Browser for SQLite" et vérifiez que les données ont bien été modifiées dans la table LIVRES.</p>
 <p>Comme vous pouvez le constater, il est possible d'utiliser la clause WHERE avec un ?</p>
 <p>Il est aussi possible de supprimer une donnée :</p>
 <h3 id="projet-112">projet 1.12</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-suppr = (&#39;Hypérion&#39;,)
-cur.execute(&#39;DELETE FROM LIVRES WHERE titre = ?&#39;, suppr)
-conn.commit()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>import sqlite3
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>cur = conn.cursor()
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>suppr = (&#39;Hypérion&#39;,)
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>cur.execute(&#39;DELETE FROM LIVRES WHERE titre = ?&#39;, suppr)
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>conn.commit()
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>cur.close()
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>conn.close()
 </code></pre></div>
 <p>Ouvrez le fichier "baseDonnees.db" à l'aide du logiciel "DB Browser for SQLite" et vérifiez que l'entrée "Hypérion" a été supprimée de la table LIVRES.</p>
 <p>Attention, le deuxième paramètre de la méthode "execute" doit être un tuple, si on écrit seulement suppr = ('Hypérion'), suppr est une chaine de caractère et pas un tuple. Pour avoir un tuple avec un seul élément il est nécessaire d'ajouter une virgule (d'où le suppr = ('Hypérion',))</p>
 <p>Enfin, pour terminer cette introduction sur l'utilisation de sqlite en Python, nous devons nous intéresser aux requêtes de type "SELECT" :</p>
 <h3 id="projet-113">projet 1.13</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-cur.execute(&#39;SELECT * FROM LIVRES&#39;)
-conn.commit()
-
-liste = cur.fetchall()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>import sqlite3
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>cur = conn.cursor()
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>cur.execute(&#39;SELECT * FROM LIVRES&#39;)
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>conn.commit()
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>liste = cur.fetchall()
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>cur.close()
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>conn.close()
 </code></pre></div>
 <p>À l'aide de la console, déterminez la valeur référencée par la variable liste</p>
 <p>Comme vous pouvez le constater, la variable liste est un tableau qui contient des tuples. Chaque tuple est un enregistrement de la table LIVRES. La méthode "fetchall" d'un objet de type "cursor" renvoie un tableau contenant des tuples</p>
 <p>Il est possible d'avoir des requêtes plus sélectives :</p>
 <h3 id="projet-114">projet 1.14</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-cur.execute(&#39;SELECT titre FROM LIVRES WHERE ann_publi &lt; 1970&#39;)
-conn.commit()
-
-liste = cur.fetchall()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>import sqlite3
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>cur = conn.cursor()
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>cur.execute(&#39;SELECT titre FROM LIVRES WHERE ann_publi &lt; 1970&#39;)
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>conn.commit()
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>liste = cur.fetchall()
 </code></pre></div>
 <p>À l'aide de la console, déterminez la valeur référencée par la variable liste</p>
 <p>Vous pouvez constater que l'on obtient bien un tableau contenant des tuples (nous avons bien des tuples même si seuls les titres ont été sélectionnés)</p>
 <p>Il est possible d'utiliser les points d'interrogation dans une requête de type SELECT :</p>
 <h3 id="projet-115">projet 1.15</h3>
 <p>Saisissez le programme ci-dessous, puis exécutez-le</p>
-<div class="highlight"><pre><span></span><code>import sqlite3
-
-conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
-cur = conn.cursor()
-
-recherche = (1960, 8)
-
-cur.execute(&#39;SELECT titre FROM LIVRES WHERE ann_publi &lt; ? AND note &gt; ?&#39;, recherche)
-conn.commit()
-
-liste = cur.fetchall()
-
-cur.close()
-conn.close()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>import sqlite3
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>conn = sqlite3.connect(&#39;baseDonnees.db&#39;)
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>cur = conn.cursor()
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>recherche = (1960, 8)
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>cur.execute(&#39;SELECT titre FROM LIVRES WHERE ann_publi &lt; ? AND note &gt; ?&#39;, recherche)
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>conn.commit()
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>liste = cur.fetchall()
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>cur.close()
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>conn.close()
 </code></pre></div>
 <p>À l'aide de la console, déterminez la valeur référencée par la variable liste</p>
 <h3 id="projet-116">projet 1.16</h3>
@@ -2691,21 +2696,28 @@ conn.close()
 <p>À part cela, aucun autre changement n'est attendu (on utilisera toujours Flask)</p>
 <p>Pour rappel, voici la vidéo qui vous montre votre objectif : <a href="https://www.youtube.com/watch?v=xTETvikDMBw&amp;t=1s">vidéo projet répertoire téléphonique version web</a></p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
         <a href="../c19r/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Révision" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2729,7 +2741,7 @@ conn.close()
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2755,10 +2767,11 @@ conn.close()
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

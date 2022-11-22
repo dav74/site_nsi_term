@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -17,20 +17,23 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
           <meta name="theme-color" content="#000000">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
@@ -40,10 +43,11 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     
@@ -81,11 +85,11 @@
     <a href=".." title="NSI terminale" class="md-header__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,7 +111,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -115,13 +119,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -167,7 +171,7 @@
     <a href=".." title="NSI terminale" class="md-nav__button md-logo" aria-label="NSI terminale" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     NSI terminale
@@ -2390,10 +2394,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>Cours</h1>
@@ -2410,208 +2415,215 @@
 <p>Il faut noter que si le noeud x est une feuille, x.gauche et x.droite sont des arbres vides (NIL)</p>
 <h2 id="2-calculer-la-hauteur-dun-arbre">2) calculer la hauteur d'un arbre</h2>
 <p>Voici l'algorithme qui permet de calculer la hauteur d'un arbre :</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-
-DEBUT
-HAUTEUR(T) :
-  si T ≠ NIL :
-    x ← T.racine
-    renvoyer 1 + max(HAUTEUR(x.gauche), HAUTEUR(x.droit))
-  sinon :
-    renvoyer 0
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>VARIABLE
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>T : arbre
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>x : noeud
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>DEBUT
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>HAUTEUR(T) :
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  si T ≠ NIL :
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    x ← T.racine
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    renvoyer 1 + max(HAUTEUR(x.gauche), HAUTEUR(x.droit))
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  sinon :
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    renvoyer 0
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  fin si
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>FIN
 </code></pre></div>
 <p>N.B. la fonction max renvoie la plus grande valeur des 2 valeurs passées en paramètre (exemple : max(5,6) renvoie 6</p>
 <p>Nous avons ici un algorithme récursif. Vous aurez l'occasion de constater que c'est souvent le cas dans les algorithmes qui travaillent sur des structures de données telles que les arbres.</p>
 <h2 id="3-calculer-la-taille-dun-arbre">3) calculer la taille d'un arbre</h2>
 <p>Nous allons maintenant étudier un algorithme qui permet de calculer le nombre de noeuds présents dans un arbre.</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-
-DEBUT
-TAILLE(T) :
-  si T ≠ NIL :
-    x ← T.racine
-    renvoyer 1 + TAILLE(x.gauche) + TAILLE(x.droit)
-  sinon :
-    renvoyer 0
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>VARIABLE
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>T : arbre
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>x : noeud
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>DEBUT
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>TAILLE(T) :
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  si T ≠ NIL :
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    x ← T.racine
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    renvoyer 1 + TAILLE(x.gauche) + TAILLE(x.droit)
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  sinon :
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    renvoyer 0
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  fin si
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>FIN
 </code></pre></div>
 <h2 id="4-parcours-dun-arbre">4) parcours d'un arbre</h2>
 <h3 id="a-introduction">a) introduction</h3>
 <p>Il existe plusieurs façons de parcourir un arbre (parcourir un arbre = passer par tous les noeuds), nous allons en étudier quelques-unes. Le choix du parcours dépend du problème à traiter</p>
 <h3 id="b-parcourir-un-arbre-dans-lordre-prefixe">b) parcourir un arbre dans l'ordre préfixe</h3>
 <p>Voici l'algorithme qui va permettre de parcourir un arbre dans l'ordre préfixe :</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-
-DEBUT
-PARCOURS-PREFIXE(T) :
-  si T ≠ NIL :
-    x ← T.racine
-    affiche x.clé
-    PARCOURS-PREFIXE(x.gauche)
-    PARCOURS-PREFIXE(x.droit)
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VARIABLE
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>T : arbre
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>x : noeud
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>DEBUT
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>PARCOURS-PREFIXE(T) :
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  si T ≠ NIL :
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    x ← T.racine
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    affiche x.clé
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    PARCOURS-PREFIXE(x.gauche)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    PARCOURS-PREFIXE(x.droit)
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  fin si
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>FIN
 </code></pre></div>
 <p>Comme vous pouvez le constater ci-dessus, dans le cas du parcours préfixe, on affiche chaque noeud avant de parcourir son sous-arbre gauche et son sous-arbre droit.</p>
 <h3 id="c-parcourir-un-arbre-dans-lordre-suffixe">c) parcourir un arbre dans l'ordre suffixe</h3>
 <p>Voici l'algorithme qui va permettre de parcourir un arbre dans l'ordre suffixe :</p>
-<p><div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-
-DEBUT
-PARCOURS-SUFFIXE(T) :
-  si T ≠ NIL :
-    x ← T.racine
-    PARCOURS-SUFFIXE(x.gauche)
-    PARCOURS-SUFFIXE(x.droit)
-    affiche x.clé
-  fin si
-FIN
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>VARIABLE
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>T : arbre
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>x : noeud
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>DEBUT
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>PARCOURS-SUFFIXE(T) :
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  si T ≠ NIL :
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    x ← T.racine
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    PARCOURS-SUFFIXE(x.gauche)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    PARCOURS-SUFFIXE(x.droit)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    affiche x.clé
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  fin si
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>FIN
 </code></pre></div>
 Dans le cas du parcours suffixe, on affiche chaque noeud après avoir parcouru son sous-arbre gauche et son sous-arbre droit.</p>
 <h3 id="d-parcourir-un-arbre-dans-lordre-infixe">d) parcourir un arbre dans l'ordre infixe</h3>
 <p>Voici l'algorithme qui va permettre de parcourir un arbre dans l'ordre infixe :</p>
-<p><div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-
-DEBUT
-PARCOURS-INFIXE(T) :
-  si T ≠ NIL :
-    x ← T.racine
-    PARCOURS-INFIXE(x.gauche)
-    affiche x.clé
-    PARCOURS-INFIXE(x.droit)
-  fin si
-FIN
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VARIABLE
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>T : arbre
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>x : noeud
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>DEBUT
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>PARCOURS-INFIXE(T) :
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  si T ≠ NIL :
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    x ← T.racine
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    PARCOURS-INFIXE(x.gauche)
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    affiche x.clé
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    PARCOURS-INFIXE(x.droit)
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  fin si
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>FIN
 </code></pre></div>
 Dans le cas du parcours infixe, pour un noeud A donné, on parcourra le sous-arbre gauche de A, puis on affichera la clé de A puis enfin, on parcourra le sous-arbre droite de A</p>
 <h3 id="e-parcourir-un-arbre-en-largeur-dabord">e) parcourir un arbre en largeur d'abord</h3>
 <p>Voici l'algorithme qui va permettre de parcourir un arbre en largeur d'abord :</p>
-<div class="highlight"><pre><span></span><code>T : arbre
-Tg : arbre
-Td : arbre
-x : noeud
-f : file (initialement vide)
-
-DEBUT
-PARCOURS-LARGEUR(T) :
-  enfiler(T.racine, f) //on place la racine dans la file
-  tant que f non vide :
-    x ← defiler(f)
-    affiche x.clé
-    si x.gauche ≠ NIL :
-      Tg ← x.gauche
-      enfiler(Tg.racine, f)
-    fin si
-    si x.droit ≠ NIL :
-      Td ← x.droite
-      enfiler(Td.racine, f)
-    fin si
-  fin tant que
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>T : arbre
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Tg : arbre
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Td : arbre
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>x : noeud
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>f : file (initialement vide)
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>DEBUT
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>PARCOURS-LARGEUR(T) :
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  enfiler(T.racine, f) //on place la racine dans la file
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  tant que f non vide :
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    x ← defiler(f)
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    affiche x.clé
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    si x.gauche ≠ NIL :
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>      Tg ← x.gauche
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>      enfiler(Tg.racine, f)
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    fin si
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    si x.droit ≠ NIL :
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>      Td ← x.droite
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>      enfiler(Td.racine, f)
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    fin si
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>  fin tant que
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>FIN
 </code></pre></div>
 <p>Vous noterez aussi que cet algorithme n'utilise pas de fonction récursive. Il est aussi important de bien noter l'utilisation d'une file (FIFO) pour cet algorithme de parcours en largeur.</p>
 <p>Dans le cas d'un parcours en largeur d'abord on affiche tous les noeuds situés à une profondeur n avant de commencer à afficher les noeuds situés à une profondeur n+1.</p>
 <h2 id="5-algorithmes-pour-les-arbres-binaires-de-recherche">5) algorithmes pour les arbres binaires de recherche</h2>
 <h3 id="a-recherche-dune-cle-dans-un-arbre-binaire-de-recherche">a) Recherche d'une clé dans un arbre binaire de recherche</h3>
 <p>Nous allons maintenant étudier un algorithme permettant de rechercher une clé de valeur k dans un arbre binaire de recherche. Si k est bien présent dans l'arbre binaire de recherche, l'algorithme renvoie vrai, dans le cas contraire, il renvoie faux.</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-k : entier
-DEBUT
-ARBRE-RECHERCHE(T,k) :
-  si T == NIL :
-    renvoyer faux
-  fin si
-  x ← T.racine
-  si k == x.clé :
-    renvoyer vrai
-  fin si
-  si k &lt; x.clé :
-    renvoyer ARBRE-RECHERCHE(x.gauche,k)
-  sinon :
-    renvoyer ARBRE-RECHERCHE(x.droit,k)
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>VARIABLE
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>T : arbre
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>x : noeud
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>k : entier
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>DEBUT
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>ARBRE-RECHERCHE(T,k) :
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  si T == NIL :
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    renvoyer faux
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  fin si
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  x ← T.racine
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  si k == x.clé :
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    renvoyer vrai
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  fin si
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  si k &lt; x.clé :
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    renvoyer ARBRE-RECHERCHE(x.gauche,k)
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  sinon :
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    renvoyer ARBRE-RECHERCHE(x.droit,k)
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>  fin si
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>FIN
 </code></pre></div>
 <p>Cet algorithme de recherche d'une clé dans un arbre binaire de recherche ressemble beaucoup à la recherche dichotomique vue en première dans le cas où l'arbre binaire de recherche traité est équilibré. La complexité en temps dans le pire des cas de l'algorithme de recherche d'une clé dans un arbre binaire de recherche équilibré est donc O(log<sub>2</sub>(n)). Dans le cas où l'arbre est filiforme, la complexité est O(n). Rappelons qu'un algorithme en O(log<sub>2</sub>(n)) est plus "efficace" qu'un algorithme en O(n).</p>
 <p>À noter qu'il existe une version dite "itérative" (qui n'est pas récursive) de cet algorithme de recherche :</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-k : entier
-DEBUT
-ARBRE-RECHERCHE_ITE(T,k) :
-  x ← T.racine
-  tant que T ≠ NIL et k ≠ x.clé :
-    x ← T.racine
-    si k &lt; x.clé :
-      T ← x.gauche
-    sinon :
-      T ← x.droit
-    fin si
-  fin tant que
-  si k == x.clé :
-    renvoyer vrai
-  sinon :
-    renvoyer faux
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>VARIABLE
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>T : arbre
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>x : noeud
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>k : entier
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>DEBUT
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>ARBRE-RECHERCHE_ITE(T,k) :
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  x ← T.racine
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  tant que T ≠ NIL et k ≠ x.clé :
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    x ← T.racine
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    si k &lt; x.clé :
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>      T ← x.gauche
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    sinon :
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>      T ← x.droit
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    fin si
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  fin tant que
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  si k == x.clé :
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    renvoyer vrai
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  sinon :
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    renvoyer faux
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>  fin si
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>FIN
 </code></pre></div>
 <h3 id="b-insertion-dune-cle-dans-un-arbre-binaire-de-recherche">b) Insertion d'une clé dans un arbre binaire de recherche</h3>
 <p>Il est tout à fait possible d'insérer un noeud y dans un arbre binaire de recherche (non vide) :</p>
-<div class="highlight"><pre><span></span><code>VARIABLE
-T : arbre
-x : noeud
-y : noeud
-DEBUT
-ARBRE-INSERTION(T,y) :
-  x ← T.racine
-  tant que T ≠ NIL :
-    x ← T.racine
-    si y.clé &lt; x.clé :
-      T ← x.gauche
-    sinon :
-      T ← x.droit
-    fin si
-  fin tant que
-  si y.clé &lt; x.clé :
-    insérer y à gauche de x
-  sinon :
-    insérer y à droite de x
-  fin si
-FIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>VARIABLE
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>T : arbre
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>x : noeud
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>y : noeud
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>DEBUT
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>ARBRE-INSERTION(T,y) :
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  x ← T.racine
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  tant que T ≠ NIL :
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    x ← T.racine
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    si y.clé &lt; x.clé :
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>      T ← x.gauche
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    sinon :
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>      T ← x.droit
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    fin si
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  fin tant que
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>  si y.clé &lt; x.clé :
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    insérer y à gauche de x
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>  sinon :
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    insérer y à droite de x
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>  fin si
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>FIN
 </code></pre></div>
 <h3 id="c-arbre-binaire-de-recherche-et-parcours-infixe">c) arbre binaire de recherche et parcours infixe</h3>
 <p>Il est important de noter qu'un parcours infixe d'un arbre binaire de recherche permet d'obtenir les valeurs des noeuds de l'arbre binaire de recherche dans l'ordre croissant.</p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
         <a href="../c7r/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Révision" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -2635,7 +2647,7 @@ FIN
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -2661,10 +2673,11 @@ FIN
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
