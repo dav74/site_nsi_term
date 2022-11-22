@@ -7,7 +7,9 @@ theme:
     primary: black
 markdown_extensions:
   - pymdownx.highlight:
-      use_pygments: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true

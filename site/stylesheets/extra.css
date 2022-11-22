@@ -1,0 +1,21 @@
+#terminale-nsi {
+  margin-top: 20%;
+  text-align: center;
+  font-size : 60px;
+  color : gray;
+}
+
+#cours-activites-et-exercices {
+  margin-top: 5%;
+  text-align: center;
+  font-size : 40px;
+  color : gray;
+}
+
+.md-grid {
+  max-width: 1500px; 
+}
+
+.md-header__button.md-logo{
+  display: none;
+}
