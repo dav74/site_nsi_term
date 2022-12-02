@@ -123,7 +123,8 @@ nav:
       - 'Révision' : 'c19r.md'
   - 'Projets' :
     - 'Projet 1 : répertoire téléphonique' : 'pr1.md'
-    - 'Projet 2 : jeu du morpion' : 'pr2.md'
+    - 'Projet 2 : jeu du morpion console' : 'pr2.md'
+    - 'Projet 3 : jeu du morpion Pygame' : 'pr3.md'
   
   
   

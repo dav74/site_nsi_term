@@ -1,4 +1,6 @@
-Dans ce projet nous allons tenter de créer un jeu du morpion ( [article sur Wikipédia sur le jeu du morpion si nécessaire](https://fr.wikipedia.org/wiki/Morpion_(jeu))) à l'aide de la bibliothèque Pygame.
+Dans ce projet, nous allons adapter le jeu du Morpion que nous avons développé dans le projet précédent afin de lui fournir une "belle" interface graphique (ne plus utiliser la console) : voici une [vidéo](https://www.youtube.com/watch?v=51AgnDp2xQs) qui vous permettra de vous faire une idée du résultat attendu
+Pour créer cette interface graphique, nous allons utiliser la bibliothèque [Pygame](https://www.pygame.org/news).
+Commençons donc par une petite prise en main de Pygame :
 
 ## 1) prise en main de Pygame 
 
@@ -354,11 +356,7 @@ Vous trouverez la liste complète des touches dans la documentation officielle d
  
 ## 2) jeu du morpion
 
-Vous en savez suffisamment sur la bibliothèque pygame pour pouvoir vous lancer dans la conception d'un jeu du morpion.
-
-Ce jeu se joue à 2 joueurs humains (la création d'une intelligence artificielle n'est pas au programme ! Sauf si vous êtes motivé !). Voici une vidéo qui vous montre ce que vous devez obtenir (démonstration de 3 parties) :
-
-[vidéo](https://www.youtube.com/watch?v=51AgnDp2xQs)
+Vous en savez suffisamment sur la bibliothèque Pygame pour pouvoir vous lancer dans la conception du jeu du morpion.
 
 Les joueurs cliquent avec le bouton gauche de la souris pour ajouter les symboles (X ou O) dans les cases. Une fois la partie gagnée par un des deux joueurs, les 3 symboles alignés deviennent rouges. Une fois la partie gagnée, il est impossible d'ajouter de nouveaux symboles (X et O). Un appui sur la touche "Entrée" doit permettre de reprendre le jeu à zéro.
 
