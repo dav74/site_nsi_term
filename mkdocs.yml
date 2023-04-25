@@ -5,6 +5,7 @@ theme:
   language: fr
   palette:
     primary: black
+    scheme : slate
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
