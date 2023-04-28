@@ -2349,7 +2349,7 @@
 <p>La description de ce réseau social, malgré son faible nombre d'abonnés, est déjà quelque peu rébarbative, alors imaginez cette même description avec un réseau social comportant des millions d'abonnés !</p>
 <p>Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut représenter chaque abonné par un cercle (avec le nom de l'abonné situé dans le cercle) et chaque relation "X est ami avec Y" par un segment de droite reliant X et Y ("X est ami avec Y" et "Y est ami avec X" étant représenté par le même segment de droite).</p>
 <p>Voici ce que cela donne avec le réseau social décrit ci-dessus :</p>
-<p><img alt="" src="../img/c9c_1.png" /></p>
+<p><img alt="" src="../img/c9c_1.jpg" /></p>
 <h2 id="2-notion-de-graphes">2) notion de graphes</h2>
 <p>Ce genre de figure s'appelle un graphe. Les graphes sont des objets mathématiques très utilisés, notamment en informatique. Les cercles sont appelés des sommets et les segments de droites qui relient 2 sommets des arêtes.</p>
 <p>Plus formellement on dira qu'un graphe G est un couple G = (V,E) avec V un ensemble de sommets et E un ensemble d'arêtes.</p>
@@ -2367,7 +2367,7 @@
 <li>il existe une route entre E et F</li>
 </ul>
 <p>Ici aussi, la représentation sous forme de graphe s'impose :</p>
-<p><img alt="" src="../img/c9c_2.png" /></p>
+<p><img alt="" src="../img/c9c_2.jpg" /></p>
 <p>Problème : avec cette représentation du réseau routier sous forme de graphe, il est impossible de tenir compte des routes en sens unique (par exemple il est possible d'aller de A vers D mais pas de D vers A)</p>
 <p>Voici de nouvelles contraintes :</p>
 <ul>
@@ -2381,12 +2381,12 @@
 <li>il existe une route entre E et F (double)</li>
 </ul>
 <p>Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :</p>
-<p><img alt="" src="../img/c9c_3.png" /></p>
+<p><img alt="" src="../img/c9c_3.jpg" /></p>
 <p>Dans un graphe orienté, les arêtes possèdent une orientation. Ces "arêtes orientées" sont souvent appelées "arcs". On dira qu'un graphe orienté G est un couple G = (V,A) avec V un ensemble de sommets et A un ensemble d'arcs.</p>
 <p>Parfois il est intéressant d'associer aux arrêtes ou aux arcs des valeurs, on parle alors de graphes pondérés. Si nous revenons à notre "graphe cartographie", il est possible d'associer à chaque arête la distance en Km entre les 2 lieux :</p>
-<p><img alt="" src="../img/c9c_4.png" /></p>
+<p><img alt="" src="../img/c9c_4.jpg" /></p>
 <p>Il est aussi possible d'associer à chaque arête la durée du trajet entre 2 points :</p>
-<p><img alt="" src="../img/c9c_5.png" /></p>
+<p><img alt="" src="../img/c9c_5.jpg" /></p>
 <p>En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l'algorithme permettant de déterminer le "chemin le plus court entre 2 points" travaillera sur le graphe "graphe pondéré (Km) cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic routier : une application comme Waze utilise les données en provenance des utilisateurs de l'application afin de mettre à jour en temps réel leur "graphe pondéré (minutes) cartographie".</p>
 <p>Pour terminer avec ces généralités sur les graphes, voici 2 définitions qui nous seront utiles par la suite :</p>
 <ul>
@@ -2400,22 +2400,22 @@
 <p><img alt="" src="../img/c9c_6.png" /></p>
 <p>La matrice A ci-dessus est constitué de 5 lignes et 4 colonnes. On appelle matrice carrée une matrice qui comporte le même nombre de lignes et de colonnes. Les matrices d'adjacences sont des matrices carrées.</p>
 <p>Reprenons l'exemple du "graphe cartographie" :</p>
-<p><img alt="" src="../img/c9c_2.png" /></p>
+<p><img alt="" src="../img/c9c_2.jpg" /></p>
 <p>Voici la matrice d'adjacence de ce graphe :</p>
-<p><img alt="" src="../img/c9c_7.png" /></p>
+<p><img alt="" src="../img/c9c_7.jpg" /></p>
 <p>Comment construire une matrice d'adjacence ?</p>
 <p>Il faut savoir qu'à chaque ligne correspond un sommet du graphe et qu'à chaque colonne correspond aussi un sommet du graphe. À chaque intersection ligne i-colonne j (ligne i correspond au sommet i et colonne j correspond au sommet j), on place un 1 s'il existe une arête entre le sommet i et le sommet j, et un zéro s'il n'existe pas d'arête entre le sommet i et le sommet j.</p>
-<p><img alt="" src="../img/c9c_8.png" /></p>
+<p><img alt="" src="../img/c9c_8.jpg" /></p>
 <ul>
 <li>Il existe une arête entre le sommet E et le sommet F, nous avons donc placé un 1 à l'intersection de la ligne E et de la colonne F (il en est de même à l'intersection de la ligne F et de la colonne E)</li>
 <li>Il n'existe pas d'arête entre le sommet D et le sommet C, nous avons donc placé un 0 à l'intersection de la ligne D et de la colonne C (il en est de même à l'intersection de la ligne C et de la colonne D)</li>
 </ul>
 <p>Il est aussi possible d'établir une matrice d'adjacence pour un graphe orienté. Le principe reste le même : si le sommet i (ligne) est lié au sommet j (colonne), nous avons un 1 à l'intersection (0 dans le cas contraire).</p>
-<p><img alt="" src="../img/c9c_3.png" /></p>
-<p><img alt="" src="../img/c9c_9.png" /></p>
+<p><img alt="" src="../img/c9c_3.jpg" /></p>
+<p><img alt="" src="../img/c9c_9.jpg" /></p>
 <p>Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un graphe pondéré : on remplace les 1 par les valeurs liées à chaque arc.</p>
-<p><img alt="" src="../img/c9c_4.png" /></p>
-<p><img alt="" src="../img/c9c_10.png" /></p>
+<p><img alt="" src="../img/c9c_4.jpg" /></p>
+<p><img alt="" src="../img/c9c_10.jpg" /></p>
 <p>Il est assez simple d'utiliser les matrices d'adjacence en Python grâce aux tableaux de tableaux vus l'année dernière :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#matrice d&#39;ajacence</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">m</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -2429,15 +2429,15 @@
 <h3 id="b-implementation-dun-graphe-a-laide-de-listes-dadjacence">b) implémentation d'un graphe à l'aide de listes d'adjacence</h3>
 <p>Pour commencer, on définit une liste des sommets du graphe. À chaque élément de cette liste, on associe une autre liste qui contient les sommets lié à cet élément :</p>
 <p>Reprenons l'exemple du "graphe cartographie" :</p>
-<p><img alt="" src="../img/c9c_2.png" /></p>
+<p><img alt="" src="../img/c9c_2.jpg" /></p>
 <p>Voici la liste d'adjacence de ce graphe :</p>
-<p><img alt="" src="../img/c9c_11.png" /></p>
+<p><img alt="" src="../img/c9c_11.jpg" /></p>
 <p>Pour les graphes orientés, il est nécessaire de définir 2 listes : la liste des successeurs et la liste des prédécesseurs. Soit un arc allant d'un sommet A vers un sommet B (flèche de A vers B). On dira que B est un successeur de A et que A est un prédécesseur de B.</p>
-<p><img alt="" src="../img/c9c_3.png" /></p>
+<p><img alt="" src="../img/c9c_3.jpg" /></p>
 <p>liste d'adjacence successeurs du graphe orienté cartographie :</p>
-<p><img alt="" src="../img/c9c_13.png" /></p>
+<p><img alt="" src="../img/c9c_13.jpg" /></p>
 <p>liste d'adjacence prédécesseurs du graphe orienté cartographie :</p>
-<p><img alt="" src="../img/c9c_12.png" /></p>
+<p><img alt="" src="../img/c9c_12.jpg" /></p>
 <p>Il est possible de travailler avec des listes d'adjacences en Python en utilisant les dictionnaires :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#liste d&#39;ajacence</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">l</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">),</span> <span class="s1">&#39;B&#39;</span><span class="p">:(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">),</span> <span class="s1">&#39;C&#39;</span><span class="p">:(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="s1">&#39;D&#39;</span><span class="p">:(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">),</span> <span class="s1">&#39;E&#39;</span><span class="p">:(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="s1">&#39;F&#39;</span><span class="p">:(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">),</span> <span class="s1">&#39;G&#39;</span><span class="p">:(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)}</span>

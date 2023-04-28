@@ -2334,7 +2334,7 @@
 <p>L2 = cdr(L1) =&gt;  la liste L2 contient 11,15 et 12 (la liste L1 reste inchangée)</p>
 <h2 id="3-les-piles">3) les  piles</h2>
 <p>On retrouve dans les piles une partie des propriétés vues sur les listes. Dans les piles, il est uniquement possible de manipuler le dernier élément introduit dans la pile. On prend souvent l'analogie avec une pile d'assiettes : dans une pile d'assiettes la seule assiette directement accessible et la dernière assiette qui a été déposée sur la pile.</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_1.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_1.jpg" /></p>
 <p>Les piles sont basées sur le principe LIFO (Last In First Out : le dernier rentré sera le premier à sortir). On retrouve souvent ce principe LIFO en informatique.</p>
 <p>Voici les opérations que l'on peut réaliser sur une pile :</p>
 <ul>
@@ -2353,7 +2353,7 @@
 </ul>
 <h2 id="4-les-files">4)  les  files</h2>
 <p>Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l'autre extrémité. On prend souvent l'analogie de la file d'attente devant un magasin pour décrire une file de données.</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_2.png" /> </p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_2.jpg" /> </p>
 <p>Les files sont basées sur le principe FIFO (First In First Out : le premier qui est rentré sera le premier à sortir. Ici aussi, on retrouve souvent ce principe FIFO en informatique.</p>
 <p>Voici les opérations que l'on peut réaliser sur une file :</p>
 <ul>
@@ -2374,19 +2374,19 @@
 <p>Nous avons évoqué ci-dessus la manipulation des types de données (liste, pile et file) par des algorithmes, mais, au-delà de la beauté intellectuelle de réfléchir sur ces algorithmes, le but de l'opération est souvent, à un moment ou un autre, de "traduire" ces algorithmes dans un langage compréhensible pour un ordinateur (Python, Java, C,...). On dit alors que l'on implémente un algorithme. Il est donc aussi nécessaire d'implémenter les types de données comme les listes, les piles ou les files afin qu'ils soient utilisables par les ordinateurs. Les listes, les piles ou les files sont des "vues de l'esprit" présentes uniquement dans la tête des informaticiens, on dit que ce sont des types abstraits de données (ou plus simplement des types abstraits). L'implémentation de ces types abstraits, afin qu'ils soient utilisables par une machine, est loin d'être une chose triviale. L'implémentation d'un type de données dépend du langage de programmation. Il faut, quel que soit le langage utilisé, que le programmeur retrouve les fonctions qui ont été définies pour le type abstrait (pour les listes, les piles et les files cela correspond aux fonctions définies ci-dessus). Certains types abstraits ne sont pas forcément implémentés dans un langage donné, si le programmeur veut utiliser ce type abstrait, il faudra qu'il le programme par lui-même en utilisant les "outils" fournis par son langage de programmation.</p>
 <p>Pour implémenter les listes (ou les piles et les files), beaucoup de langages de programmation utilisent 2 structures : les tableaux et les listes chaînées.</p>
 <p>Un tableau est une suite contiguë de cases mémoires (les adresses des cases mémoire se suivent) :</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_3.png" /> </p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_3.jpg" /> </p>
 <p>Le système réserve une plage d'adresse mémoire afin de stocker des éléments.</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_4.png" /> </p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_4.jpg" /> </p>
 <p>La taille d'un tableau est fixe : une fois que l'on a défini le nombre d'éléments que le tableau peut accueillir, il n'est pas possible modifier sa taille. Si l'on veut insérer une donnée, on doit créer un nouveau tableau plus grand et déplacer les éléments du premier tableau vers le second tout en ajoutant la donnée au bon endroit !</p>
 <p>Dans certains langages de programmation, on trouve une version "évoluée" des tableaux : les tableaux dynamiques. Les tableaux dynamiques ont une taille qui peut varier. Il est donc relativement simple d'insérer des éléments dans le tableau. Ce type de tableaux permet d'implémenter facilement le type abstrait liste (de même pour les piles et les files).</p>
 <p>À noter que les "listes Python" (listes Python) sont des tableaux dynamiques. Attention de ne pas confondre avec le type abstrait liste défini ci-dessus, ce sont de "faux amis".</p>
 <p>tableau dynamique :</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_5.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_5.jpg" /></p>
 <p>Autre type de structure que l'on rencontre souvent et qui permet d'implémenter les listes, les piles et les files : les listes chaînées.</p>
 <p>Dans une liste chaînée, à chaque élément de la liste on associe 2 cases mémoire : la première case contient l'élément et la deuxième contient l'adresse mémoire de l'élément suivant.</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_6.png" /> </p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_6.jpg" /> </p>
 <p>Il est relativement facile d'insérer un élément dans une liste chaînée :</p>
-<p><img alt="" src="../img/nsi_term_structDo_liste_7.png" /> </p>
+<p><img alt="" src="../img/nsi_term_structDo_liste_7.jpg" /> </p>
 <p>Il est aussi possible d'implémenter les types abstraits en utilisant des structures plus complexes que les tableaux et les listes chaînées (nous  verrons des exemples en Python dans les activités).</p>
 
 

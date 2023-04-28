@@ -2246,7 +2246,7 @@
 </code></pre></div>
 <p>Dans l'exemple ci-dessus, nous avons une fonction (fctB) qui appelle une autre fonction (fctA). La principale chose à retenir de cet exemple est que l'exécution de fctB est interrompue pendant l'exécution de fctA. Une fois l'exécution de fctA terminée, l'exécution de fctB reprendra là où elle avait été interrompue.</p>
 <p>Pour gérer ces fonctions qui appellent d'autres fonctions, le système utilise une "pile d'exécution". Une pile d'exécution permet d'enregistrer des informations sur les fonctions en cours d'exécution dans un programme. On parle de pile, car les exécutions successives "s'empilent" les unes sur les autres. Si nous nous intéressons à la pile d'exécution du programme étudié ci-dessus, nous obtenons le schéma suivant :</p>
-<p><img alt="" src="../img/nsi_term_rec_1.png" /></p>
+<p><img alt="" src="../img/nsi_term_rec_1.jpg" /></p>
 <p>Nous pouvons "découper" l'exécution de ce programme en 3 parties :</p>
 <ol>
 <li>la fonction fctB s'exécute jusqu'à l'appel de la fonction fctA</li>
@@ -2255,7 +2255,7 @@
 </ol>
 <p>Il est important de bien comprendre que la fonction située au sommet de la pile d'exécution est en cours d'exécution. Toutes les fonctions situées "en dessous" sont mises en pause jusqu'au moment où elles se retrouveront au sommet de la pile. Quand une fonction termine son exécution, elle est automatiquement retirée du sommet de la pile (on dit que la fonction est dépilée).</p>
 <p>La pile d'exécution permet de retenir la prochaine instruction à exécuter au moment où une fonction sera sortie de son ""état de pause" (qu'elle se retrouvera au sommet de la pile d'exécution) :</p>
-<p><img alt="" src="../img/nsi_term_rec_2.png" /></p>
+<p><img alt="" src="../img/nsi_term_rec_2.jpg" /></p>
 <p>Évidemment l'explication donnée ci-dessus est quelque peu simpliste : c'est l'adresse mémoire de la prochaine instruction machine à exécuter qui est conservée dans la pile d'exécution</p>
 <p>Dans l'exemple ci-dessus, on retrouve une variable i dans les deux fonctions : fctA et fctB. La variable i présente dans la fonction fctA n'a rien à voir avec la variable i présente dans la fonction fctB (elles portent le même nom, mais elles représentent 2 adresses mémoires différentes). Il est très important de bien comprendre que les variables créées dans une fonction ne "sortent" pas de la fonction : chaque fonction possède sa propre liste de variable, comme déjà dit ci-dessus la variable i de la fonction fctB est différente de la variable i de la fonction fctA.</p>
 <p>La pile d'exécution conserve une "trace" des valeurs des variables lorsqu'une autre fonction est exécutée. Par exemple la valeur de i (fctB) est conservée au moment de l'exécution de fctA. Quand l'exécution de fctA se termine est que l'exécution de fctB "reprend", la valeur référencée par i (fctB) a été "conservée" (voilà pourquoi on reprend l'exécution de fctB avec un "fctB 3").</p>
@@ -2305,7 +2305,7 @@
 </li>
 </ul>
 <p>Voici un schéma expliquant le processus en termes de pile d'exécution :</p>
-<p><img alt="" src="../img/nsi_term_rec_3.png" /></p>
+<p><img alt="" src="../img/nsi_term_rec_3.jpg" /></p>
 <p>Il ne faut jamais perdre de vu qu'à chaque nouvel appel de la fonction fonct le paramètre n est différent.</p>
 <p>Nous allons étudier le calcul de la factorielle grâce à une fonction récursive. D'après Wikipédia : "En mathématiques, la factorielle d'un entier naturel n est le produit des nombres entiers strictement positifs inférieurs ou égaux à n". Par exemple : la factorielle de 3 est : 3 x 2 x 1 = 6 ; la factorielle de 4 est 4 x 3 x 2 x 1 = 24 ; la factorielle de 5 est 5 x 4 x 3 x 2 x 1 = 120 ...</p>
 <p>Si on note la factorielle de n par n!, on a :</p>
@@ -2331,7 +2331,7 @@
 <li>dans le cas où n &gt; 0 la fonction renvoie n*fact(n-1) (n! = n x (n – 1)!)</li>
 </ul>
 <p>On peut essayer de comprendre le fonctionnement du programme ci-dessus à l'aide du schéma suivant :</p>
-<p><img alt="" src="https://pixees.fr/informatiquelycee/term/img/nsi_term_rec_4.png" /></p>
+<p><img alt="" src="../img/nsi_term_rec_4.jpg" /></p>
 <p>On a fact(4) = 4 * fact(3) avec fact(3) = 3 * fact(2) avec fact(2) =  2 * fact(1) avec fact(1) = 1 * fact(0) avec fact(0) = 1 (par définition) donc fact(1) = 1 donc fact(2) = 2 donc fact(3) = 6 donc fact(4) = 24 </p>
 <p>L'utilisation des fonctions récursives est souvent liée à la notion de récurrence en mathématiques :</p>
 <p>En mathématiques une suite définie par récurrence est une suite définie par son premier terme et par une relation de récurrence, qui définit chaque terme à partir du précédent ou des précédents lorsqu'ils existent.</p>
