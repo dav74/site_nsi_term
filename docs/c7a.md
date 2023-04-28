@@ -4,7 +4,7 @@ Trouvez un autre exemple de données qui peuvent être représentées par un arb
 ### activité 7.2
 Soit l'arbre binaire suivant :
 
-![](img/c7a_1.png)
+![](img/c7a_1.jpg)
 
 1) Cet arbre est-il un arbre binaire ? Justifiez votre réponse.
 
@@ -24,7 +24,7 @@ Soit l'arbre binaire suivant :
 
 ### activité 7.3
 
-![](img/c7a_2.png)
+![](img/c7a_2.jpg)
 
 1) Expliquez pourquoi cet arbre binaire n'est pas un arbre binaire de recherche.
 

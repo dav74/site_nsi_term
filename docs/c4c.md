@@ -47,7 +47,7 @@ Dans l'exemple ci-dessus, nous avons une fonction (fctB) qui appelle une autre f
 
 Pour gérer ces fonctions qui appellent d'autres fonctions, le système utilise une "pile d'exécution". Une pile d'exécution permet d'enregistrer des informations sur les fonctions en cours d'exécution dans un programme. On parle de pile, car les exécutions successives "s'empilent" les unes sur les autres. Si nous nous intéressons à la pile d'exécution du programme étudié ci-dessus, nous obtenons le schéma suivant :
 
-![](img/nsi_term_rec_1.png)
+![](img/nsi_term_rec_1.jpg)
 
 Nous pouvons "découper" l'exécution de ce programme en 3 parties :
 
@@ -59,7 +59,7 @@ Il est important de bien comprendre que la fonction située au sommet de la pile
 
 La pile d'exécution permet de retenir la prochaine instruction à exécuter au moment où une fonction sera sortie de son ""état de pause" (qu'elle se retrouvera au sommet de la pile d'exécution) :
 
-![](img/nsi_term_rec_2.png)
+![](img/nsi_term_rec_2.jpg)
 
 Évidemment l'explication donnée ci-dessus est quelque peu simpliste : c'est l'adresse mémoire de la prochaine instruction machine à exécuter qui est conservée dans la pile d'exécution
 
@@ -119,7 +119,7 @@ Analysons en détail le fonctionnement de ce programme :
 
 Voici un schéma expliquant le processus en termes de pile d'exécution :
 
-![](img/nsi_term_rec_3.png)
+![](img/nsi_term_rec_3.jpg)
 
 Il ne faut jamais perdre de vu qu'à chaque nouvel appel de la fonction fonct le paramètre n est différent.
 
@@ -150,7 +150,7 @@ Comme vous pouvez le constater, la fonction fact est structurée de la même man
 
 On peut essayer de comprendre le fonctionnement du programme ci-dessus à l'aide du schéma suivant :
 
-![](https://pixees.fr/informatiquelycee/term/img/nsi_term_rec_4.png)
+![](img/nsi_term_rec_4.jpg)
 
 On a fact(4) = 4 * fact(3) avec fact(3) = 3 * fact(2) avec fact(2) =  2 * fact(1) avec fact(1) = 1 * fact(0) avec fact(0) = 1 (par définition) donc fact(1) = 1 donc fact(2) = 2 donc fact(3) = 6 donc fact(4) = 24 
 

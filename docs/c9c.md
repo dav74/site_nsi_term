@@ -15,7 +15,7 @@ Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut r
 
 Voici ce que cela donne avec le réseau social décrit ci-dessus :
 
-![](img/c9c_1.png)
+![](img/c9c_1.jpg)
 
 ## 2) notion de graphes
 
@@ -40,7 +40,7 @@ Les différents lieux sont reliés par les routes suivantes :
 
 Ici aussi, la représentation sous forme de graphe s'impose :
 
-![](img/c9c_2.png)
+![](img/c9c_2.jpg)
 
 Problème : avec cette représentation du réseau routier sous forme de graphe, il est impossible de tenir compte des routes en sens unique (par exemple il est possible d'aller de A vers D mais pas de D vers A)
 
@@ -57,17 +57,17 @@ Voici de nouvelles contraintes :
 
 Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :
 
-![](img/c9c_3.png)
+![](img/c9c_3.jpg)
 
 Dans un graphe orienté, les arêtes possèdent une orientation. Ces "arêtes orientées" sont souvent appelées "arcs". On dira qu'un graphe orienté G est un couple G = (V,A) avec V un ensemble de sommets et A un ensemble d'arcs.
 
 Parfois il est intéressant d'associer aux arrêtes ou aux arcs des valeurs, on parle alors de graphes pondérés. Si nous revenons à notre "graphe cartographie", il est possible d'associer à chaque arête la distance en Km entre les 2 lieux :
 
-![](img/c9c_4.png)
+![](img/c9c_4.jpg)
 
 Il est aussi possible d'associer à chaque arête la durée du trajet entre 2 points :
 
-![](img/c9c_5.png)
+![](img/c9c_5.jpg)
 
 En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l'algorithme permettant de déterminer le "chemin le plus court entre 2 points" travaillera sur le graphe "graphe pondéré (Km) cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic routier : une application comme Waze utilise les données en provenance des utilisateurs de l'application afin de mettre à jour en temps réel leur "graphe pondéré (minutes) cartographie".
 
@@ -90,32 +90,32 @@ La matrice A ci-dessus est constitué de 5 lignes et 4 colonnes. On appelle matr
 
 Reprenons l'exemple du "graphe cartographie" :
 
-![](img/c9c_2.png)
+![](img/c9c_2.jpg)
 
 Voici la matrice d'adjacence de ce graphe :
 
-![](img/c9c_7.png)
+![](img/c9c_7.jpg)
 
 Comment construire une matrice d'adjacence ?
 
 Il faut savoir qu'à chaque ligne correspond un sommet du graphe et qu'à chaque colonne correspond aussi un sommet du graphe. À chaque intersection ligne i-colonne j (ligne i correspond au sommet i et colonne j correspond au sommet j), on place un 1 s'il existe une arête entre le sommet i et le sommet j, et un zéro s'il n'existe pas d'arête entre le sommet i et le sommet j.
 
-![](img/c9c_8.png)
+![](img/c9c_8.jpg)
 
 - Il existe une arête entre le sommet E et le sommet F, nous avons donc placé un 1 à l'intersection de la ligne E et de la colonne F (il en est de même à l'intersection de la ligne F et de la colonne E)
 - Il n'existe pas d'arête entre le sommet D et le sommet C, nous avons donc placé un 0 à l'intersection de la ligne D et de la colonne C (il en est de même à l'intersection de la ligne C et de la colonne D)
 
 Il est aussi possible d'établir une matrice d'adjacence pour un graphe orienté. Le principe reste le même : si le sommet i (ligne) est lié au sommet j (colonne), nous avons un 1 à l'intersection (0 dans le cas contraire).
 
-![](img/c9c_3.png)
+![](img/c9c_3.jpg)
 
-![](img/c9c_9.png)
+![](img/c9c_9.jpg)
 
 Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un graphe pondéré : on remplace les 1 par les valeurs liées à chaque arc.
 
-![](img/c9c_4.png)
+![](img/c9c_4.jpg)
 
-![](img/c9c_10.png)
+![](img/c9c_10.jpg)
 
 Il est assez simple d'utiliser les matrices d'adjacence en Python grâce aux tableaux de tableaux vus l'année dernière :
 
@@ -136,23 +136,23 @@ Pour commencer, on définit une liste des sommets du graphe. À chaque élément
 
 Reprenons l'exemple du "graphe cartographie" :
 
-![](img/c9c_2.png)
+![](img/c9c_2.jpg)
 
 Voici la liste d'adjacence de ce graphe :
 
-![](img/c9c_11.png)
+![](img/c9c_11.jpg)
 
 Pour les graphes orientés, il est nécessaire de définir 2 listes : la liste des successeurs et la liste des prédécesseurs. Soit un arc allant d'un sommet A vers un sommet B (flèche de A vers B). On dira que B est un successeur de A et que A est un prédécesseur de B.
 
-![](img/c9c_3.png)
+![](img/c9c_3.jpg)
 
 liste d'adjacence successeurs du graphe orienté cartographie :
 
-![](img/c9c_13.png)
+![](img/c9c_13.jpg)
 
 liste d'adjacence prédécesseurs du graphe orienté cartographie :
 
-![](img/c9c_12.png)
+![](img/c9c_12.jpg)
 
 Il est possible de travailler avec des listes d'adjacences en Python en utilisant les dictionnaires :
 

@@ -27,18 +27,18 @@ L'organisateur du tournoi affiche les informations ci-dessus le jour du tournoi.
 
 Pourtant, un simple graphique aurait grandement simplifié les choses :
 
-![](img/nsi_term_structDo_arbre_1.png)
+![](img/nsi_term_structDo_arbre_1.jpg)
 
 Les spectateurs peuvent alors recopier sur un bout de papier ce schéma et ensuite se livrer au jeu des pronostics.
 
 Nous avons ci-dessous ce que l'on appelle une structure en arbre. On peut aussi retrouver cette même structure dans un arbre "père/mère" :
 
-![](img/nsi_term_structDo_arbre_2.png)
+![](img/nsi_term_structDo_arbre_2.jpg)
 
 
 Dernier exemple, les systèmes de fichiers dans les systèmes de type UNIX ont aussi une structure en arbre (notion vue l'année dernière)
 
-![](img/nsi_prem_base_linux_2.png)
+![](img/nsi_prem_base_linux_2.jpg)
 
 Les arbres sont des types abstraits très utilisés en informatique. On les utilise notamment quand on a besoin d'une structure hiérarchique des données : dans l'exemple ci-dessous le fichier grub.cfg ne se trouve pas au même niveau que le fichier rapport.odt (le fichier grub.cfg se trouve "plus proche" de la racine / que le fichier rapport.odt). On ne pourrait pas avec une simple liste qui contiendrait les noms des fichiers et des répertoires, rendre compte de cette hiérarchie (plus ou moins "proche" de la racine). On trouve souvent dans cette hiérarchie une notion de temps (les quarts de finale sont avant les demi-finales ou encore votre grand-mère paternelle est née avant votre père), mais ce n'est pas une obligation (voir l'arborescence du système de fichiers).
 
@@ -49,7 +49,7 @@ Les arbres binaires sont des cas particuliers d'arbres : l'arbre du tournoi de r
 
 Soit l'arbre binaire suivant :
 
-![](img/nsi_term_structDo_arbre_3.png)
+![](img/nsi_term_structDo_arbre_3.jpg)
 
 ### b) un peu de vocabulaire
 
@@ -75,7 +75,7 @@ Il est important de bien noter que l'on peut aussi voir les arbres comme des str
 
 Il est possible d'avoir des arbres binaires de même taille, mais de "forme" très différente :
 
-![](img/nsi_term_structDo_arbre_4.png)
+![](img/nsi_term_structDo_arbre_4.jpg)
 
 Sur le schéma ci-dessus l'arbre 1 est dit " filiforme" alors que l'arbre 2 est dit "complet" (on dira qu'un arbre binaire est complet si tous les noeuds possèdent 2 fils et que toutes les feuilles se situent à la même profondeur). On pourra aussi dire que l'arbre 1 est déséquilibré alors que l'arbre 2 est équilibré.
 
@@ -103,7 +103,7 @@ Un arbre binaire de recherche est un cas particulier d'arbre binaire. Pour avoir
 
 exemple d'arbre binaire de recherche :
 
-![](img/nsi_term_arbre_5.png)
+![](img/nsi_term_arbre_5.jpg)
 
 Vous pouvez vérifier que le fils gauche d'un noeud a une valeur plus petite que son père (par exemple 3 < 6) et que le fils droit d'un noeud a une valeur plus grande que son père (par exemple 7 > 6)
 

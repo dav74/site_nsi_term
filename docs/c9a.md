@@ -13,7 +13,7 @@ F est ami avec C, D et E
 
 Soit le graphe suivant :
 
-![](img/c9a_1.png)
+![](img/c9a_1.jpg)
 
 Déterminez sa matrice d'adjacence.
 
@@ -21,7 +21,7 @@ Déterminez sa matrice d'adjacence.
 
 Établissez la liste d'adjacence du graphe ci-dessous.
 
-![](img/c9a_1.png)
+![](img/c9a_1.jpg)
 
 ### activité 9.4
 

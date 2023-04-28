@@ -34,7 +34,7 @@ L2 = cdr(L1) =>  la liste L2 contient 11,15 et 12 (la liste L1 reste inchangée)
 ## 3) les  piles
 On retrouve dans les piles une partie des propriétés vues sur les listes. Dans les piles, il est uniquement possible de manipuler le dernier élément introduit dans la pile. On prend souvent l'analogie avec une pile d'assiettes : dans une pile d'assiettes la seule assiette directement accessible et la dernière assiette qui a été déposée sur la pile.
 
-![](img/nsi_term_structDo_liste_1.png)
+![](img/nsi_term_structDo_liste_1.jpg)
 
 Les piles sont basées sur le principe LIFO (Last In First Out : le dernier rentré sera le premier à sortir). On retrouve souvent ce principe LIFO en informatique.
 
@@ -57,7 +57,7 @@ Soit une pile P composée des éléments suivants : 12, 14, 8, 7, 19 et 22 (le s
 ## 4)  les  files
 Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l'autre extrémité. On prend souvent l'analogie de la file d'attente devant un magasin pour décrire une file de données.
 
-![](img/nsi_term_structDo_liste_2.png) 
+![](img/nsi_term_structDo_liste_2.jpg) 
 
 Les files sont basées sur le principe FIFO (First In First Out : le premier qui est rentré sera le premier à sortir. Ici aussi, on retrouve souvent ce principe FIFO en informatique.
 
@@ -85,11 +85,11 @@ Pour implémenter les listes (ou les piles et les files), beaucoup de langages d
 
 Un tableau est une suite contiguë de cases mémoires (les adresses des cases mémoire se suivent) :
 
-![](img/nsi_term_structDo_liste_3.png) 
+![](img/nsi_term_structDo_liste_3.jpg) 
 
 Le système réserve une plage d'adresse mémoire afin de stocker des éléments.
 
-![](img/nsi_term_structDo_liste_4.png) 
+![](img/nsi_term_structDo_liste_4.jpg) 
 
 La taille d'un tableau est fixe : une fois que l'on a défini le nombre d'éléments que le tableau peut accueillir, il n'est pas possible modifier sa taille. Si l'on veut insérer une donnée, on doit créer un nouveau tableau plus grand et déplacer les éléments du premier tableau vers le second tout en ajoutant la donnée au bon endroit !
 
@@ -99,17 +99,17 @@ Dans certains langages de programmation, on trouve une version "évoluée" des t
 
 tableau dynamique :
 
-![](img/nsi_term_structDo_liste_5.png)
+![](img/nsi_term_structDo_liste_5.jpg)
 
 Autre type de structure que l'on rencontre souvent et qui permet d'implémenter les listes, les piles et les files : les listes chaînées.
 
 Dans une liste chaînée, à chaque élément de la liste on associe 2 cases mémoire : la première case contient l'élément et la deuxième contient l'adresse mémoire de l'élément suivant.
 
-![](img/nsi_term_structDo_liste_6.png) 
+![](img/nsi_term_structDo_liste_6.jpg) 
 
 Il est relativement facile d'insérer un élément dans une liste chaînée :
 
-![](img/nsi_term_structDo_liste_7.png) 
+![](img/nsi_term_structDo_liste_7.jpg) 
 
 Il est aussi possible d'implémenter les types abstraits en utilisant des structures plus complexes que les tableaux et les listes chaînées (nous  verrons des exemples en Python dans les activités).
 

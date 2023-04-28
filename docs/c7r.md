@@ -3,7 +3,7 @@
 Les arbres sont des types abstraits très utilisés en informatique. On les utilise notamment
 quand on a besoin d'une structure hiérarchique des données.
 
-![](img/nsi_term_structDo_arbre_3.png)
+![](img/nsi_term_structDo_arbre_3.jpg)
 
 Vocabulaire :
 

@@ -14,7 +14,7 @@ Voici les opérations qui peuvent être effectuées sur une liste :
 On retrouve dans les piles une partie des propriétés vues sur les listes.
 Dans les piles, il est uniquement possible de manipuler le dernier élément introduit dans la pile. Les piles sont basées sur le principe LIFO
 
-![](img/nsi_term_structDo_liste_1.png)
+![](img/nsi_term_structDo_liste_1.jpg)
 
 Voici les opérations que l'on peut réaliser sur une pile :
 
@@ -28,7 +28,7 @@ Comme les piles, les files ont des points communs avec les listes. Différences 
 dans une file on ajoute des éléments à une extrémité de la file et on supprime des éléments
 à l'autre extrémité. Les files sont basées sur le principe FIFO.
 
-![](img/nsi_term_structDo_liste_2.png)
+![](img/nsi_term_structDo_liste_2.jpg)
 
 Voici les opérations que l'on peut réaliser sur une file :
 
