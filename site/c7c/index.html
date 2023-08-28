@@ -2388,18 +2388,18 @@
 </ul>
 <p>L'organisateur du tournoi affiche les informations ci-dessus le jour du tournoi. Malheureusement, la plupart des spectateurs se perdent quand ils cherchent à déterminer les potentielles demi-finales (et ne parlons pas de la finale !)</p>
 <p>Pourtant, un simple graphique aurait grandement simplifié les choses :</p>
-<p><img alt="" src="../img/nsi_term_structDo_arbre_1.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_arbre_1.jpg" /></p>
 <p>Les spectateurs peuvent alors recopier sur un bout de papier ce schéma et ensuite se livrer au jeu des pronostics.</p>
 <p>Nous avons ci-dessous ce que l'on appelle une structure en arbre. On peut aussi retrouver cette même structure dans un arbre "père/mère" :</p>
-<p><img alt="" src="../img/nsi_term_structDo_arbre_2.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_arbre_2.jpg" /></p>
 <p>Dernier exemple, les systèmes de fichiers dans les systèmes de type UNIX ont aussi une structure en arbre (notion vue l'année dernière)</p>
-<p><img alt="" src="../img/nsi_prem_base_linux_2.png" /></p>
+<p><img alt="" src="../img/nsi_prem_base_linux_2.jpg" /></p>
 <p>Les arbres sont des types abstraits très utilisés en informatique. On les utilise notamment quand on a besoin d'une structure hiérarchique des données : dans l'exemple ci-dessous le fichier grub.cfg ne se trouve pas au même niveau que le fichier rapport.odt (le fichier grub.cfg se trouve "plus proche" de la racine / que le fichier rapport.odt). On ne pourrait pas avec une simple liste qui contiendrait les noms des fichiers et des répertoires, rendre compte de cette hiérarchie (plus ou moins "proche" de la racine). On trouve souvent dans cette hiérarchie une notion de temps (les quarts de finale sont avant les demi-finales ou encore votre grand-mère paternelle est née avant votre père), mais ce n'est pas une obligation (voir l'arborescence du système de fichiers).</p>
 <h2 id="2-les-arbres-binaires">2) les arbres binaires</h2>
 <h3 id="a-introduction">a) introduction</h3>
 <p>Les arbres binaires sont des cas particuliers d'arbres : l'arbre du tournoi de rugby et l'arbre "père, mère..." sont des arbres binaires, en revanche, l'arbre représentant la structure du système de fichier n'est pas un arbre binaire (même chose pour un véritable arbre généalogique). Dans un arbre binaire, on a au maximum 2 branches qui partent d'un élément (pour le système de fichiers, on a 7 branches qui partent de la racine : ce n'est donc pas un arbre binaire). Dans la suite nous allons uniquement travailler sur les arbres binaires.</p>
 <p>Soit l'arbre binaire suivant :</p>
-<p><img alt="" src="../img/nsi_term_structDo_arbre_3.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_arbre_3.jpg" /></p>
 <h3 id="b-un-peu-de-vocabulaire">b) un peu de vocabulaire</h3>
 <ul>
 <li>chaque élément de l'arbre est appelé noeud (par exemple : A, B, C, D,...,P et Q sont des noeuds)</li>
@@ -2420,7 +2420,7 @@ ATTENTION : comme on trouve 2 définitions pour la profondeur, on peut trouver 2
 <p>Il est important de bien noter que l'on peut aussi voir les arbres comme des structures récursives : les fils d'un noeud sont des arbres (sous-arbre gauche et un sous-arbre droite dans le cas d'un arbre binaire), ces arbres sont eux-mêmes constitués d'arbres...</p>
 <h3 id="d-encadrement-de-la-hauteur-dun-arbre">d) encadrement de la hauteur d'un arbre</h3>
 <p>Il est possible d'avoir des arbres binaires de même taille, mais de "forme" très différente :</p>
-<p><img alt="" src="../img/nsi_term_structDo_arbre_4.png" /></p>
+<p><img alt="" src="../img/nsi_term_structDo_arbre_4.jpg" /></p>
 <p>Sur le schéma ci-dessus l'arbre 1 est dit " filiforme" alors que l'arbre 2 est dit "complet" (on dira qu'un arbre binaire est complet si tous les noeuds possèdent 2 fils et que toutes les feuilles se situent à la même profondeur). On pourra aussi dire que l'arbre 1 est déséquilibré alors que l'arbre 2 est équilibré.</p>
 <p>Si on prend un arbre filiforme de taille n, on peut dire que la hauteur de cet arbre est égale à <span class="arithmatex">\(n−1\)</span> (si on prend la définition de la hauteur d'un arbre où la racine a une profondeur 0)</p>
 <p>Si on prend un arbre complet de taille n, on peut démontrer que la hauteur de cet arbre est égale à la partie entière de <span class="arithmatex">\(log_2(n)\)</span> (on arrondit à l'entier immédiatement inférieur le <span class="arithmatex">\(log_2(n)\)</span>). Dans le cas de l'arbre 2, nous avons <span class="arithmatex">\(log_2(7)=2,8\)</span> donc en prenant la partie entière on a bien la hauteur de l'arbre 2 égale à 2.</p>
@@ -2437,7 +2437,7 @@ ATTENTION : comme on trouve 2 définitions pour la profondeur, on peut trouver 2
 <li>soit x un noeud d'un arbre binaire de recherche. Si y est un noeud du sous-arbre gauche de x, alors il faut que y.clé ⩽ x.clé. Si y est un noeud du sous-arbre droit de x, il faut alors que x.clé ⩽ y.clé</li>
 </ul>
 <p>exemple d'arbre binaire de recherche :</p>
-<p><img alt="" src="../img/nsi_term_arbre_5.png" /></p>
+<p><img alt="" src="../img/nsi_term_arbre_5.jpg" /></p>
 <p>Vous pouvez vérifier que le fils gauche d'un noeud a une valeur plus petite que son père (par exemple 3 &lt; 6) et que le fils droit d'un noeud a une valeur plus grande que son père (par exemple 7 &gt; 6)</p>
 <p>Attention : pour un noeud donné A, tous les noeuds de l'arbre gauche de A auront des valeurs plus petites que la valeur du noeud A et tous les noeuds de l'arbre droit de A auront des valeurs plus grandes que la valeur du noeud A. </p>
 

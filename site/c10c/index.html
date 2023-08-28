@@ -2388,7 +2388,7 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>FIN
 </code></pre></div>
 <p>Si on applique cet algorithme sur le graphe G ci-dessous : </p>
-<p><img alt="" src="../img/c10c_1.png" /></p>
+<p><img alt="" src="../img/c10c_1.jpg" /></p>
 <p>si on part du sommet A (sommet s dans l'algorithme) la "découverte" peut se faire dans l'ordre suivant :  A, B, F, C, D, G, H, E et I (ATTENTION ce n'est pas la seule solution possible, par exemple A, F, B, D, C, G, H, I et E est aussi possible (il y a bien d'autres possibilités)).</p>
 <p>Vous avez sans doute remarqué que dans le cas d'un parcours en largeur d'abord, on "découvre" d'abord tous les sommets situés à une distance k du sommet "origine" (sommet s) avant de commencer la découverte des sommets situés à une distance k+1 (on définit la distance comme étant le nombre d'arêtes à parcourir depuis A pour arriver à destination):</p>
 <p>En effet, pour l'exemple ci-dessus, nous avons bien : </p>
@@ -2412,7 +2412,7 @@
 </code></pre></div>
 Vous avez dû remarquer que le parcours en profondeur utilise une fonction récursive. J'attire votre attention sur l'extrême simplicité de cet algorithme (au niveau de sa conception), c'est souvent le cas avec les algorithmes récursifs.</p>
 <p>Si on applique cet algorithme sur le graphe G ci-dessous : </p>
-<p><img alt="" src="../img/c10c_1.png" /></p>
+<p><img alt="" src="../img/c10c_1.jpg" /></p>
 <p>en partant du sommet A la "découverte" peut se faire dans l'ordre suivant :  A, B, C, E, I, D, G, F et H (ATTENTION, ici aussi, ce n'est pas la seule solution possible : A, F, H, I, E, C, B, D et G est aussi une solution possible (il y a bien d'autres possibilités)).</p>
 <p>Dans le cas du parcours en largeur d'abord on "découvrait" tous les sommets situés à une distance k de l'origine avant de s'intéresser aux sommets situés à une distance k+1 de l'origine. Dans le cas du parcours en profondeur, on va chercher à aller "le plus loin possible" dans le graphe : A -&gt; B -&gt; C -&gt; E -&gt; I -&gt; D, quand on tombe sur "un cul-de-sac" (dans notre exemple, D est un "cul-de-sac", car une fois en D, on peut uniquement aller en B, or, B a déjà été découvert...), on revient "en arrière" (dans notre exemple, on repart de B pour aller explorer une autre branche : G -&gt; F -&gt; H)</p>
 <p>À noter que l'utilisation d'un algorithme récursif n'est pas une obligation pour le parcours en profondeur :</p>

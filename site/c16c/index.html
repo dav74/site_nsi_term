@@ -2317,10 +2317,10 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <p>Pour n=6, il est possible d'illustrer le fonctionnement de ce programme avec le schéma ci-dessous :</p>
-<p><img alt="" src="../img/c16c_1.png" /></p>
+<p><img alt="" src="../img/c16c_1.jpg" /></p>
 <p>Vous pouvez constater que l'on a une structure arborescente (typique dans les algorithmes récursifs), si on additionne toutes les feuilles de cette structure arborescente (fib(1)=1 et fib(0)=0), on retrouve bien 8.</p>
 <p>En observant attentivement le schéma ci-dessus, vous avez remarqué que de nombreux calculs sont inutiles, car effectué 2 fois : par exemple on retrouve le calcul de fib(4) à 2 endroits (en haut à droite et un peu plus bas à gauche) :</p>
-<p><img alt="" src="../img/c16c_2.png" /></p>
+<p><img alt="" src="../img/c16c_2.jpg" /></p>
 <p>On pourrait donc grandement simplifier le calcul en calculant une fois pour toutes fib(4), en "mémorisant" le résultat et en le réutilisant quand nécessaire :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">fib_mem</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">mem</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">#permet de créer un tableau contenant n+1 zéro</span>
@@ -2430,7 +2430,7 @@
 1)</em> dans la  console Python, on obtient 4 (on doit utiliser au minimum 4 pièces pour rendre 11 cts)</p>
 <p>Essayons de comprendre plus en détail comment le programme ci-dessous détermine ce résultat.</p>
 <p>Étudions cet arbre : </p>
-<p><img alt="" src="../img/c16c_3.png" /></p>
+<p><img alt="" src="../img/c16c_3.jpg" /></p>
 <p>Plusieurs remarques s'imposent :</p>
 <ul>
 <li>
@@ -2446,7 +2446,7 @@
 <p>Si maintenant on tente d'exécuter la même fonction avec une valeur à rendre beaucoup plus grande (par exemple 171 cts), le programme plante ! Pourquoi ? Parce que les appels récursifs sont trop nombreux, on dépasse la capacité de la pile.</p>
 <p>La programmation dynamique va nous   permettre de résoudre ce problème.</p>
 <p>Comme vous avez peut-être déjà dû le remarquer, même dans le cas simple évoqué ci-dessus (11 cts à rendre), nous faisons plusieurs fois exactement le même calcul. Par exemple on retrouve 2 fois la branche qui part de "4" :</p>
-<p><img alt="" src="../img/c16c_4.png" /></p>
+<p><img alt="" src="../img/c16c_4.jpg" /></p>
 <p>Il va donc être possible d'appliquer la même méthode que pour Fibonacci.</p>
 <p>À noter que dans des cas plus "difficiles à traiter" comme 171 cts, on va retrouver de nombreuses fois exactement les mêmes calculs, il est donc potentiellement intéressant d'utiliser la programmation dynamique.</p>
 <p>Voici donc notre programme de calcul de rendu de monnaie modifiée :</p>

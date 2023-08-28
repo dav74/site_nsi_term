@@ -2342,7 +2342,7 @@ Pour chiffrer le message nous allons effectuer un XOR bit à bit. Pour rappel, v
 </tbody>
 </table>
 <p>Comme la clé est plus courte que le message, il faut "reproduire" la clé vers la droite autant de fois que nécessaire (si la taille du message n'est pas un multiple de la taille de la clé, on peut reproduire seulement quelques bits de la clé pour la fin du message):</p>
-<p><img alt="" src="../img/c12c_1.png" /></p>
+<p><img alt="" src="../img/c12c_1.jpg" /></p>
 <p>Le signe + dans un cercle symbolise le XOR</p>
 <p>Après ce XOR on obtient donc la suite de bits suivante :</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>001111000000101000011000000000110001101101001111001000110000000000000110000000110001000001001110
@@ -2350,7 +2350,7 @@ Pour chiffrer le message nous allons effectuer un XOR bit à bit. Pour rappel, v
 Soit la chaine de caractères suivante (si on cherche à afficher le message chiffré avec un éditeur de texte) : O#N</p>
 <p>Maintenant ce message est prêt pour être envoyé à son destinataire B. Si P intercepte le message et cherche à le lire avec un éditeur de texte, il obtiendra la suite de caractère O#N</p>
 <p>B a maintenant reçu le message chiffré, il possède la clé (toto), il va donc pouvoir déchiffrer le message en appliquant un XOR entre le message chiffré et la clé (on applique exactement la même méthode que ci-dessus).</p>
-<p><img alt="" src="../img/c12c_2.png" /></p>
+<p><img alt="" src="../img/c12c_2.jpg" /></p>
 <p>On trouve le code binaire suivant :</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>010010000110010101101100011011000110111100100000010101110110111101110010011011000110010000100001
 </code></pre></div>
@@ -2368,15 +2368,15 @@ Vous pouvez remarquer que nous avons bien retrouvé le code binaire d'origine. S
 <p>B possède une "clé privée" que l'on notera kprB et une "clé publique" que l'on notera kpuB. En aucun cas B ne devra divulguer sa clé privée à quiconque, elle devra rester strictement secrète. En revanche sa clé publique pourra être connue de tout le monde sans aucun problème.</p>
 </li>
 </ul>
-<p><img alt="" src="../img/c12c_3.png" /></p>
+<p><img alt="" src="../img/c12c_3.jpg" /></p>
 <p>Si A désire envoyer un message m à B, il va utiliser la clé publique de B afin de réaliser le chiffrement (m est chiffré en m'). Le message chiffré (m') va ensuite pouvoir transiter entre A et B. Une fois le message m' en sa possession, B va utiliser sa clé privée afin de pouvoir déchiffrer le message m' et ainsi obtenir le message m. Le processus peut être résumé par le schéma suivant :</p>
-<p><img alt="" src="../img/c12c_4.png" /></p>
+<p><img alt="" src="../img/c12c_4.jpg" /></p>
 <p>Si P intercepte le message m', il sera incapable de déterminer m à partir de m' sans la clé privée de B.</p>
 <p>Le chiffrement asymétrique repose sur des problèmes très difficiles à résoudre dans un sens et faciles à résoudre dans l'autre sens. Prenons un exemple : l'algorithme de chiffrement asymétrique RSA (du nom de ses 3 inventeurs : Rivest Shamir et Adleman), est très couramment utilisé, notamment dans tout ce qui touche au commerce électronique. RSA se base sur la factorisation des très grands nombres premiers. Si vous prenez un nombre premier A (par exemple A = 16813007) et un nombre premier B (par exemple B = 258027589), il facile de déterminer C le produit de A par B (ici on a A x B = C avec C = 4338219660050123). En revanche si je vous donne C (ici 4338219660050123) il est très difficile de retrouver A et B. En tous les cas, à ce jour, aucun algorithme n'est capable de retrouver A et B connaissant C dans un temps "raisonnable". Nous avons donc bien ici un problème relativement facile dans un sens (trouver C à partir de A et B) est extrêmement difficile dans l'autre sens (trouver A et B à partir de C). Les détails du fonctionnement de RSA sont relativement complexes (mathématiquement parlant) et ne seront pas abordés ici. Vous devez juste savoir qu'il existe un lien entre une clé publique et la clé privée correspondante, mais qu'il est quasiment impossible de trouver la clé privée de quelqu'un à partir de sa clé publique.</p>
 <h2 id="4-le-protocole-https">4) le protocole HTTPS</h2>
 <p>Nous allons maintenant voir une utilisation concrète de ces chiffrements symétriques et asymétriques : le protocole HTTPS.</p>
 <p>Avant de parler du protocole HTTPS, petit retour sur le protocole HTTP : un client effectue une requête HTTP vers un serveur, le serveur va alors répondre à cette requête (par exemple en envoyant une page HTML au client). Si nécessaire n'hésitez pas à consulter ce qui a été fait en première pour plus de détails.</p>
-<p><img alt="" src="../img/c12c_5.png" /></p>
+<p><img alt="" src="../img/c12c_5.jpg" /></p>
 <p>Le protocole HTTP pose 2 problèmes en termes de sécurité informatique :</p>
 <ul>
 <li>
@@ -2386,7 +2386,7 @@ Vous pouvez remarquer que nous avons bien retrouvé le code binaire d'origine. S
 <p>grâce à une technique qui ne sera pas détaillée ici (le DNS spoofing), un serveur "pirate" peut se faire passer pour un site sur lequel vous avez l'habitude de vous rendre en toute confiance : imaginez vous voulez consulter vos comptes bancaires en ligne, vous saisissez l'adresse web de votre banque dans la barre d'adresse de votre navigateur favori, vous arrivez sur la page d'accueil d'un site en tout point identique au site de votre banque, en toute confiance, vous saisissez votre identifiant et votre mot de passe. C'est terminé un "pirate" va pouvoir récupérer votre identifiant et votre mot de passe ! Pourquoi ? Vous avez saisi l'adresse web de votre banque comme d'habitude ! Oui, sauf que grâce à une attaque de type "DNS spoofing" vous avez été redirigé vers un site pirate, en tout point identique au site de votre banque. Dès vos identifiant et mot de passe saisis sur ce faux site, le pirate pourra les récupérer et se rendre avec sur le véritable site de votre banque. À noter qu'il existe d'autres techniques que le DNS spoofing qui permettent de substituer un serveur à un autre, mais elles ne seront pas évoquées ici.</p>
 </li>
 </ul>
-<p><img alt="" src="../img/c12c_6.png" /></p>
+<p><img alt="" src="../img/c12c_6.jpg" /></p>
 <p>HTTPS est donc la version sécurisée de HTTP, le but de HTTPS est d'éviter les 2 problèmes évoqués ci-dessus. HTTPS s'appuie sur le protocole TSL (Transport Layer Security) anciennement connu sous le nom de SSL (Secure Sockets Layer)</p>
 <p>Comment chiffrer les données circulant entre le client et le serveur ?</p>
 <p>Les communications vont être chiffrées grâce à une clé symétrique. Problème : comment échanger cette clé entre le client et le serveur ? Simplement en utilisant une paire clé publique / clé privée !</p>
@@ -2406,7 +2406,7 @@ Vous pouvez remarquer que nous avons bien retrouvé le code binaire d'origine. S
 </li>
 </ul>
 <p>On peut résumer ce processus avec le schéma suivant :</p>
-<p><img alt="" src="../img/c12c_7.png" /></p>
+<p><img alt="" src="../img/c12c_7.jpg" /></p>
 <p>Ce processus se répète à chaque fois qu'un nouveau client effectue une requête HTTPS vers le serveur.</p>
 <p>Comment éviter les conséquences fâcheuses d'une attaque de type DNS Spoofing ?</p>
 <p>Pour éviter tout problème, il faut que le serveur puisse justifier de son "identité" ("voici la preuve que je suis bien le site de la banque B et pas un site "pirate""). Pour ce faire, chaque site désirant proposer des transactions HTTPS doit, périodiquement, demander (acheter dans la plupart des cas) un certificat d'authentification (sorte de carte d'identité pour un site internet) auprès d'une autorité habilitée à fournir ce genre de certificats (chaque navigateur web possède une liste des autorités dont il accepte les certificats). Comme dit plus haut, ce certificat permet au site de prouver son "identité" auprès des clients. Nous n'allons pas entrer dans les détails du fonctionnement de ces certificats, mais vous devez juste savoir que le serveur envoie ce certificat au client en même temps que sa clé publique (étape 2 du schéma ci-dessus). En cas d'absence de certificat (ou d'envoi de certificat non conforme), le client stoppe immédiatement les échanges avec le serveur. Il peut arriver de temps en temps que le responsable d'un site oublie de renouveler son certificat à temps (dépasse la date d'expiration), dans ce cas, le navigateur web côté client affichera une page de mise en garde avec un message du style "ATTENTION le certificat d'authentification du site XXX a expiré, il serait prudent de ne pas poursuivre vos échanges avec le site XXXX".</p>

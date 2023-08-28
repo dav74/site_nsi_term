@@ -2343,7 +2343,7 @@
 </ul>
 <p>Le passage de l'état "prêt" vers l'état "élu" constitue l'opération "d'élection". Le passage de l'état élu vers l'état bloqué est l'opération de "blocage". Un processus est toujours créé dans l'état "prêt". Pour se terminer, un processus doit obligatoirement se trouver dans l'état "élu".</p>
 <p>On peut résumer tout cela avec le diagramme suivant :</p>
-<p><img alt="" src="../img/c19c_1.png" /></p>
+<p><img alt="" src="../img/c19c_1.jpg" /></p>
 <p>Il est vraiment important de bien comprendre que le "chef d'orchestre" qui attribue aux processus leur état "élu", "bloqué" ou "prêt" est le système d'exploitation. On dit que le système gère l'ordonnancement des processus (tel processus sera prioritaire sur tel autre...)</p>
 <p>Chose aussi à ne pas perdre de vu : un processus qui utilise une ressource R doit la "libérer" une fois qu'il a fini de l'utiliser afin de la rendre disponible pour les autres processus. Pour libérer une ressource, un processus doit obligatoirement être dans un état "élu".</p>
 <h2 id="3-creation-dun-processus">3) création d'un processus</h2>
@@ -2351,7 +2351,7 @@
 <p>Si un processus est créé à partir d'un autre processus, comment est créé le tout premier processus ?</p>
 <p>Sous un système d'exploitation comme Linux, au moment du démarrage de l'ordinateur un tout premier processus (appelé processus 0 ou encore Swapper) est créé à partir de "rien" (il n'est le fils d'aucun processus). Ensuite, ce processus 0 crée un processus souvent appelé "init" ("init" est donc le fils du processus 0). À partir de "init", les processus nécessaires au bon fonctionnement du système sont créés (par exemple les processus "crond", "inetd", "getty",...). Puis d'autres processus sont créés à partir des fils de "init"...</p>
 <p>On peut résumer tout cela avec le schéma suivant :</p>
-<p><img alt="" src="../img/c19c_2.png" /></p>
+<p><img alt="" src="../img/c19c_2.jpg" /></p>
 <p>N. B. Tous ces noms de processus ne sont pas à retenir, ils sont juste donnés pour l'exemple. Il est juste nécessaire d'avoir compris les notions de processus père et processus fils et la structure arborescente.</p>
 <h2 id="4-pid-et-ppid">4) PID et PPID</h2>
 <p>Chaque processus possède un identifiant appelé PID (Process Identification), ce PID est un nombre. Le premier processus créé au démarrage du système à pour PID 0, le second 1, le troisième 2... Le système d'exploitation utilise un compteur qui est incrémenté de 1 à chaque création de processus, le système utilise ce compteur pour attribuer les PID aux processus.</p>

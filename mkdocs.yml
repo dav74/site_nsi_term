@@ -63,12 +63,12 @@ nav:
       - 'Activités' : 'c8a.md'
       - 'Exercices' : 'c8e.md'
       - 'Révision' : 'c8r.md'
-    - '*C9 : les graphes':
+    - 'C9 : les graphes':
       - 'Cours': 'c9c.md'
       - 'Activités' : 'c9a.md'
       - 'Exercices' : 'c9e.md'
       - 'Révision' : 'c9r.md'
-    - '*C10 : algo graphes':
+    - 'C10 : algo graphes':
       - 'Cours': 'c10c.md'
       - 'Activités' : 'c10a.md'
       - 'Exercices' : 'c10e.md'
@@ -79,13 +79,13 @@ nav:
       - 'Activités' : 'c11a.md'
       - 'Exercices' : 'c11e.md'
       - 'Révision' : 'c11r.md'
-    - '*C12 : sécurisation des communications':
+    - 'C12 : sécurisation des communications':
       - 'Cours': 'c12c.md'
       - 'Activités' : 'c12a.md'
       - 'Exercices' : 'c12e.md'
       - 'Révision' : 'c12r.md'
   - 'Partie 4':
-    - '*C13 : calculabilité-décidabilité':
+    - 'C13 : calculabilité-décidabilité':
       - 'Cours': 'c13c.md'
       - 'Activités' : 'c13a.md'
       - 'Exercices' : 'c13e.md'
@@ -101,18 +101,18 @@ nav:
       - 'Activités' : 'c15a.md'
       - 'Exercices' : 'c15e.md'
       - 'Révision' : 'c15r.md'
-    - '*C16 : programmation dynamique':
+    - 'C16 : programmation dynamique':
       - 'Cours': 'c16c.md'
       - 'Activités' : 'c16a.md'
       - 'Exercices' : 'c16e.md'
       - 'Révision' : 'c16r.md'
-    - '*C17 : recherche textuelle':
+    - 'C17 : recherche textuelle':
       - 'Cours': 'c17c.md'
       - 'Activités' : 'c17a.md'
       - 'Exercices' : 'c17e.md'
       - 'Révision' : 'c17r.md'
   - 'Partie 6':
-    - '*C18 : système sur puce':
+    - 'C18 : système sur puce':
       - 'Cours': 'c18c.md'
       - 'Activités' : 'c18a.md'
       - 'Exercices' : 'c18e.md'
