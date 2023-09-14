@@ -20,11 +20,11 @@ Soit une pile P composée des éléments suivants : 15, 11, 32, 45 et 67 (le som
 Soit une pile P initialement vide. Soit les instructions suivantes :
 
 ```
-push(P,34)
-push(P,76)
-push(P,43)
-a = pop(P)
-push(P,42)
+empile(P,34)
+empile(P,76)
+empile(P,43)
+a = dépile(P)
+empile(P,42)
 b = taille(P) 
 ```
 Donnez le contenu de la pile P, la valeur de a et la valeur de b.
@@ -37,11 +37,11 @@ Soit une file F composée des éléments suivants : 1, 12, 24, 17, 21 et 72 (le 
 Soit une file F initialement vide. Soit les instructions suivantes :
 
 ```
-enqueue(F,67)
-enqueue(F,34)
-enqueue(F,78)
-a = dequeue(F)
-enqueue(F,23)
+enfile(F,67)
+enfile(F,34)
+enfile(F,78)
+a = défile(F)
+enfile(F,23)
 b = taille(F)
 ```
 Donnez le contenu de la file F, la valeur de a et la valeur de b.

@@ -41,7 +41,7 @@ Les piles sont basées sur le principe LIFO (Last In First Out : le dernier rent
 Voici les opérations que l'on peut réaliser sur une pile :
 
 - on peut savoir si une pile est vide (estVide)
-- on peut empiler un nouvel élément sur la pile (piler en français, push en anglais)
+- on peut empiler un nouvel élément sur la pile (empiler en français, push en anglais)
 - on peut récupérer l'élément au sommet de la pile tout en le supprimant. On dit que l'on dépile (dépiler en français, pop en anglais)
 - on peut connaitre le nombre d'éléments présents dans la pile (taille)
 
@@ -49,10 +49,10 @@ Exemples :
 
 Soit une pile P composée des éléments suivants : 12, 14, 8, 7, 19 et 22 (le sommet de la pile est 22) **Pour chaque exemple ci-dessous on repart de la pile d'origine** :
 
-- pop(P) renvoie 22 et la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7 et 19 (le sommet de la pile est 19)
-- push(P,42) la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7, 19, 22 et 42  (le sommet de la pile est 42)
-- si on applique pop(P) 6 fois de suite, estVide(P) renvoie vrai
-- après avoir appliqué pop(P) une fois, taille(P) renvoie 5
+- dépile(P) renvoie 22 et la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7 et 19 (le sommet de la pile est 19)
+- empile(P,42) la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7, 19, 22 et 42  (le sommet de la pile est 42)
+- si on applique dépile(P) 6 fois de suite, estVide(P) renvoie vrai
+- après avoir appliqué dépile(P) une fois, taille(P) renvoie 5
 
 ## 4)  les  files
 Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l'autre extrémité. On prend souvent l'analogie de la file d'attente devant un magasin pour décrire une file de données.
@@ -72,10 +72,10 @@ Exemples :
 
 Soit une file F composée des éléments suivants : 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 12). **Pour chaque exemple ci-dessous on repart de la file d'origine** :
 
-- enqueue(F,42) la file F est maintenant composée des éléments suivants : 42, 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 42)
-- dequeue(F) la file F est maintenant composée des éléments suivants : 12, 14, 8, 7, et 19 (le premier élément rentré dans la file est 19 ; le dernier élément rentré dans la file est 12)
-- si on applique dequeue(F) 6 fois de suite, estVide(F) renvoie vrai
-- après avoir appliqué dequeue(F) une fois, taille(F) renvoie 5.
+- enfile(F,42) la file F est maintenant composée des éléments suivants : 42, 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 42)
+- défile(F) la file F est maintenant composée des éléments suivants : 12, 14, 8, 7, et 19 (le premier élément rentré dans la file est 19 ; le dernier élément rentré dans la file est 12)
+- si on applique défile(F) 6 fois de suite, estVide(F) renvoie vrai
+- après avoir appliqué défile(F) une fois, taille(F) renvoie 5.
 
 ## 5) Types abstraits et représentation concrète des données
 
