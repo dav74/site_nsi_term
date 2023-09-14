@@ -2339,17 +2339,17 @@
 <p>Voici les opérations que l'on peut réaliser sur une pile :</p>
 <ul>
 <li>on peut savoir si une pile est vide (estVide)</li>
-<li>on peut empiler un nouvel élément sur la pile (piler en français, push en anglais)</li>
+<li>on peut empiler un nouvel élément sur la pile (empiler en français, push en anglais)</li>
 <li>on peut récupérer l'élément au sommet de la pile tout en le supprimant. On dit que l'on dépile (dépiler en français, pop en anglais)</li>
 <li>on peut connaitre le nombre d'éléments présents dans la pile (taille)</li>
 </ul>
 <p>Exemples :</p>
 <p>Soit une pile P composée des éléments suivants : 12, 14, 8, 7, 19 et 22 (le sommet de la pile est 22) <strong>Pour chaque exemple ci-dessous on repart de la pile d'origine</strong> :</p>
 <ul>
-<li>pop(P) renvoie 22 et la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7 et 19 (le sommet de la pile est 19)</li>
-<li>push(P,42) la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7, 19, 22 et 42  (le sommet de la pile est 42)</li>
-<li>si on applique pop(P) 6 fois de suite, estVide(P) renvoie vrai</li>
-<li>après avoir appliqué pop(P) une fois, taille(P) renvoie 5</li>
+<li>dépile(P) renvoie 22 et la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7 et 19 (le sommet de la pile est 19)</li>
+<li>empile(P,42) la pile P est maintenant composée des éléments suivants : 12, 14, 8, 7, 19, 22 et 42  (le sommet de la pile est 42)</li>
+<li>si on applique dépile(P) 6 fois de suite, estVide(P) renvoie vrai</li>
+<li>après avoir appliqué dépile(P) une fois, taille(P) renvoie 5</li>
 </ul>
 <h2 id="4-les-files">4)  les  files</h2>
 <p>Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l'autre extrémité. On prend souvent l'analogie de la file d'attente devant un magasin pour décrire une file de données.</p>
@@ -2365,10 +2365,10 @@
 <p>Exemples :</p>
 <p>Soit une file F composée des éléments suivants : 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 12). <strong>Pour chaque exemple ci-dessous on repart de la file d'origine</strong> :</p>
 <ul>
-<li>enqueue(F,42) la file F est maintenant composée des éléments suivants : 42, 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 42)</li>
-<li>dequeue(F) la file F est maintenant composée des éléments suivants : 12, 14, 8, 7, et 19 (le premier élément rentré dans la file est 19 ; le dernier élément rentré dans la file est 12)</li>
-<li>si on applique dequeue(F) 6 fois de suite, estVide(F) renvoie vrai</li>
-<li>après avoir appliqué dequeue(F) une fois, taille(F) renvoie 5.</li>
+<li>enfile(F,42) la file F est maintenant composée des éléments suivants : 42, 12, 14, 8, 7, 19 et 22 (le premier élément rentré dans la file est 22 ; le dernier élément rentré dans la file est 42)</li>
+<li>défile(F) la file F est maintenant composée des éléments suivants : 12, 14, 8, 7, et 19 (le premier élément rentré dans la file est 19 ; le dernier élément rentré dans la file est 12)</li>
+<li>si on applique défile(F) 6 fois de suite, estVide(F) renvoie vrai</li>
+<li>après avoir appliqué défile(F) une fois, taille(F) renvoie 5.</li>
 </ul>
 <h2 id="5-types-abstraits-et-representation-concrete-des-donnees">5) Types abstraits et représentation concrète des données</h2>
 <p>Nous avons évoqué ci-dessus la manipulation des types de données (liste, pile et file) par des algorithmes, mais, au-delà de la beauté intellectuelle de réfléchir sur ces algorithmes, le but de l'opération est souvent, à un moment ou un autre, de "traduire" ces algorithmes dans un langage compréhensible pour un ordinateur (Python, Java, C,...). On dit alors que l'on implémente un algorithme. Il est donc aussi nécessaire d'implémenter les types de données comme les listes, les piles ou les files afin qu'ils soient utilisables par les ordinateurs. Les listes, les piles ou les files sont des "vues de l'esprit" présentes uniquement dans la tête des informaticiens, on dit que ce sont des types abstraits de données (ou plus simplement des types abstraits). L'implémentation de ces types abstraits, afin qu'ils soient utilisables par une machine, est loin d'être une chose triviale. L'implémentation d'un type de données dépend du langage de programmation. Il faut, quel que soit le langage utilisé, que le programmeur retrouve les fonctions qui ont été définies pour le type abstrait (pour les listes, les piles et les files cela correspond aux fonctions définies ci-dessus). Certains types abstraits ne sont pas forcément implémentés dans un langage donné, si le programmeur veut utiliser ce type abstrait, il faudra qu'il le programme par lui-même en utilisant les "outils" fournis par son langage de programmation.</p>
