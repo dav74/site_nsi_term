@@ -19,7 +19,7 @@ Dans les piles, il est uniquement possible de manipuler le dernier élément int
 Voici les opérations que l'on peut réaliser sur une pile :
 
 - on peut savoir si une pile est vide (estVide)
-- on peut empiler un nouvel élément sur la pile (piler en français, push en anglais)
+- on peut empiler un nouvel élément sur la pile (empiler en français, push en anglais)
 - on peut récupérer l'élément au sommet de la pile tout en le supprimant. On dit que l'on dépile (dépiler en français, pop en anglais)
 - on peut connaitre le nombre d'éléments présents dans la pile (taille)
 

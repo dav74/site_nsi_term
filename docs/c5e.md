@@ -16,13 +16,13 @@ Donnez le contenu des listes L et L1 et la valeur de a.
 Soit une pile P initialement vide. Soit les instructions suivantes :
 
 ```
-push(P,4)
-push(P,7)
-a = pop(P)
+empile(P,4)
+empile(P,7)
+a = dépile(P)
 b = taille(P)
-c = pop(P)
-push(P,3)
-push(P,2)
+c = dépile(P)
+empile(P,3)
+empile(P,2)
 d = taille(P)
 ```
 Donnez le contenu de la pile P, la valeur de a, la valeur de b, la valeur de c et la valeur de d.
@@ -32,14 +32,14 @@ Donnez le contenu de la pile P, la valeur de a, la valeur de b, la valeur de c e
 Soit une file F initialement vide. Soit les instructions suivantes :
 
 ```
-enqueue(F,6)
-enqueue(F,3)
-a = dequeue(F)
-enqueue(F,9)
+enfile(F,6)
+enfile(F,3)
+a = défile(F)
+enfile(F,9)
 b = taille(F)
-enqueue(F,17)
-c = dequeue(F)
-enqueue(F,2)
+enfile(F,17)
+c = défile(F)
+enfile(F,2)
 d = taille(F)
 ```
 Donnez le contenu de la file F, la valeur de a, la valeur de b, la valeur de c et la valeur de d.
