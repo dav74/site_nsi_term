@@ -30,7 +30,7 @@ b = taille(P)
 Donnez le contenu de la pile P, la valeur de a et la valeur de b.
 
 ### activité 5.4
-Soit une file F composée des éléments suivants : 1, 12, 24, 17, 21 et 72 (le premier élément rentré dans la file est 72 ; le dernier élément rentré dans la file est 1). Quel est l'effet de l'instruction enqueue(F,25) ?
+Soit une file F composée des éléments suivants : 1, 12, 24, 17, 21 et 72 (le premier élément rentré dans la file est 72 ; le dernier élément rentré dans la file est 1). Quel est l'effet de l'instruction enfile(F,25) ?
 
 ### activité 5.5
 
