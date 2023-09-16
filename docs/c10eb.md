@@ -29,13 +29,13 @@ DEBUT
 s.couleur ← noir
 enfiler (s,f)
 tant que f non vide :
-    u ← ………….
-    pour chaque sommet v adjacent au sommet ……… :
-        si v.couleur n'est pas ……… :
-            v.couleur ← noir
-            enfiler(...,f)
-        fin si
-    fin pour
+  u ← ………….
+  pour chaque sommet v adjacent au sommet ……… :
+    si v.couleur n'est pas ……… :
+      v.couleur ← noir
+      enfiler(...,f)
+    fin si
+  fin pour
 fin tant que
 FIN
 ``` 
@@ -57,16 +57,19 @@ Soit la matrice d'adjacence suivante qui représente un graphe G :
 g1 = {'A':['B','C'], 'B':['A'], 'C':['A','D'], 'D':['C']}
 
 def myst(G,s):
-    noir = []
-    pile = [s]
-    while len(pile) > 0 :
-        u = pile.pop()
-        if u not in noir :
-            noir.append(u)
-            for v in G[u]:
-                pile.append(v)  
-    return noir
-
+    noir=[]
+    p = []
+    l = []
+    noir.append(s)
+    p.append(s)
+    while len(p)>0:
+        u = p.pop()
+        l.append(u)
+        for v in G[u]:
+            if v not in noir:
+                noir.append(v)
+                p.append(v)
+    return l
 
 L = myst(g1,'A')
 ```

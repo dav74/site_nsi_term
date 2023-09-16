@@ -32,13 +32,13 @@ DEBUT
 s.couleur ← noir
 enfiler (s,f)
 tant que f non vide :
-    u ← defiler(f)
-    pour chaque sommet v adjacent au sommet u :
-        si v.couleur n'est pas noir :
-            v.couleur ← noir
-            enfiler(v,f)
-        fin si
-    fin pour
+  u ← defiler(f)
+  pour chaque sommet v adjacent au sommet u :
+    si v.couleur n'est pas noir :
+      v.couleur ← noir
+      enfiler(v,f)
+    fin si
+  fin pour
 fin tant que
 FIN
 ```
@@ -67,12 +67,12 @@ v : noeud
 //On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l'origine
 DEBUT
 PARCOURS-PROFONDEUR(G,u) :
-    u.couleur ← noir
-    pour chaque sommet v adjacent au sommet u :
-        si v.couleur n'est pas noir :
-            PARCOURS-PROFONDEUR(G,v)
-        fin si
-    fin pour
+  u.couleur ← noir
+  pour chaque sommet v adjacent au sommet u :
+    si v.couleur n'est pas noir :
+      PARCOURS-PROFONDEUR(G,v)
+    fin si
+  fin pour
 FIN
 ```
 Vous avez dû remarquer que le parcours en profondeur utilise une fonction récursive. J'attire votre attention sur l'extrême simplicité de cet algorithme (au niveau de sa conception), c'est souvent le cas avec les algorithmes récursifs.
@@ -96,19 +96,20 @@ v : noeud
 p : pile (pile vide au départ)
 //On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l'origine
 DEBUT
-empiler(s,p)
+s.couleur ← noir
+piler(s,p)
 tant que p n'est pas vide :
-    u ← depiler(p)
-    si u.couleur n'est pas noir :
-        u.couleur ← noir
-        pour chaque sommet v adjacent au sommet u :
-            empiler(v,p)
-        fin pour
+  u ← depiler(p)
+  pour chaque sommet v adjacent au sommet u :
+    si v.couleur n'est pas noir :
+      v.couleur ← noir
+      piler(v,p)
     fin si
+  fin pour
 fin tant que
 FIN
 ```
-Vous avez sans doute remarqué que la version "non récursive" (on dit "itérative") de l'algorithme du parcours en profondeur ressemble beaucoup à l'algorithme du parcours en largeur. Il y a tout de même une différence à bien noter : la file est remplacée par une pile
+Vous avez sans doute remarqué que la version "non récursive" (on dit "itérative") de l'algorithme du parcours en profondeur ressemble beaucoup à l'algorithme du parcours en largeur, on a juste remplacé la file par une pile.
 
 ## 2) cycle dans  les graphes
 
@@ -131,21 +132,21 @@ p : pile (vide au départ)
 //On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l'origine
 DEBUT
 CYCLE():
-    piler(s,p)
-    tant que p n'est pas vide :
-        u ← depiler(p)
-        pour chaque sommet v adjacent au sommet u :
-            si v.couleur n'est pas noir :
-                empiler(v,p)
-            fin si
-        fin pour
-        si u est noir :
-            renvoie Vrai
-        sinon :
-            u.couleur ← noir
-        fin si
-    fin tant que
-    renvoie Faux
+  piler(s,p)
+  tant que p n'est pas vide :
+    u ← depiler(p)
+    pour chaque sommet v adjacent au sommet u :
+      si v.couleur n'est pas noir :
+        piler(v,p)
+      fin si
+    fin pour
+    si u est noir :
+      renvoie Vrai
+    sinon :
+      u.couleur ← noir
+    fin si
+  fin tant que
+  renvoie Faux
 FIN
 ```
 ## 3) Chercher une chaine dans un graphe
@@ -162,19 +163,19 @@ chaine : ensemble de noeuds (initialement vide)
 
 DEBUT
 TROUVE-CHAINE(G, start, end, chaine):
-    chaine = chaine ⋃ start //le symbol ⋃ signifie union, il permet d'ajouter le noeud start à l'ensemble chaine
-    si start est identique à end :
-        renvoie chaine
+  chaine = chaine ⋃ start //le symbol ⋃ signifie union, il permet d'ajouter le noeud start à l'ensemble chaine
+  si start est identique à end :
+    renvoie chaine
+  fin si
+  pour chaque sommet u adjacent au sommet start :
+    si u n'appartient pas à chaine :
+	  nchemin = TROUVE-CHAINE(G, u, end, chaine)
+      si nchemin non vide :
+        renvoie nchemin
+      fin si
     fin si
-    pour chaque sommet u adjacent au sommet start :
-        si u n'appartient pas à chaine :
-            nchemin = TROUVE-CHAINE(G, u, end, chaine)
-            si nchemin non vide :
-                renvoie nchemin
-            fin si
-        fin si
-    fin pour
-    renvoie NIL
+  fin pour
+renvoie NIL
 FIN
 ```
 
