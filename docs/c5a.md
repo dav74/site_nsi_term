@@ -13,7 +13,7 @@ Donnez le contenu des listes L et L1 et la valeur de a.
 
 ### activité 5.2
 
-Soit une pile P composée des éléments suivants : 15, 11, 32, 45 et 67 (le sommet de la pile est 67). Quel est l'effet de l'instruction pop(P) ?
+Soit une pile P composée des éléments suivants : 15, 11, 32, 45 et 67 (le sommet de la pile est 67). Quel est l'effet de l'instruction dépiler(P) ?
 
 ### activité 5.3
 
