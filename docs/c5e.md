@@ -84,11 +84,11 @@ Donnez l’état de la file *file* après l’exécution de ce programme
 
 ### exercices du bac
 
-- [Sujet 1 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_1.pdf)
-- [Sujet 3 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_3.pdf)
-- [Sujet 6 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_6.pdf)
-- [Sujet 7 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_7.pdf)
-- [Sujet 8 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_8.pdf)
+- [Sujet 1 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_01.pdf)
+- [Sujet 3 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_03.pdf)
+- [Sujet 6 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_06.pdf)
+- [Sujet 7 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_07.pdf)
+- [Sujet 8 2021 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_08.pdf)
 - [Sujet 1 2022 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_01.pdf)
 - [Sujet 2 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_02.pdf)
 - [Sujet 3 2022 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_03.pdf)

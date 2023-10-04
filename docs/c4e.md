@@ -25,8 +25,8 @@ La fonction puissance prend un paramètre n et renvoie 2<sup>n</sup>. On défini
 
 ### exercices du bac
 
-- [Sujet 1 2021 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_1.pdf)
-- [Sujet 5 2021 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_5.pdf)
+- [Sujet 1 2021 Exercice 2](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_01.pdf)
+- [Sujet 5 2021 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_05.pdf)
 - [Sujet 1 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_01.pdf)
 - [Sujet 7 2022 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_07.pdf)
 

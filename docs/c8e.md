@@ -20,10 +20,10 @@ Soit l’arbre binaire A suivant :
 
 ### exercices du bac
 
-- [Sujet 1 2021 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_1.pdf)
-- [Sujet 2 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_2.pdf)
-- [Sujet 6 2021 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_6.pdf)
-- [Sujet 8 2021 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_8.pdf)
+- [Sujet 1 2021 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_01.pdf)
+- [Sujet 2 2021 Exercice 1](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_02.pdf)
+- [Sujet 6 2021 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_06.pdf)
+- [Sujet 8 2021 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2021/sujet_08.pdf)
 - [Sujet 1 2022 Exercice 5](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_01.pdf)
 - [Sujet 4 2022 Exercice 3](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_04.pdf)
 - [Sujet 5 2022 Exercice 4](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_05.pdf)
