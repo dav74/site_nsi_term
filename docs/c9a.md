@@ -2,12 +2,12 @@
 
 Construisez un graphe de réseau social à partir des informations suivantes :
 
-A est ami avec B et E
-B est ami avec A et C
-C est ami avec B,F et D
-D est ami avec C,F et E
-E est ami avec A,D et F
-F est ami avec C, D et E
+- A est ami avec B et E
+- B est ami avec A et C
+- C est ami avec B,F et D
+- D est ami avec C,F et E
+- E est ami avec A,D et F
+- F est ami avec C, D et E
 
 ### activité 9.2
 
