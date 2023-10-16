@@ -113,7 +113,7 @@ Il est aussi possible d'établir une matrice d'adjacence pour un graphe orienté
 
 Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un graphe pondéré : on remplace les 1 par les valeurs liées à chaque arc.
 
-![](img/c9c_4.jpg)
+![](img/c9c_5.jpg)
 
 ![](img/c9c_10.jpg)
 
