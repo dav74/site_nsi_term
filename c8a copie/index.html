@@ -15,7 +15,7 @@
     
     
       
-        <title>C10cb - NSI terminale</title>
+        <title>C8a copie - NSI terminale</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-algorithmes-de-parcours-dun-graphe" class="md-skip">
+        <a href="#activite-81" class="md-skip">
           Aller au contenu
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C10cb
+              C8a copie
             
           </span>
         </div>
@@ -2186,56 +2186,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-algorithmes-de-parcours-dun-graphe" class="md-nav__link">
-    1) algorithmes de parcours d'un graphe
-  </a>
-  
-    <nav class="md-nav" aria-label="1) algorithmes de parcours d'un graphe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-prealable" class="md-nav__link">
-    a) préalable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-le-parcours-en-largeur-dabord" class="md-nav__link">
-    b) le parcours en largeur d'abord
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c-le-parcours-en-profondeur-dabord" class="md-nav__link">
-    c) le parcours en profondeur d'abord
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cycle-dans-les-graphes" class="md-nav__link">
-    2) cycle dans  les graphes
+  <a href="#activite-81" class="md-nav__link">
+    activité 8.1
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-chercher-une-chaine-dans-un-graphe" class="md-nav__link">
-    3) Chercher une chaine dans un graphe
+  <a href="#activite-82" class="md-nav__link">
+    activité 8.2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-pour-aller-plus-loin" class="md-nav__link">
-    4) pour aller plus  loin...
+  <a href="#activite-83" class="md-nav__link">
+    activité 8.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-84" class="md-nav__link">
+    activité 8.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-85" class="md-nav__link">
+    activité 8.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-86" class="md-nav__link">
+    activité 8.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-87" class="md-nav__link">
+    activité 8.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-88" class="md-nav__link">
+    activité 8.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-89" class="md-nav__link">
+    activité 8.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-810" class="md-nav__link">
+    activité 8.10
   </a>
   
 </li>
@@ -2255,159 +2270,76 @@
                   
 
 
-  <h1>C10cb</h1>
+  <h1>C8a copie</h1>
 
-<h2 id="1-algorithmes-de-parcours-dun-graphe">1) algorithmes de parcours d'un graphe</h2>
-<p>Nous allons commencer par nous intéresser aux algorithmes de parcours d'un graphe. L'idée du "parcours" est de "visiter" tous les sommets d'un graphe en partant d'un sommet quelconque. Ces algorithmes de parcours d'un graphe sont à la base de nombreux algorithmes très utilisés : routage des paquets de données dans un réseau, découverte du chemin le plus court pour aller d'une ville à une autre...</p>
-<p>Il existe 2 méthodes pour parcourir un graphe :</p>
-<ul>
-<li>le parcours en largeur d'abord</li>
-<li>le parcours en profondeur d'abord</li>
-</ul>
-<h3 id="a-prealable">a) préalable</h3>
-<p>Nous allons travailler sur un graphe G(V,E) avec V l'ensemble des sommets de ce graphe et E l'ensemble des arêtes de ce graphe. Un sommet u sera adjacent avec un sommet v si u et v sont reliés par une arête (on pourra aussi dire que u et v sont voisins) À chaque sommet u de ce graphe nous allons associer une couleur : blanc ou noir. Autrement dit, chaque sommet u possède un attribut couleur que l'on notera u.couleur, nous aurons u.couleur = blanc ou u.couleur = noir. Quelle est la signification de ces couleurs ?</p>
-<ul>
-<li>si u.couleur = blanc =&gt; u n'a pas encore été "découvert"</li>
-<li>si u.couleur = noir =&gt; u a été "découvert"</li>
-</ul>
-<h3 id="b-le-parcours-en-largeur-dabord">b) le parcours en largeur d'abord</h3>
-<p>L'algorithme ci-dessous permet de parcourir un graphe en largeur d'abord :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>VARIABLE
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>G : un graphe
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>s : noeud (origine)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>u : noeud
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>v : noeud
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>f : file (initialement vide)
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>DEBUT
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>s.couleur ← noir
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>enfiler (s,f)
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>tant que f non vide :
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  u ← defiler(f)
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  pour chaque sommet v adjacent au sommet u :
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    si v.couleur n&#39;est pas noir :
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      v.couleur ← noir
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      enfiler(v,f)
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    fin si
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  fin pour
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>fin tant que
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>FIN
+<h3 id="activite-81">activité 8.1</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de calculer le hauteur d'un arbre binaire à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-82">activité 8.2</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de calculer la taille d'un arbre binaire à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-83">activité 8.3</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de trouver un parcours dans l'ordre préfixe à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-84">activité 8.4</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de trouver un parcours dans l'ordre suffixe à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-85">activité 8.5</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de trouver un parcours dans l'ordre infixe à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-86">activité 8.6</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_1.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de trouver un parcours en largeur d'abord à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-87">activité 8.7</h3>
+<p>Soit l'arbre suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_4.jpg" /></p>
+<p>Appliquez l'algorithme qui permet de trouver un parcours dans l'ordre infixe à l'arbre ci-dessus. Quel résultat obtenez-vous ?</p>
+<h3 id="activite-88">activité 8.8</h3>
+<p>Appliquez l'algorithme de recherche d'une clé dans un arbre binaire de recherche sur l'arbre ci-dessous. On prendra k = 13. Quel résultat obtenez-vous ?</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_4.jpg" /></p>
+<h3 id="activite-89">activité 8.9</h3>
+<p>Appliquez l'algorithme de recherche d'une clé dans un arbre binaire de recherche sur l'arbre ci-dessous. On prendra k = 16. Quel résultat obtenez-vous ?</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_4.jpg" /></p>
+<h3 id="activite-810">activité 8.10</h3>
+<p>Dans cette activité, nous allons implémenter des arbres binaires en Python en utilisant (nous verrons un peu plus tard dans l'année une autre façon de procéder). L'idée est relativement simple : chaque noeud est modélisé à l'aide d'un dictionnaire, ces dictionnaires seront composés de 3 clés (et donc 3 valeurs) : une clé "valeur", une clé "arbre_gauche", une clé "arbre_droit". La valeur associée à la clé "valeur" sera tout simplement la valeur du noeud. La valeur associé à la clé "arbre_gauche" sera un noeud (donc un autre dictionnaire) si l'arbre gauche existe et None dans le cas contraire. La valeur associé à la clé "arbre_droit" sera un noeud (donc un autre dictionnaire) si l'arbre droit existe et None dans le cas contraire.</p>
+<p>L'arbre binaire suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_5.png" /></p>
+<p>sera implémenté en Python avec le dictionnaire suivant :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>arbre_1 = {&quot;valeur&quot; : &quot;A&quot;, &quot;arbre_gauche&quot; : {&quot;valeur&quot; : &quot;B&quot;, &quot;arbre_gauche&quot;: {&quot;valeur&quot; : &quot;D&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}, &quot;arbre_droit&quot;: {&quot;valeur&quot; : &quot;E&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}}, &quot;arbre_droit&quot; : {&quot;valeur&quot; : &quot;C&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}}
 </code></pre></div>
-<p>Si on applique cet algorithme sur le graphe G ci-dessous : </p>
-<p><img alt="" src="../img/c10c_1.jpg" /></p>
-<p>si on part du sommet A (sommet s dans l'algorithme) la "découverte" peut se faire dans l'ordre suivant :  A, B, F, C, D, G, H, E et I (ATTENTION ce n'est pas la seule solution possible, par exemple A, F, B, D, C, G, H, I et E est aussi possible (il y a bien d'autres possibilités)).</p>
-<p>Vous avez sans doute remarqué que dans le cas d'un parcours en largeur d'abord, on "découvre" d'abord tous les sommets situés à une distance k du sommet "origine" (sommet s) avant de commencer la découverte des sommets situés à une distance k+1 (on définit la distance comme étant le nombre d'arêtes à parcourir depuis A pour arriver à destination):</p>
-<p>En effet, pour l'exemple ci-dessus, nous avons bien : </p>
-<p><img alt="" src="../img/c10c_2.png" /></p>
-<h3 id="c-le-parcours-en-profondeur-dabord">c) le parcours en profondeur d'abord</h3>
-<p>L'algorithme ci-dessous permet de parcourir un graphe en profondeur d'abord :</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>VARIABLE
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>G : un graphe
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>u : noeud
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>v : noeud
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>DEBUT
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>PARCOURS-PROFONDEUR(G,u) :
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  u.couleur ← noir
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  pour chaque sommet v adjacent au sommet u :
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    si v.couleur n&#39;est pas noir :
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      PARCOURS-PROFONDEUR(G,v)
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    fin si
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  fin pour
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>FIN
+<p>que l'on peut aussi représenter comme ceci afin d'améliorer la visibilité : </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>arbre_1 = {&quot;valeur&quot;:&quot;A&quot;,
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>            &quot;arbre_gauche&quot;:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                            {&quot;valeur&quot; : &quot;B&quot;,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                            &quot;arbre_gauche&quot;: 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                                            {&quot;valeur&quot; : &quot;D&quot;, 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                                            &quot;arbre_droit&quot;: None}, 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                            &quot;arbre_droit&quot;: {&quot;valeur&quot; : &quot;E&quot;,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>                                            &quot;arbre_droit&quot;: None}}, 
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            &quot;arbre_droit&quot; : {&quot;valeur&quot; : &quot;C&quot;, 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                            &quot;arbre_droit&quot;: None}}
 </code></pre></div>
-Vous avez dû remarquer que le parcours en profondeur utilise une fonction récursive. J'attire votre attention sur l'extrême simplicité de cet algorithme (au niveau de sa conception), c'est souvent le cas avec les algorithmes récursifs.</p>
-<p>Si on applique cet algorithme sur le graphe G ci-dessous : </p>
-<p><img alt="" src="../img/c10c_1.jpg" /></p>
-<p>en partant du sommet A la "découverte" peut se faire dans l'ordre suivant :  A, B, C, E, I, D, G, F et H (ATTENTION, ici aussi, ce n'est pas la seule solution possible : A, F, H, I, E, C, B, D et G est aussi une solution possible (il y a bien d'autres possibilités)).</p>
-<p>Dans le cas du parcours en largeur d'abord on "découvrait" tous les sommets situés à une distance k de l'origine avant de s'intéresser aux sommets situés à une distance k+1 de l'origine. Dans le cas du parcours en profondeur, on va chercher à aller "le plus loin possible" dans le graphe : A -&gt; B -&gt; C -&gt; E -&gt; I -&gt; D, quand on tombe sur "un cul-de-sac" (dans notre exemple, D est un "cul-de-sac", car une fois en D, on peut uniquement aller en B, or, B a déjà été découvert...), on revient "en arrière" (dans notre exemple, on repart de B pour aller explorer une autre branche : G -&gt; F -&gt; H)</p>
-<p>À noter que l'utilisation d'un algorithme récursif n'est pas une obligation pour le parcours en profondeur :</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VARIABLE
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>s : noeud (origine)
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>G : un graphe
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>u : noeud
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>v : noeud
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>p : pile (pile vide au départ)
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>DEBUT
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>s.couleur ← noir
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>piler(s,p)
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>tant que p n&#39;est pas vide :
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  u ← depiler(p)
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  pour chaque sommet v adjacent au sommet u :
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    si v.couleur n&#39;est pas noir :
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      v.couleur ← noir
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      piler(v,p)
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    fin si
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  fin pour
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>fin tant que
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>FIN
-</code></pre></div>
-Vous avez sans doute remarqué que la version "non récursive" (on dit "itérative") de l'algorithme du parcours en profondeur ressemble beaucoup à l'algorithme du parcours en largeur, on a juste remplacé la file par une pile.</p>
-<h2 id="2-cycle-dans-les-graphes">2) cycle dans  les graphes</h2>
-<p>Voici un rappel de 2 définitions vues précédemment :</p>
-<ul>
-<li>une chaine est une suite d'arêtes consécutives dans un graphe, un peu comme si on se promenait sur le graphe. On la désigne par les lettres des sommets qu'elle comporte. On utilise le terme de chaine pour les graphes non orientés et le terme de chemin pour les graphes orientés.</li>
-<li>un cycle est une chaine qui commence et se termine au même sommet.</li>
-</ul>
-<p>Pour différentes raisons, il peut être intéressant de détecter la présence d'un ou plusieurs cycles dans un graphe (par exemple pour savoir s'il est possible d'effectuer un parcours qui revient à son point de départ sans être obligé de faire demi-tour).</p>
-<p>Voici ci-dessous un algorithme qui permet de "détecter" la présence d'au moins un cycle dans un graphe :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>VARIABLE
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>s : noeud (noeud quelconque)
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>G : un graphe
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>u : noeud
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>v : noeud
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>p : pile (vide au départ)
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>DEBUT
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>CYCLE():
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  piler(s,p)
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  tant que p n&#39;est pas vide :
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    u ← depiler(p)
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    pour chaque sommet v adjacent au sommet u :
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      si v.couleur n&#39;est pas noir :
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        piler(v,p)
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      fin si
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    fin pour
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    si u est noir :
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>      renvoie Vrai
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    sinon :
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      u.couleur ← noir
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    fin si
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>  fin tant que
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>  renvoie Faux
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>FIN
-</code></pre></div>
-<h2 id="3-chercher-une-chaine-dans-un-graphe">3) Chercher une chaine dans un graphe</h2>
-<p>Nous allons maintenant nous intéresser à un algorithme qui permet de trouver une chaine entre 2 sommets (sommet de départ et sommet d'arrivée). Les algorithmes de ce type ont une grande importance et sont très souvent utilisés).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VARIABLE
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>G : un graphe
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>start : noeud (noeud de départ)
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>end : noeud (noeud d&#39;arrivé)
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>u : noeud
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>chaine : ensemble de noeuds (initialement vide)
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>DEBUT
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>TROUVE-CHAINE(G, start, end, chaine):
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  chaine = chaine ⋃ start //le symbol ⋃ signifie union, il permet d&#39;ajouter le noeud start à l&#39;ensemble chaine
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  si start est identique à end :
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    renvoie chaine
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  fin si
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  pour chaque sommet u adjacent au sommet start :
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    si u n&#39;appartient pas à chaine :
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>      nchemin = TROUVE-CHAINE(G, u, end, chaine)
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      si nchemin non vide :
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        renvoie nchemin
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>      fin si
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    fin si
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  fin pour
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>renvoie NIL
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>FIN
-</code></pre></div>
-<p>Vous noterez que l'algorithme ci-dessus est basé sur un parcours en profondeur d'abord.</p>
-<h2 id="4-pour-aller-plus-loin">4) pour aller plus  loin...</h2>
-<p>Il est important de noter que dans la plupart des cas, les algorithmes de recherche de chaine (ou de chemin), travaillent sur des graphes pondérés (par exemple pour rechercher la route entre un point de départ et un point d'arrivée dans un logiciel de cartographie). Ces algorithmes recherchent aussi souvent les chemins les plus courts (logiciels de cartographie). On peut citer l'algorithme de Dijkstra ou encore l'algorithme de Bellman-Ford qui recherchent le chemin le plus court entre un noeud de départ et un noeud d'arrivée dans un graphe pondéré. Si ce sujet vous intéresse, vous pouvez visionner cette <a href="https://www.youtube.com/watch?v=JPeCmKFrKio">vidéo</a> qui explique le principe de fonctionnement de l'algorithme de Dijkstra.</p>
+<ol>
+<li>Écrire en Python une fonction <code>taille</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui renvoie la taille de l'arbre <code>arb</code>.</li>
+<li>Écrire en Python une fonction <code>hauteur</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui renvoie la hauteur de l'arbre <code>arb</code>.</li>
+<li>Écrire en Python une fonction <code>parcours_prefixe</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre préfixe.</li>
+<li>Écrire en Python une fonction <code>parcours_infixe</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre infixe.</li>
+<li>Écrire en Python une fonction <code>parcours_sufixe</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre sufixe.</li>
+<li>Écrire en Python une fonction <code>parcours_largeur</code> qui prend en paramètre une arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> en respectant le parcours en largeur.</li>
+<li>Implémenter en Python un arbre binaire de recherche 'arbre_2' constitué des nombres suivants : 30, 0, 10, 40 et 20</li>
+<li>Écrire en Python une fonction récursive <code>arbre_recherche_rec</code> qui prend en paramètre une arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code> et qui renvoie <code>True</code>si k est bien présent dans l'arbre et False dans le cas contraire.</li>
+<li>Écrire en Python une fonction non récursive <code>arbre_recherche_it</code> qui prend en paramètre une arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code> et qui renvoie <code>True</code>si k est bien présent dans l'arbre et False dans le cas contraire.</li>
+<li>Écrire en Python une fonction non récursive <code>insertion</code> qui prend en paramètre une arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code>et qui place l'entier <code>k</code>dans l'arbre binaire de recherche <code>arb</code>.</li>
+</ol>
 
 
 

@@ -1005,6 +1005,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#activite-810" class="md-nav__link">
+    activité 8.10
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2349,6 +2356,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#activite-810" class="md-nav__link">
+    activité 8.10
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2400,6 +2414,40 @@
 <h3 id="activite-89">activité 8.9</h3>
 <p>Appliquez l'algorithme de recherche d'une clé dans un arbre binaire de recherche sur l'arbre ci-dessous. On prendra k = 16. Quel résultat obtenez-vous ?</p>
 <p><img alt="" src="../img/nsi_term_algo_arbre_4.jpg" /></p>
+<h3 id="activite-810">activité 8.10</h3>
+<p>Dans cette activité, nous allons implémenter des arbres binaires en Python en utilisant (nous verrons un peu plus tard dans l'année une autre façon de procéder). L'idée est relativement simple : chaque noeud est modélisé à l'aide d'un dictionnaire, ces dictionnaires seront composés de 3 clés (et donc 3 valeurs) : une clé "valeur", une clé "arbre_gauche", une clé "arbre_droit". La valeur associée à la clé "valeur" sera tout simplement la valeur du noeud. La valeur associé à la clé "arbre_gauche" sera un noeud (donc un autre dictionnaire) si l'arbre gauche existe et None dans le cas contraire. La valeur associée à la clé "arbre_droit" sera un noeud (donc un autre dictionnaire) si l'arbre droit existe et None dans le cas contraire.</p>
+<p>L'arbre binaire suivant :</p>
+<p><img alt="" src="../img/nsi_term_algo_arbre_5.png" /></p>
+<p>sera implémenté en Python avec le dictionnaire suivant :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>arbre_1 = {&quot;valeur&quot; : &quot;A&quot;, &quot;arbre_gauche&quot; : {&quot;valeur&quot; : &quot;B&quot;, &quot;arbre_gauche&quot;: {&quot;valeur&quot; : &quot;D&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}, &quot;arbre_droit&quot;: {&quot;valeur&quot; : &quot;E&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}}, &quot;arbre_droit&quot; : {&quot;valeur&quot; : &quot;C&quot;, &quot;arbre_gauche&quot;: None, &quot;arbre_droit&quot;: None}}
+</code></pre></div>
+<p>que l'on peut aussi représenter comme ceci afin d'améliorer la visibilité : </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>arbre_1 = {&quot;valeur&quot;:&quot;A&quot;,
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>            &quot;arbre_gauche&quot;:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                            {&quot;valeur&quot; : &quot;B&quot;,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                            &quot;arbre_gauche&quot;: 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                                            {&quot;valeur&quot; : &quot;D&quot;, 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                                            &quot;arbre_droit&quot;: None}, 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                            &quot;arbre_droit&quot;: {&quot;valeur&quot; : &quot;E&quot;,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>                                            &quot;arbre_droit&quot;: None}}, 
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            &quot;arbre_droit&quot; : {&quot;valeur&quot; : &quot;C&quot;, 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                            &quot;arbre_gauche&quot;: None, 
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                            &quot;arbre_droit&quot;: None}}
+</code></pre></div>
+<ol>
+<li>Écrire en Python une fonction <code>taille</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui renvoie la taille de l'arbre <code>arb</code>.</li>
+<li>Écrire en Python une fonction <code>hauteur</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui renvoie la hauteur de l'arbre <code>arb</code>.</li>
+<li>Écrire en Python une fonction <code>parcours_prefixe</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre préfixe.</li>
+<li>Écrire en Python une fonction <code>parcours_infixe</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre infixe.</li>
+<li>Écrire en Python une fonction <code>parcours_suffixe</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> dans l'ordre suffixe.</li>
+<li>Écrire en Python une fonction <code>parcours_largeur</code> qui prend en paramètre un arbre <code>arb</code>(arbre implémenté sous forme de dictionnaire) et qui affiche les noeuds de l'arbre <code>arb</code> en respectant le parcours en largeur.</li>
+<li>Implémenter en Python un arbre binaire de recherche 'arbre_2' constitué des nombres suivants : 30, 0, 10, 40 et 20</li>
+<li>Écrire en Python une fonction récursive <code>arbre_recherche_rec</code> qui prend en paramètre un arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code> et qui renvoie <code>True</code>si k est bien présent dans l'arbre et False dans le cas contraire.</li>
+<li>Écrire en Python une fonction non récursive <code>arbre_recherche_it</code> qui prend en paramètre un arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code> et qui renvoie <code>True</code>si k est bien présent dans l'arbre et False dans le cas contraire.</li>
+<li>Écrire en Python une fonction non récursive <code>insertion</code> qui prend en paramètre un arbre binaire de recherche <code>arb</code>(arbre implémenté sous forme de dictionnaire) et un entier <code>k</code>et qui place l'entier <code>k</code>dans l'arbre binaire de recherche <code>arb</code>.</li>
+</ol>
 
 
 
