@@ -59,7 +59,7 @@ Appliquez l'algorithme de recherche d'une clé dans un arbre binaire de recherch
 
 ### activité 8.10
 
-Dans cette activité, nous allons implémenter des arbres binaires en Python en utilisant (nous verrons un peu plus tard dans l'année une autre façon de procéder). L'idée est relativement simple : chaque noeud est modélisé à l'aide d'un dictionnaire, ces dictionnaires seront composés de 3 clés (et donc 3 valeurs) : une clé "valeur", une clé "arbre_gauche", une clé "arbre_droit". La valeur associée à la clé "valeur" sera tout simplement la valeur du noeud. La valeur associé à la clé "arbre_gauche" sera un noeud (donc un autre dictionnaire) si l'arbre gauche existe et None dans le cas contraire. La valeur associée à la clé "arbre_droit" sera un noeud (donc un autre dictionnaire) si l'arbre droit existe et None dans le cas contraire.
+Dans cette activité, nous allons implémenter des arbres binaires en Python en utilisant des dictionnaires (nous verrons un peu plus tard dans l'année une autre façon de procéder). L'idée est relativement simple : chaque noeud est modélisé à l'aide d'un dictionnaire, ces dictionnaires seront composés de 3 clés (et donc 3 valeurs) : une clé "valeur", une clé "arbre_gauche" et une clé "arbre_droit". La valeur associée à la clé "valeur" sera tout simplement la valeur du noeud. La valeur associé à la clé "arbre_gauche" sera un noeud (donc un autre dictionnaire) si l'arbre gauche existe et None dans le cas contraire. La valeur associée à la clé "arbre_droit" sera un noeud (donc un autre dictionnaire) si l'arbre droit existe et None dans le cas contraire.
 
 L'arbre binaire suivant :
 
