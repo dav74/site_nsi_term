@@ -8,7 +8,7 @@ Voici les opérations qui peuvent être effectuées sur une liste :
 - tester si une liste est vide (estVide)
 - obtenir le dernier élément ajouté à la liste (car)
 - obtenir une liste contenant tous les éléments d'une liste à l'exception du dernier élément ajouté (cdr)
-- construire une liste à partir d'un élément et d'un autre liste (cons)
+- construire une liste à partir d'un élément et d'une autre liste (cons)
 
 #### Les piles
 On retrouve dans les piles une partie des propriétés vues sur les listes.
