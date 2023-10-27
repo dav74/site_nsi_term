@@ -7,4 +7,4 @@ préfixe, ordre suffixe, en largeur d’abord (voir cours)
 - connaître l’algorithme qui permet d’insérer une clé dans un arbre binaire de recherche (voir cours)
 
 ### Ce qu’il faut savoir faire
-Vous devez être capable d'implémenter tous ces algorithmes en Python (voir projet)
+Vous devez être capable d'implémenter tous ces algorithmes en Python (voir activité)

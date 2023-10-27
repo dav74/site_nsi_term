@@ -18,6 +18,8 @@ Exemples : Soit le dictionnaire D composé des couples clé:valeur suivants => p
 - suppr(D,date-naissance) ; le dictionnaire D est maintenant composé des couples suivants : prenom:Kevin, nom:Durand
 - rech(D,prenom) ; la fonction renvoie Kevin
 
+ATTENTION : les clés d'un dictionnaire sont forcément des types non-mutables. Un type est non-mutable s'il ne peut pas être modifié après sa création. Par exemple, les chaines de caractères et les tuples sont non-mutables. A contrario, les listes Python sont mutables (une liste Python peut être modifié après sa création avec la méthode append). Il n'est donc pas possible d'utiliser une liste Python comme clé d'un dictionnaire. En revanche, il est possible d'utiliser une chaine de caractères ou un tuple.
+
 ### 2)  Implémentation des dictionnaires
 
 L'implémentation des dictionnaires dans les langages de programmation peut se faire à l'aide des tables de hachage. Les tables de hachages ainsi que les fonctions de hachages qui sont utilisées pour construire les tables de hachages, ne sont pas au programme de NSI. Cependant, l'utilisation des fonctions de hachages est omniprésente en informatique, il serait donc bon, pour votre "culture générale informatique", de connaître le principe des fonctions de hachages. Voici un texte qui vous permettra de comprendre le principe des fonctions de hachages : [c'est quoi le hachage](https://www.culture-informatique.net/cest-quoi-hachage/) . Pour avoir quelques idées sur le principe des tables de hachages, je vous recommande le visionnage de cette vidéo : [wandida : les tables de hachage](https://www.youtube.com/watch?v=CkLctGYWFPA)
