@@ -2269,8 +2269,6 @@
   <h1>Activités</h1>
 
 <h3 id="activite-161">activité 16.1</h3>
-<p>Résumez en quelques lignes le principe de la programmation dynamique.</p>
-<h3 id="activite-162">activité 16.2</h3>
 <p>Cette activité s'inspire librement du contenu du livre de Cormen, Leiserson, Rivest et Stein "Introduction to Algorithms" (édition The Mit Press) </p>
 <p>L'entreprise sun &amp; steel produit et vend des barres d'acier de différentes longueurs. Voici le prix de vente de ces barres d'acier en fonction de leurs longueurs :</p>
 <table>
@@ -2336,7 +2334,7 @@
 <li>découper la barre en 3 =&gt; 4 = 1+1+2 et vendre ces 3 barres ; gain = 1+1+5 = 7 euros</li>
 <li>...</li>
 </ul>
-<p>1) Continuez la liste ci-dessus afin d'obtenir toutes les possibilités pour une barre de 4 m. Quel est le revenu maximum possible pour la société ?</p>
+<p>1- Continuez la liste ci-dessus afin d'obtenir toutes les possibilités pour une barre de 4 m. Quel est le revenu maximum possible pour la société ?</p>
 <p>Partons maintenant du principe qu'au départ, la barre ne fait plus forcement 4 m mais qu'elle fait n mètres (n compris entre 1 et 10).</p>
 <p>Pour chaque longueur n on peut déterminer le revenu maximum possible (que l'on notera r<sub>n</sub>). Par exemple :</p>
 <ul>
@@ -2388,7 +2386,7 @@
 </ul>
 <p>L'idée de cette activité est d'écrire un programme Python qui permettra d'obtenir tous les r<sub>n</sub> avec n compris entre 1 et 10.</p>
 <p>On peut remarquer qu'il est aussi possible de calculer r<sub>5</sub> en appliquant la relation suivante :</p>
-<p>r<sub>5</sub> = max(p<sub>5</sub>, r<sub>1</sub>+r<sub>4</sub>, r<sub>2</sub>+r<sub>3</sub>, r<sub>3</sub>+r<sub>2</sub>, r<sub>4</sub>+r<sub>1</sub>)</p>
+<p>r<sub>5</sub> = max(p<sub>5</sub>, r<sub>1</sub> + r<sub>4</sub>, r<sub>2</sub> + r<sub>3</sub>, r<sub>3</sub> + r<sub>2</sub>, r<sub>4</sub> + r<sub>1</sub>)</p>
 <p>avec :</p>
 <ul>
 <li>p<sub>5</sub> le prix de la barre de 5 m</li>
@@ -2398,10 +2396,10 @@
 <li>r<sub>4</sub> le meilleur revenu possible pour 1 barre de 4 m (c'est-à-dire 10)</li>
 </ul>
 <p>Nous avons donc :</p>
-<p>r<sub>5</sub> = max(10, 1+5, 5+8, 8+5, 5+1) = max(10,6,13,13,6) = 13</p>
+<p>r<sub>5</sub> = max(10, 1+10, 5+8, 8+5, 10+1) = max(10,11,13,13,11) = 13</p>
 <p>Il est possible de généraliser cette relation en écrivant :</p>
-<p>r<sub>n</sub> = max(p<sub>n</sub>, r<sub>1</sub>+r<sub>n-1</sub>, r<sub>2</sub>+r<sub>n-2</sub>,..., r<sub>n-1</sub>+r<sub>1</sub>)</p>
-<p>2) Retrouvez la valeur de r<sub>4</sub> en utilisant la relation ci-dessus</p>
+<p>r<sub>n</sub> = max(p<sub>n</sub>, r<sub>1</sub>+r<sub>n-1</sub>, r<sub>2</sub>+r<sub>n-2</sub>, ..., r<sub>n-1</sub>+r<sub>1</sub>)</p>
+<p>2- Retrouvez la valeur de r<sub>4</sub> en utilisant la relation ci-dessus</p>
 <p>On remarque que pour calculer r<sub>n</sub>, il faut calculer r<sub>n-1</sub>, r<sub>n-2</sub>, ...</p>
 <p>Cela devrait vous rappeler quelque chose : dans le chapitre consacré aux fonctions récursives nous avons vu que pour calculer la factorielle de n , il faut calculer la factorielle de n-1, la factorielle de n-2 ... Nous allons donc pouvoir écrire une fonction récursive afin de pouvoir résoudre notre problème (calculer tous les r<sub>n</sub> pour n compris entre 1 et 10).</p>
 <p>Avant d'écrire cette fonction récursive, analysons un peu la relation vue ci-dessus :</p>
@@ -2415,19 +2413,19 @@
 <p>r<sub>4</sub> = max(p<sub>1</sub>+r<sub>3</sub>, p<sub>2</sub>+r<sub>2</sub>, p<sub>3</sub>+r<sub>1</sub>, p<sub>4</sub>+r<sub>0</sub>)</p>
 <p>mais il est aussi nécessaire de calculer r<sub>3</sub>, r<sub>2</sub> et r<sub>1</sub> à la fois pour calculer r<sub>5</sub> mais aussi pour calculer r<sub>4</sub> ... On retrouve bien notre structure récursive.</p>
 <p>N.B : Si vous avez du mal à comprendre le pourquoi du comment de la relation vue ci-dessus (r<sub>n</sub> = max(p<sub>i</sub>+r<sub>n-i</sub>) avec i compris entre 1 et n (n inclus)), cela n'a pas une grande importance, contentez-vous de l'utiliser (le but de cette activité est ailleurs).</p>
-<p>3) La fonction <em>revenu_barre</em> ci-dessous prend en paramètre la taille n de la barre (avant découpe) et renvoie le revenu maximum possible pour cette barre de longueur n :</p>
+<p>3- La fonction <em>revenu_barre</em> ci-dessous prend en paramètre la taille n de la barre (avant découpe) et renvoie le revenu maximum possible pour cette barre de longueur n :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">revenu_barre</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">prix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="k">return</span> <span class="o">.........</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="k">return</span> <span class="o">...</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">r</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">prix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+........</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">r</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">prix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">return</span> <span class="n">r</span>
 </code></pre></div>
 <p>Compétez la fonction <em>revenu_barre</em></p>
-<p>4) Utilisez la fonction <em>revenu_barre</em> pour calculer r<sub>5</sub>, r<sub>6</sub>, r<sub>7</sub>, r<sub>8</sub>, r<sub>9</sub> et r<sub>10</sub></p>
-<p>5) L'entreprise a modifié ces tarifs, nous avons maintenant le tableau suivant :</p>
+<p>4- Utilisez la fonction <em>revenu_barre</em> pour calculer r<sub>5</sub>, r<sub>6</sub>, r<sub>7</sub>, r<sub>8</sub>, r<sub>9</sub> et r<sub>10</sub></p>
+<p>5- L'entreprise a modifié ces tarifs, nous avons maintenant le tableau suivant :</p>
 <table>
 <thead>
 <tr>
@@ -2490,7 +2488,52 @@
 </ul>
 <p>Dans cet exemple, cela ne pose aucun problème, mais avec un n plus grand (par exemple r<sub>10</sub>), nous aurions à effectuer de nombreuses fois exactement les mêmes calculs. On pourrait même imaginer si nous avions à notre disposition des barres de 100 m de long, un nombre de calculs à effectuer qui arriverait aux limites des capacités de nos ordinateurs (calculs très longs à effectuer).</p>
 <p>Nous sommes donc typiquement dans le cas où la programmation dynamique pourrait nous être utile afin d'éviter de refaire un grand nombre de fois exactement les mêmes calculs.</p>
-<p>6) En vous inspirant de ce qui a été fait dans le cours (suite de Fibonacci et rendu de monnaie), écrivez un programme permettant de calculer r<sub>n</sub>. Ce programme devra utiliser la programmation dynamique.  </p>
+<p>6- En vous inspirant de ce qui a été fait dans le cours (suite de Fibonacci et rendu de monnaie), écrivez une fonction <em>revenu_barre_dyn_desc(n)</em> permettant de calculer r<sub>n</sub>. Cette fonction devra utiliser la programmation dynamique (approche descendante)</p>
+<p>7- Toujours en utilisant la programmation dynamique, proposez une fonction <em>revenu_barre_dyn_asc(n)</em> permettant de calculer r<sub>n</sub> mais cette fois-ci en utilisant une approche ascendante.</p>
+<h3 id="activite-162">activité 16.2</h3>
+<p><strong>Cette activité s'inspire très fortement de l'exercice 1 du sujet 0.B session 2024. Merci beaucoup à l'autrice ou à l'auteur de cet exercice.</strong></p>
+<p>Nolan vient de découvrir un petit jeu amusant dont le but est de trouver un chemin de score maximal dans une pyramide de nombres. Un exemple de pyramide de nombres est représenté ci-dessous. Un chemin dans cette pyramide doit partir du sommet de la pyramide et descendre jusqu’en bas en suivant des flèches, c’est-à-dire en choisissant à chaque niveau de descendre sur la droite ou sur la gauche. Le score d’un chemin est la somme des nombres rencontrés le long de ce chemin. Le chemin gris représenté sur la pyramide de droite a pour score 4 + 2 + 5 + 1 + 3 = 15.</p>
+<p><img alt="" src="../img/c16a_2.png" /></p>
+<p>Nolan souhaite utiliser son ordinateur pour chercher à résoudre ce genre de jeux efficacement. Pour cela, on représente chaque niveau par la liste des nombres de ce niveau et une pyramide est une liste de niveaux. La pyramide ci-dessus est donc représentée par la liste de listes <code>ex1 = [[4],[6,2],[3,5,7],[5,1,6,2],[4,7,3,5,2]]</code>.</p>
+<p>1- Dessiner la pyramide représentée par la liste de listes <code>ex2 = [[3],[1,2],[4,5,9],[3,6,2,1]]</code>.</p>
+<p>Un chemin dans une pyramide est représenté par la liste des indices des nombres qu’il parcourt à chaque niveau.
+Le chemin gris est représenté par la liste <code>ch1 = [0,1,1,1,2]</code>. En effet, le 4 est à l’indice 0 du premier niveau, le
+2, le 5 et le 1 sont tous à l’indice 1 de leurs niveaux respectifs et le 3 du dernier niveau est à l’indice 2.</p>
+<p>2- Dessiner le chemin <code>ch2 = [0,1,2,2]</code> dans la pyramide représentée par <code>ex2</code>.</p>
+<p>3- Calculer le score de <code>ch2</code> dans la pyramide représentée par ex2.</p>
+<p>Dans un premier temps, Nolan souhaite écrire une fonction qui vérifie qu’une liste donnée représente bien un chemin
+et une autre fonction qui calcule le score d’un chemin.</p>
+<p>On remarque qu’une liste <code>ch</code> représente un chemin dans une pyramide p si elle commence par un 0, si lorsque a et
+b sont deux éléments consécutifs dans <code>ch</code> alors b = a ou b = a + 1 et <code>ch</code> est de la même longueur que p.</p>
+<p>4- Écrire une fonction <code>est_chemin(ch,p)</code> qui prend en paramètre une liste <code>ch</code> et une pyramide <code>p</code> et qui renvoie
+un booléen indiquant si <code>ch</code> représente un chemin de la pyramide <code>p</code>. Vérifier que votre fonction est correct en passant à votre fonction le chemin <code>ch2</code> et la pyramide <code>ex2</code> (votre fonction doit renvoyer <code>True</code>). Tester aussi votre fonction à l'aide du chemin <code>ch3 = [0, 0, 0, 2]</code>et de la pyramide <code>ex2</code> (votre fonction doit renvoyer <code>False</code>).</p>
+<p>5- Écrire une fonction <code>score(ch,p)</code> qui prend en paramètre un chemin <code>ch</code> et une pyramide <code>p</code> et qui renvoie le
+score de <code>ch</code> dans <code>p</code>. Tester votre fonction à l'aide de la pyramide <code>ex1</code>et du chemin <code>ch1</code> (vous devez obtenir 15)</p>
+<p>Maintenant que Nolan est capable de vérifier des chemins et de calculer leur score, il voudrait être capable de trouver un meilleur chemin, c’est-à-dire un chemin dont le score est maximal. Pour cela, Nolan analyse le problème en le décomposant.</p>
+<p><strong>Première observation</strong> : si on a des chemins maximaux <code>chm1</code> et <code>chm2</code> (représentés en gris ci-dessous) pour les
+deux pyramides obtenues en enlevant le sommet de <code>ex1</code>, on obtient un chemin maximal en ajoutant le sommet 4
+devant le chemin de plus grand score parmi <code>chm1</code> et <code>chm2</code>. Ici le score de <code>chm1</code> est 6 + 5 + 6 + 5 = 22 et le score de
+<code>chm2</code> est 2 + 7 + 6 + 5 = 20 donc le chemin optimal dans <code>ex1</code> est celui obtenu à partir de <code>chm1</code> et dessinée à droite
+dans <code>ex1</code>.</p>
+<p><img alt="" src="../img/c16a_3.png" /></p>
+<p><strong>Deuxième observation</strong> : si la pyramide n’a qu’un seul niveau, il n’y a que le sommet, dans ce cas, il n’y a pas
+de choix à faire, le seul chemin possible est celui qui contient le sommet et le nombre de ce sommet est le score
+maximal que l’on peut obtenir.</p>
+<p>Avec ces deux observations, on peut calculer le score maximal possible pour un chemin dans une pyramide p par
+récurrence. Posons <code>score_max(i,j)</code> le score maximal possible depuis le nombre d’indice <code>j</code> du niveau <code>i</code>, c’est-à-dire
+dans la petite pyramide issue de ce nombre. On a alors les relations suivantes :</p>
+<ul>
+<li><code>score_max(len(p)-1 , j) = p[len(p)-1][j]</code></li>
+<li><code>score_max(i,j) = p[i][j] + max(score_max(i+1,j),score_max(i+1,j+1))</code></li>
+</ul>
+<p>Le score maximal possible pour p toute entière sera alors <code>score_max(0,0)</code>.</p>
+<p>6- Écrire une fonction <code>calcule_score_max(p)</code> qui renvoie le score maximum pour une pyramide <code>p</code>.</p>
+<p>Si on suit à la lettre la définition de <code>score_max</code>, on obtient une résolution dont le coût est exponentiel à cause de
+la redondance des calculs. Par exemple <code>score_max(3,1)</code> va être calculer pour chaque appel à <code>score_max(2,0)</code> et
+<code>score_max(2,1)</code>. Pour éviter cette redondance, Nolan décide de mettre en place une approche par programmation dynamique. Pour cela, il va construire une pyramide s dont le nombre à l’indice j du niveau i correspond à <code>score_max(i,j)</code>, c’est-à-dire au score maximal pour un chemin à partir du nombre correspondant dans <code>p</code>.</p>
+<p>7- Écrire une fonction <code>pyramide_nulle(n)</code> qui prend en paramètre un entier et construit une pyramide remplie de 0. Cette pyramide aura <code>n</code> niveaux.</p>
+<p>8- Écrire une fonction <code>prog_dyn(p)</code> qui prend en paramètre une pyramide <code>p</code>, et qui renvoie le score maximal pour un chemin dans <code>p</code>. Pour cela, elle construit une pyramide <code>s</code> pleine de 0 de la même taille et la remplit avec les valeurs de <code>score_max</code> en commençant par le dernier niveau et en appliquant petit à petit les relations données ci-dessus. On pourra utiliser la programmation dynamique avec une approche ascendante.</p>
+<p>9- Déterminer l’ordre de grandeur du coût de cette fonction pour une pyramide à n niveaux.</p>
 
 
 
