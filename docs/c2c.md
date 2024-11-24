@@ -4,7 +4,7 @@ Il existe différents types de bases de données, par exemple, les bases de donn
 Les bases de données relationnelles ont été mises au point en 1970 par Edgar Franck Codd, informaticien britannique (1923-2003). Ces bases de données sont basées sur la théorie mathématique des ensembles.
 
 ## 2) relation
-La notion de relation est au coeur des bases de données relationnelles. Une relation peut être vue comme un tableau à 2 dimensions, composé d'un en-tête et d'un corps. Le corps est lui-même composé de t-uplets (lignes) et d'attributs (colonnes). L'en-tête contient les intitulés des attributs, le corps contient les données proprement dites. À noter que l'on emploie aussi le terme "table" à la place de "relation".
+La notion de relation est au coeur des bases de données relationnelles. Une relation peut être vue comme un tableau à 2 dimensions, composé d'un en-tête et d'un corps. L'en-tête correspond à l'ensemble des attributs, le corps quant à lui est composé de l'ensemble des données (ensemble des t-uplets). À noter que l'on emploie aussi le terme "table" à la place de "relation".
 
 Voici un exemple de relation :
 
